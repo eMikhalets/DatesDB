@@ -1,0 +1,73 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.emikhalets.datesdb"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="29" />
+9-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:5:5-21:19
+12        android:allowBackup="true"
+12-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.1.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\03736cf4bc3669a69d502627b70a527e\core-1.1.0\AndroidManifest.xml:24:18-86
+14        android:debuggable="true"
+15        android:icon="@mipmap/ic_launcher"
+15-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:7:9-43
+16        android:label="@string/app_name"
+16-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:8:9-41
+17        android:roundIcon="@mipmap/ic_launcher_round"
+17-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:9:9-54
+18        android:supportsRtl="true"
+18-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:10:9-35
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:11:9-40
+21        <activity android:name="com.emikhalets.datesdb.DateItemActivity" />
+21-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:12:9-54
+21-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:12:19-51
+22        <activity android:name="com.emikhalets.datesdb.DateEditActivity" />
+22-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:13:9-54
+22-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:13:19-51
+23        <activity android:name="com.emikhalets.datesdb.DatesListActivity" >
+23-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:14:9-20:20
+23-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:14:19-52
+24            <intent-filter>
+24-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:15:13-19:29
+25                <action android:name="android.intent.action.MAIN" />
+25-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:16:17-69
+25-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:16:25-66
+26
+27                <category android:name="android.intent.category.LAUNCHER" />
+27-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:18:17-77
+27-->D:\Android\Udemy\DatesDB\app\src\main\AndroidManifest.xml:18:27-74
+28            </intent-filter>
+29        </activity>
+30
+31        <service
+31-->[androidx.room:room-runtime:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\717f65762e8c098ad71282db36fbc63c\room-runtime-2.2.5\AndroidManifest.xml:25:9-28:40
+32            android:name="androidx.room.MultiInstanceInvalidationService"
+32-->[androidx.room:room-runtime:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\717f65762e8c098ad71282db36fbc63c\room-runtime-2.2.5\AndroidManifest.xml:26:13-74
+33            android:directBootAware="true"
+33-->[androidx.room:room-runtime:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\717f65762e8c098ad71282db36fbc63c\room-runtime-2.2.5\AndroidManifest.xml:27:13-43
+34            android:exported="false" />
+34-->[androidx.room:room-runtime:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\717f65762e8c098ad71282db36fbc63c\room-runtime-2.2.5\AndroidManifest.xml:28:13-37
+35
+36        <provider
+36-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+37            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+37-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+38            android:authorities="com.emikhalets.datesdb.lifecycle-process"
+38-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+39            android:exported="false"
+39-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+40            android:multiprocess="true" />
+40-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\12565117c533432cd60af9b41fd49aa9\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+41    </application>
+42
+43</manifest>
