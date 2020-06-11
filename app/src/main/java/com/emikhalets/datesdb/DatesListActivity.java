@@ -12,21 +12,19 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.emikhalets.datesdb.adapters.DatesAdapter;
+import com.emikhalets.datesdb.data.DateItem;
 import com.emikhalets.datesdb.databinding.ActivityDatesListBinding;
+import com.emikhalets.datesdb.utils.Const;
 import com.emikhalets.datesdb.viewmodels.DatesListViewModel;
 
-public class DatesListActivity extends AppCompatActivity {
+import java.util.List;
 
-    private static final int ADD_DATE_REQUEST = 0;
-    private static final int DATE_ITEM_REQUEST = 1;
-    private static final String DATE_ITEM_EXTRA = "date_item_extra";
-    private static final String NAME_EXTRA = "name_extra";
-    private static final String DATE_EXTRA = "date_extra";
-    private static final String TYPE_EXTRA = "type_extra";
+public class DatesListActivity extends AppCompatActivity
+        implements DatesAdapter.OnDateItemClickListener {
 
-    private ActivityDatesListBinding binding;
-    private DatesListViewModel viewModel;
     private DatesAdapter adapter;
+    private DatesListViewModel viewModel;
+    private ActivityDatesListBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,37 +37,19 @@ public class DatesListActivity extends AppCompatActivity {
     private void init() {
         viewModel = new ViewModelProvider(this).get(DatesListViewModel.class);
 
-        adapter = new DatesAdapter(dateItem -> {
-            Intent intent = new Intent(this, DateItemActivity.class);
-            intent.putExtra(DATE_ITEM_EXTRA, dateItem);
-            startActivity(intent);
-        });
+        viewModel.getLiveDataDates().observe(this, this::onDatesListChanged);
 
-        viewModel.getLiveDataDatesList().observe(this, dates -> {
-            if (dates != null) {
-                adapter.setDates(dates);
-
-                if (!dates.isEmpty()) {
-                    hideAddDateHint();
-                } else {
-                    showAddDateHint();
-                }
-            }
-        });
-
-        binding.fabAddDate.setOnClickListener(v -> {
-            Intent intent = new Intent(this, DateEditActivity.class);
-            startActivity(intent);
-        });
-
+        adapter = new DatesAdapter(this);
         binding.recyclerDates.setLayoutManager(new LinearLayoutManager(this));
         binding.recyclerDates.setAdapter(adapter);
+
+        binding.fabAddDate.setOnClickListener(v -> onAddDateClick());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        viewModel.getAllDates();
+        viewModel.getAllDates(this);
     }
 
     @Override
@@ -91,11 +71,30 @@ public class DatesListActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void showAddDateHint() {
-        binding.textAddFirstDate.setVisibility(View.VISIBLE);
+    @Override
+    public void onDateItemClick(int id) {
+        Intent intent = new Intent(this, DateItemActivity.class);
+        intent.putExtra(Const.EXTRA_DATE_ID, id);
+        startActivity(intent);
     }
 
-    private void hideAddDateHint() {
-        binding.textAddFirstDate.setVisibility(View.INVISIBLE);
+    private void onAddDateClick() {
+        Intent intent = new Intent(this, DateAddActivity.class);
+        startActivity(intent);
+    }
+
+    private void onDatesListChanged(List<DateItem> dates) {
+        if (dates != null) {
+            adapter.setDates(dates);
+            handleTextEmptyListVisibility(dates);
+        }
+    }
+
+    private void handleTextEmptyListVisibility(List<DateItem> dates) {
+        if (!dates.isEmpty()) {
+            binding.textAddFirstDate.setVisibility(View.INVISIBLE);
+        } else {
+            binding.textAddFirstDate.setVisibility(View.VISIBLE);
+        }
     }
 }

@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/text_add_date"
+        android:text="@string/text.add_date"
         android:textColor="@android:color/black"
         android:textSize="24sp" />
 

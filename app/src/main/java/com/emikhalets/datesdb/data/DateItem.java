@@ -1,6 +1,7 @@
 package com.emikhalets.datesdb.data;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
@@ -11,10 +12,18 @@ public class DateItem implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private int id;
     private String name;
-    private String date;
+    private long date;
     private String type;
 
-    public DateItem(String name, String date, String type) {
+    public DateItem(String name, long date, String type) {
+        this.name = name;
+        this.date = date;
+        this.type = type;
+    }
+
+    @Ignore
+    public DateItem(int id, String name, long date, String type) {
+        this.id = id;
         this.name = name;
         this.date = date;
         this.type = type;
@@ -36,11 +45,11 @@ public class DateItem implements Serializable {
         this.name = name;
     }
 
-    public String getDate() {
+    public long getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(long date) {
         this.date = date;
     }
 

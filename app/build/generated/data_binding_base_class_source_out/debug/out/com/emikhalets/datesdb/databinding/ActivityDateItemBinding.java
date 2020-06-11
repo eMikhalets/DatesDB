@@ -19,6 +19,9 @@ public final class ActivityDateItemBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ConstraintLayout layoutDateItem;
+
+  @NonNull
   public final TextView textDate;
 
   @NonNull
@@ -51,13 +54,15 @@ public final class ActivityDateItemBinding implements ViewBinding {
   @NonNull
   public final TextView textType;
 
-  private ActivityDateItemBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textDate,
+  private ActivityDateItemBinding(@NonNull ConstraintLayout rootView,
+      @NonNull ConstraintLayout layoutDateItem, @NonNull TextView textDate,
       @NonNull TextView textDaysLeft, @NonNull TextView textDaysLeftLabel,
       @NonNull TextView textHoursLeft, @NonNull TextView textHoursLeftLabel,
       @NonNull TextView textMinutesLeft, @NonNull TextView textMinutesLeftLabel,
       @NonNull TextView textName, @NonNull TextView textSecondsLeft,
       @NonNull TextView textSecondsLeftLabel, @NonNull TextView textType) {
     this.rootView = rootView;
+    this.layoutDateItem = layoutDateItem;
     this.textDate = textDate;
     this.textDaysLeft = textDaysLeft;
     this.textDaysLeftLabel = textDaysLeftLabel;
@@ -98,6 +103,8 @@ public final class ActivityDateItemBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      ConstraintLayout layoutDateItem = (ConstraintLayout) rootView;
+
       id = R.id.text_date;
       TextView textDate = rootView.findViewById(id);
       if (textDate == null) {
@@ -164,8 +171,8 @@ public final class ActivityDateItemBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityDateItemBinding((ConstraintLayout) rootView, textDate, textDaysLeft,
-          textDaysLeftLabel, textHoursLeft, textHoursLeftLabel, textMinutesLeft,
+      return new ActivityDateItemBinding((ConstraintLayout) rootView, layoutDateItem, textDate,
+          textDaysLeft, textDaysLeftLabel, textHoursLeft, textHoursLeftLabel, textMinutesLeft,
           textMinutesLeftLabel, textName, textSecondsLeft, textSecondsLeftLabel, textType);
     }
     String missingId = rootView.getResources().getResourceName(id);

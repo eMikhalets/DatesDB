@@ -52,6 +52,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array dates_type
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -726,7 +727,11 @@ attr yearTodayStyle
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
+bool enable_system_alarm_service_default
+bool enable_system_foreground_service_default
+bool enable_system_job_service_default
 bool mtrl_btn_textappearance_all_caps
+bool workmanager_test_configuration
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -1355,6 +1360,7 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable ic_baseline_add_24
 drawable ic_baseline_delete_24
+drawable ic_baseline_save_24
 drawable ic_baseline_settings_24
 drawable ic_calendar_black_24dp
 drawable ic_clear_black_24dp
@@ -1468,6 +1474,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn_date_pick
 id buttonPanel
 id cancel_action
 id cancel_button
@@ -1504,6 +1511,7 @@ id dialog_button
 id dimensions
 id direct
 id disableHome
+id dp_date
 id dropdown_menu
 id edit_query
 id end
@@ -1513,6 +1521,7 @@ id enterAlwaysCollapsed
 id etDate
 id etName
 id etType
+id et_name
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -1545,6 +1554,7 @@ id italic
 id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
+id layout_date_item
 id left
 id line1
 id line3
@@ -1552,6 +1562,7 @@ id listMode
 id list_item
 id masked
 id media_actions
+id menu_add_save
 id menu_item_delete
 id menu_list_search
 id menu_list_settings
@@ -1646,6 +1657,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner_date_type
 id split_action_bar
 id spread
 id spread_inside
@@ -1775,6 +1787,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_date_add
 layout activity_date_edit
 layout activity_date_item
 layout activity_dates_list
@@ -1854,6 +1867,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+menu menu_date_add
 menu menu_date_item
 menu menu_dates_list
 mipmap ic_launcher
@@ -1898,12 +1912,12 @@ string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string menu_delete
 string menu_search
 string menu_settings
+string menu_save
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description
 string mtrl_exceed_max_badge_number_suffix
@@ -1945,17 +1959,18 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
-string text_00_placeholder
 string text_add_date
-string text_date_placeholder
 string text_days
 string text_days_left
-string text_days_left_placeholder
 string text_hours
 string text_min
-string text_name_placeholder
+string text_placeholder_00
+string text_placeholder_date
+string text_placeholder_days_left
+string text_placeholder_name
+string text_placeholder_type
 string text_sec
-string text_type_placeholder
+string text_hint_name
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

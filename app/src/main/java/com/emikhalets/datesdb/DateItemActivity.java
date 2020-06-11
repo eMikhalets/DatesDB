@@ -9,15 +9,16 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.emikhalets.datesdb.data.DateItem;
 import com.emikhalets.datesdb.databinding.ActivityDateItemBinding;
-import com.emikhalets.datesdb.viewmodels.ItemDateViewModel;
+import com.emikhalets.datesdb.utils.Const;
+import com.emikhalets.datesdb.viewmodels.DateItemViewModel;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class DateItemActivity extends AppCompatActivity {
 
-    private static final String DATE_ITEM_EXTRA = "date_item_extra";
-
-    private ItemDateViewModel viewModel;
+    private DateItemViewModel viewModel;
     private ActivityDateItemBinding binding;
 
     @Override
@@ -29,30 +30,22 @@ public class DateItemActivity extends AppCompatActivity {
     }
 
     private void init() {
-        viewModel = new ViewModelProvider(this).get(ItemDateViewModel.class);
+        viewModel = new ViewModelProvider(this).get(DateItemViewModel.class);
 
-        intentExtra();
-
-        viewModel.getLiveDataFields().observe(this, fields -> {
-            binding.textName.setText(fields.get("name"));
-            binding.textDate.setText(fields.get("date"));
-            binding.textType.setText(fields.get("type"));
+        viewModel.getLiveDataNotice().observe(this, notice -> {
+            if (notice.equals("DATE_ITEM")) {
+                fillFields();
+                binding.layoutDateItem.animate().alpha(1).setDuration(1000).start();
+            } else if (notice.equals("DELETED")) {
+                finish();
+            }
         });
+
+        getDateFromIntent();
     }
 
     @Override
     public void onBackPressed() {
-//        String name = binding.etName.getText().toString().trim();
-//        String date = binding.etDate.getText().toString().trim();
-//        String type = binding.etType.getText().toString().trim();
-//
-//        if (!name.isEmpty() && !date.isEmpty() && !type.isEmpty()) {
-//            viewModel.insert(name, date, type);
-//            super.onBackPressed();
-//        } else {
-//            Toast.makeText(this, "Все поля должны быть заполнены",
-//                    Toast.LENGTH_SHORT).show();
-//        }
         super.onBackPressed();
     }
 
@@ -66,21 +59,49 @@ public class DateItemActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.menu_item_delete:
-                viewModel.delete(viewModel.getDate());
-                finish();
+                viewModel.delete(this);
                 break;
         }
         return super.onOptionsItemSelected(item);
     }
 
-    private void intentExtra() {
+    private void getDateFromIntent() {
         Intent intent = getIntent();
+        int id = intent.getIntExtra(Const.EXTRA_DATE_ID, -1);
 
-        DateItem dateItem = (DateItem) intent.getSerializableExtra(DATE_ITEM_EXTRA);
-
-        if (dateItem != null) {
-            viewModel.setDate(dateItem);
-            viewModel.setFields();
+        if (id != -1) {
+            viewModel.getDate(this, id);
         }
+    }
+
+    private void fillFields() {
+        Calendar current = Calendar.getInstance();
+        int currentDay = current.get(Calendar.DAY_OF_YEAR);
+
+        Calendar selected = Calendar.getInstance();
+        selected.setTimeInMillis(viewModel.getDateItem().getDate());
+        int selectedDay = selected.get(Calendar.DAY_OF_YEAR);
+        int selectedHour = current.get(Calendar.HOUR);
+        int selectedMin = current.get(Calendar.MINUTE);
+        int selectedSec = current.get(Calendar.SECOND);
+
+        int daysLeft = 0;
+
+        if (currentDay > selectedDay) {
+            daysLeft = 365 + selectedDay - currentDay;
+        } else {
+            daysLeft = selectedDay - currentDay;
+        }
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("d LLLL y ', ' EEEE");
+
+        binding.textName.setText(viewModel.getDateItem().getName());
+        binding.textDate.setText(dateFormat.format(viewModel.getDateItem().getDate()));
+        binding.textType.setText(viewModel.getDateItem().getType());
+
+        binding.textDaysLeft.setText(String.valueOf(daysLeft - 1));
+        binding.textHoursLeft.setText(String.valueOf(24 - selectedHour));
+        binding.textMinutesLeft.setText(String.valueOf(60 - selectedMin));
+        binding.textSecondsLeft.setText(String.valueOf(60 - selectedSec));
     }
 }

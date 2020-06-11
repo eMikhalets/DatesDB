@@ -1,26 +1,22 @@
 [
     {
-        "merged": "D:\\Android\\Udemy\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_add_date.xml",
-        "source": "D:\\Android\\Udemy\\DatesDB\\app\\src\\main\\res\\layout\\activity_add_date.xml"
+        "merged": "D:\\Android\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_date_edit.xml",
+        "source": "D:\\Android\\DatesDB\\app\\src\\main\\res\\layout\\activity_date_edit.xml"
     },
     {
-        "merged": "D:\\Android\\Udemy\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_dates_list.xml",
-        "source": "D:\\Android\\Udemy\\DatesDB\\app\\src\\main\\res\\layout\\activity_dates_list.xml"
+        "merged": "D:\\Android\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_date_item.xml",
+        "source": "D:\\Android\\DatesDB\\app\\src\\main\\res\\layout\\activity_date_item.xml"
     },
     {
-        "merged": "D:\\Android\\Udemy\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_date.xml",
-        "source": "D:\\Android\\Udemy\\DatesDB\\app\\src\\main\\res\\layout\\item_date.xml"
+        "merged": "D:\\Android\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_date_add.xml",
+        "source": "D:\\Android\\DatesDB\\app\\src\\main\\res\\layout\\activity_date_add.xml"
     },
     {
-        "merged": "D:\\Android\\Udemy\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_item_date.xml",
-        "source": "D:\\Android\\Udemy\\DatesDB\\app\\src\\main\\res\\layout\\activity_item_date.xml"
+        "merged": "D:\\Android\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_dates_list.xml",
+        "source": "D:\\Android\\DatesDB\\app\\src\\main\\res\\layout\\activity_dates_list.xml"
     },
     {
-        "merged": "D:\\Android\\Udemy\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_date_edit.xml",
-        "source": "D:\\Android\\Udemy\\DatesDB\\app\\src\\main\\res\\layout\\activity_date_edit.xml"
-    },
-    {
-        "merged": "D:\\Android\\Udemy\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_date_item.xml",
-        "source": "D:\\Android\\Udemy\\DatesDB\\app\\src\\main\\res\\layout\\activity_date_item.xml"
+        "merged": "D:\\Android\\DatesDB\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_date.xml",
+        "source": "D:\\Android\\DatesDB\\app\\src\\main\\res\\layout\\item_date.xml"
     }
 ]

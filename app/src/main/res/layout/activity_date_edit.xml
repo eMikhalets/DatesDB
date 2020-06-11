@@ -12,9 +12,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Name"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="55dp" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/etDate"
@@ -22,9 +20,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Date"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="147dp" />
+        android:inputType="textPersonName" />
 
     <EditText
         android:id="@+id/etType"
@@ -32,7 +28,5 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Type"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="251dp" />
+        android:inputType="textPersonName" />
 </LinearLayout>

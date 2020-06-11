@@ -40,11 +40,7 @@ public final class DatesDao_Impl implements DatesDao {
         } else {
           stmt.bindString(2, value.getName());
         }
-        if (value.getDate() == null) {
-          stmt.bindNull(3);
-        } else {
-          stmt.bindString(3, value.getDate());
-        }
+        stmt.bindLong(3, value.getDate());
         if (value.getType() == null) {
           stmt.bindNull(4);
         } else {
@@ -77,11 +73,7 @@ public final class DatesDao_Impl implements DatesDao {
         } else {
           stmt.bindString(2, value.getName());
         }
-        if (value.getDate() == null) {
-          stmt.bindNull(3);
-        } else {
-          stmt.bindString(3, value.getDate());
-        }
+        stmt.bindLong(3, value.getDate());
         if (value.getType() == null) {
           stmt.bindNull(4);
         } else {
@@ -145,8 +137,8 @@ public final class DatesDao_Impl implements DatesDao {
       if(_cursor.moveToFirst()) {
         final String _tmpName;
         _tmpName = _cursor.getString(_cursorIndexOfName);
-        final String _tmpDate;
-        _tmpDate = _cursor.getString(_cursorIndexOfDate);
+        final long _tmpDate;
+        _tmpDate = _cursor.getLong(_cursorIndexOfDate);
         final String _tmpType;
         _tmpType = _cursor.getString(_cursorIndexOfType);
         _result = new DateItem(_tmpName,_tmpDate,_tmpType);
@@ -179,8 +171,8 @@ public final class DatesDao_Impl implements DatesDao {
         final DateItem _item;
         final String _tmpName;
         _tmpName = _cursor.getString(_cursorIndexOfName);
-        final String _tmpDate;
-        _tmpDate = _cursor.getString(_cursorIndexOfDate);
+        final long _tmpDate;
+        _tmpDate = _cursor.getLong(_cursorIndexOfDate);
         final String _tmpType;
         _tmpType = _cursor.getString(_cursorIndexOfType);
         _item = new DateItem(_tmpName,_tmpDate,_tmpType);

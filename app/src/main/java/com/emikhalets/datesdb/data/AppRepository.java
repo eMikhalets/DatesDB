@@ -1,96 +1,107 @@
 package com.emikhalets.datesdb.data;
 
-import android.os.AsyncTask;
+import android.content.Context;
 
-import java.util.List;
-import java.util.concurrent.ExecutionException;
+import androidx.work.Data;
+import androidx.work.OneTimeWorkRequest;
+import androidx.work.WorkManager;
+import androidx.work.WorkRequest;
+
+import com.emikhalets.datesdb.utils.Const;
+import com.emikhalets.datesdb.workers.DeleteWorker;
+import com.emikhalets.datesdb.workers.GetAllDatesWorker;
+import com.emikhalets.datesdb.workers.GetDateWorker;
+import com.emikhalets.datesdb.workers.InsertWorker;
+import com.emikhalets.datesdb.workers.UpdateWorker;
+
+import java.util.UUID;
 
 public class AppRepository {
 
-    private DatesDao datesDao;
+    private Context context;
+    private static AppRepository instance;
 
-    public AppRepository(DatesDao datesDao) {
-        this.datesDao = datesDao;
+    private AppRepository(Context context) {
+        this.context = context;
     }
 
-    public void insert(DateItem date) {
-        new InsertTask().execute(date);
-    }
-
-    public void update(DateItem date) {
-        new UpdateTask().execute(date);
-    }
-
-    public void delete(DateItem date) {
-        new DeleteTask().execute(date);
-    }
-
-    public DateItem getDate(int id) {
-        GetDateTask task = new GetDateTask();
-        try {
-            return task.execute(id).get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-            return null;
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            return null;
+    public static synchronized AppRepository getInstance(Context context) {
+        if (instance == null) {
+            instance = new AppRepository(context);
         }
+        return instance;
     }
 
-    public List<DateItem> getAllDates() {
-        GetAllDatesTask task = new GetAllDatesTask();
-        try {
-            return task.execute().get();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-            return null;
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-            return null;
-        }
+    public UUID getAllDates() {
+        WorkRequest workRequest = new OneTimeWorkRequest.Builder(GetAllDatesWorker.class)
+                .build();
+
+        WorkManager.getInstance(context).enqueue(workRequest);
+
+        return workRequest.getId();
     }
 
-    private class InsertTask extends AsyncTask<DateItem, Void, Void> {
+    public UUID getDate(int id) {
+        Data data = new Data.Builder()
+                .putInt(Const.KEY_DATE_ID, id)
+                .build();
 
-        @Override
-        protected Void doInBackground(DateItem... dateItems) {
-            datesDao.insert(dateItems[0]);
-            return null;
-        }
+        WorkRequest workRequest = new OneTimeWorkRequest.Builder(GetDateWorker.class)
+                .setInputData(data)
+                .build();
+
+        WorkManager.getInstance(context).enqueue(workRequest);
+
+        return workRequest.getId();
     }
 
-    private class UpdateTask extends AsyncTask<DateItem, Void, Void> {
+    public UUID insert(String name, long date, String type) {
+        Data data = new Data.Builder()
+                .putString(Const.KEY_DATE_NAME, name)
+                .putLong(Const.KEY_DATE_DATE, date)
+                .putString(Const.KEY_DATE_TYPE, type)
+                .build();
 
-        @Override
-        protected Void doInBackground(DateItem... dateItems) {
-            datesDao.update(dateItems[0]);
-            return null;
-        }
+        WorkRequest workRequest = new OneTimeWorkRequest.Builder(InsertWorker.class)
+                .setInputData(data)
+                .build();
+
+        WorkManager.getInstance(context).enqueue(workRequest);
+
+        return workRequest.getId();
     }
 
-    private class DeleteTask extends AsyncTask<DateItem, Void, Void> {
+    public UUID update(DateItem dateItem) {
+        Data data = new Data.Builder()
+                .putInt(Const.KEY_DATE_ID, dateItem.getId())
+                .putString(Const.KEY_DATE_NAME, dateItem.getName())
+                .putLong(Const.KEY_DATE_DATE, dateItem.getDate())
+                .putString(Const.KEY_DATE_TYPE, dateItem.getType())
+                .build();
 
-        @Override
-        protected Void doInBackground(DateItem... dateItems) {
-            datesDao.delete(dateItems[0]);
-            return null;
-        }
+        WorkRequest workRequest = new OneTimeWorkRequest.Builder(UpdateWorker.class)
+                .setInputData(data)
+                .build();
+
+        WorkManager.getInstance(context).enqueue(workRequest);
+
+        return workRequest.getId();
     }
 
-    private class GetDateTask extends AsyncTask<Integer, Void, DateItem> {
+    public UUID delete(DateItem dateItem) {
+        Data data = new Data.Builder()
+                .putInt(Const.KEY_DATE_ID, dateItem.getId())
+                .putString(Const.KEY_DATE_NAME, dateItem.getName())
+                .putLong(Const.KEY_DATE_DATE, dateItem.getDate())
+                .putString(Const.KEY_DATE_TYPE, dateItem.getType())
+                .build();
 
-        @Override
-        protected DateItem doInBackground(Integer... integers) {
-            return datesDao.getDate(integers[0]);
-        }
-    }
+        WorkRequest workRequest = new OneTimeWorkRequest.Builder(DeleteWorker.class)
+                .setInputData(data)
+                .build();
 
-    private class GetAllDatesTask extends AsyncTask<Void, Void, List<DateItem>> {
+        WorkManager.getInstance(context).enqueue(workRequest);
 
-        @Override
-        protected List<DateItem> doInBackground(Void... voids) {
-            return datesDao.getAllDates();
-        }
+        return workRequest.getId();
     }
 }
