@@ -1,78 +1,58 @@
-package com.emikhalets.datesdb.viewmodels;
+package com.emikhalets.datesdb.viewmodels
 
-import android.app.Application;
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.work.WorkInfo
+import androidx.work.WorkManager
+import com.emikhalets.datesdb.data.AppRepository
+import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
+import com.emikhalets.datesdb.data.DateItem
+import com.emikhalets.datesdb.utils.Const
 
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.work.WorkInfo;
-import androidx.work.WorkManager;
-
-import com.emikhalets.datesdb.data.AppRepository;
-import com.emikhalets.datesdb.data.DateItem;
-import com.emikhalets.datesdb.utils.Const;
-
-import java.util.UUID;
-
-public class DateItemViewModel extends AndroidViewModel {
-
-    private AppRepository repository;
-    private MutableLiveData<String> liveDataNotice;
-    private DateItem dateItem;
-
-    public DateItemViewModel(@NonNull Application application) {
-        super(application);
-
-        repository = AppRepository.getInstance(application);
-
-        liveDataNotice = new MutableLiveData<>();
-        dateItem = null;
+class DateItemViewModel(application: Application) : AndroidViewModel(application) {
+    private val repository: AppRepository?
+    private val liveDataNotice: MutableLiveData<String>
+    var dateItem: DateItem?
+    fun getLiveDataNotice(): LiveData<String> {
+        return liveDataNotice
     }
 
-    public LiveData<String> getLiveDataNotice() {
-        return liveDataNotice;
-    }
-
-    public DateItem getDateItem() {
-        return dateItem;
-    }
-
-    public void setDateItem(DateItem dateItem) {
-        this.dateItem = dateItem;
-    }
-
-    public void getDate(LifecycleOwner lifecycleOwner, int dateId) {
-        UUID id = repository.getDate(dateId);
-
+    fun getDate(lifecycleOwner: LifecycleOwner?, dateId: Int) {
+        val id = repository!!.getDate(dateId)
         WorkManager.getInstance(getApplication())
                 .getWorkInfoByIdLiveData(id)
-                .observe(lifecycleOwner, info -> {
-                    if (info.getState() == WorkInfo.State.SUCCEEDED) {
-                        setDateItem(new DateItem(
-                                info.getOutputData().getInt(Const.KEY_DATE_ID, -1),
-                                info.getOutputData().getString(Const.KEY_DATE_NAME),
-                                info.getOutputData().getLong(Const.KEY_DATE_DATE, -1),
-                                info.getOutputData().getString(Const.KEY_DATE_TYPE)
-                        ));
-
-                        liveDataNotice.setValue("DATE_ITEM");
+                .observe(lifecycleOwner!!, { info: WorkInfo ->
+                    if (info.state == WorkInfo.State.SUCCEEDED) {
+                        dateItem = DateItem(
+                                info.outputData.getInt(Const.KEY_DATE_ID, -1),
+                                info.outputData.getString(Const.KEY_DATE_NAME)!!,
+                                info.outputData.getLong(Const.KEY_DATE_DATE, -1),
+                                info.outputData.getString(Const.KEY_DATE_TYPE)!!
+                        )
+                        liveDataNotice.value = "DATE_ITEM"
                     }
-                });
+                })
     }
 
-    public void delete(LifecycleOwner lifecycleOwner) {
+    fun delete(lifecycleOwner: LifecycleOwner?) {
         if (dateItem != null) {
-            UUID id = repository.delete(dateItem);
-
+            val id = repository!!.delete(dateItem!!)
             WorkManager.getInstance(getApplication())
                     .getWorkInfoByIdLiveData(id)
-                    .observe(lifecycleOwner, info -> {
-                        if (info.getState() == WorkInfo.State.SUCCEEDED) {
-                            liveDataNotice.setValue("DELETED");
+                    .observe(lifecycleOwner!!, { info: WorkInfo ->
+                        if (info.state == WorkInfo.State.SUCCEEDED) {
+                            liveDataNotice.value = "DELETED"
                         }
-                    });
+                    })
         }
+    }
+
+    init {
+        repository = getInstance(application)
+        liveDataNotice = MutableLiveData()
+        dateItem = null
     }
 }

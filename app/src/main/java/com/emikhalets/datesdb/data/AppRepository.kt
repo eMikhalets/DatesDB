@@ -1,106 +1,88 @@
-package com.emikhalets.datesdb.data;
+package com.emikhalets.datesdb.data
 
-import android.content.Context;
+import android.content.Context
+import androidx.work.Data
+import androidx.work.OneTimeWorkRequest
+import androidx.work.WorkManager
+import androidx.work.WorkRequest
+import com.emikhalets.datesdb.utils.Const
+import com.emikhalets.datesdb.workers.DeleteWorker
+import com.emikhalets.datesdb.workers.GetDateWorker
+import com.emikhalets.datesdb.workers.InsertWorker
+import com.emikhalets.datesdb.workers.UpdateWorker
+import io.reactivex.Single
+import java.util.*
 
-import androidx.work.Data;
-import androidx.work.OneTimeWorkRequest;
-import androidx.work.WorkManager;
-import androidx.work.WorkRequest;
+class AppRepository private constructor(private val context: Context) {
+    private val datesDao: DatesDao?
+    val allDates: Single<List<DateItem?>?>?
+        get() = datesDao!!.allDates
 
-import com.emikhalets.datesdb.utils.Const;
-import com.emikhalets.datesdb.workers.DeleteWorker;
-import com.emikhalets.datesdb.workers.GetDateWorker;
-import com.emikhalets.datesdb.workers.InsertWorker;
-import com.emikhalets.datesdb.workers.UpdateWorker;
-
-import java.util.List;
-import java.util.UUID;
-
-import io.reactivex.Single;
-
-public class AppRepository {
-
-    private Context context;
-    private DatesDao datesDao;
-    private static AppRepository instance;
-
-    private AppRepository(Context context) {
-        this.context = context;
-        datesDao = AppDatabase.getInstance(context).getDatesDao();
-    }
-
-    public static synchronized AppRepository getInstance(Context context) {
-        if (instance == null) {
-            instance = new AppRepository(context);
-        }
-        return instance;
-    }
-
-    public Single<List<DateItem>> getAllDates() {
-        return datesDao.getAllDates();
-    }
-
-    public UUID getDate(int id) {
-        Data data = new Data.Builder()
+    fun getDate(id: Int): UUID {
+        val data = Data.Builder()
                 .putInt(Const.KEY_DATE_ID, id)
-                .build();
-
-        WorkRequest workRequest = new OneTimeWorkRequest.Builder(GetDateWorker.class)
+                .build()
+        val workRequest: WorkRequest = OneTimeWorkRequest.Builder(GetDateWorker::class.java)
                 .setInputData(data)
-                .build();
-
-        WorkManager.getInstance(context).enqueue(workRequest);
-
-        return workRequest.getId();
+                .build()
+        WorkManager.getInstance(context).enqueue(workRequest)
+        return workRequest.id
     }
 
-    public UUID insert(String name, long date, String type) {
-        Data data = new Data.Builder()
+    fun insert(name: String?, date: Long, type: String?): UUID {
+        val data = Data.Builder()
                 .putString(Const.KEY_DATE_NAME, name)
                 .putLong(Const.KEY_DATE_DATE, date)
                 .putString(Const.KEY_DATE_TYPE, type)
-                .build();
-
-        WorkRequest workRequest = new OneTimeWorkRequest.Builder(InsertWorker.class)
+                .build()
+        val workRequest: WorkRequest = OneTimeWorkRequest.Builder(InsertWorker::class.java)
                 .setInputData(data)
-                .build();
-
-        WorkManager.getInstance(context).enqueue(workRequest);
-
-        return workRequest.getId();
+                .build()
+        WorkManager.getInstance(context).enqueue(workRequest)
+        return workRequest.id
     }
 
-    public UUID update(DateItem dateItem) {
-        Data data = new Data.Builder()
-                .putInt(Const.KEY_DATE_ID, dateItem.getId())
-                .putString(Const.KEY_DATE_NAME, dateItem.getName())
-                .putLong(Const.KEY_DATE_DATE, dateItem.getDate())
-                .putString(Const.KEY_DATE_TYPE, dateItem.getType())
-                .build();
-
-        WorkRequest workRequest = new OneTimeWorkRequest.Builder(UpdateWorker.class)
+    fun update(dateItem: DateItem): UUID {
+        val data = Data.Builder()
+                .putInt(Const.KEY_DATE_ID, dateItem.id)
+                .putString(Const.KEY_DATE_NAME, dateItem.name)
+                .putLong(Const.KEY_DATE_DATE, dateItem.date)
+                .putString(Const.KEY_DATE_TYPE, dateItem.type)
+                .build()
+        val workRequest: WorkRequest = OneTimeWorkRequest.Builder(UpdateWorker::class.java)
                 .setInputData(data)
-                .build();
-
-        WorkManager.getInstance(context).enqueue(workRequest);
-
-        return workRequest.getId();
+                .build()
+        WorkManager.getInstance(context).enqueue(workRequest)
+        return workRequest.id
     }
 
-    public UUID delete(DateItem dateItem) {
-        Data data = new Data.Builder()
-                .putInt(Const.KEY_DATE_ID, dateItem.getId())
-                .putString(Const.KEY_DATE_NAME, dateItem.getName())
-                .putLong(Const.KEY_DATE_DATE, dateItem.getDate())
-                .putString(Const.KEY_DATE_TYPE, dateItem.getType())
-                .build();
-
-        WorkRequest workRequest = new OneTimeWorkRequest.Builder(DeleteWorker.class)
+    fun delete(dateItem: DateItem): UUID {
+        val data = Data.Builder()
+                .putInt(Const.KEY_DATE_ID, dateItem.id)
+                .putString(Const.KEY_DATE_NAME, dateItem.name)
+                .putLong(Const.KEY_DATE_DATE, dateItem.date)
+                .putString(Const.KEY_DATE_TYPE, dateItem.type)
+                .build()
+        val workRequest: WorkRequest = OneTimeWorkRequest.Builder(DeleteWorker::class.java)
                 .setInputData(data)
-                .build();
+                .build()
+        WorkManager.getInstance(context).enqueue(workRequest)
+        return workRequest.id
+    }
 
-        WorkManager.getInstance(context).enqueue(workRequest);
+    companion object {
+        private var instance: AppRepository? = null
+        @JvmStatic
+        @Synchronized
+        fun getInstance(context: Context): AppRepository? {
+            if (instance == null) {
+                instance = AppRepository(context)
+            }
+            return instance
+        }
+    }
 
-        return workRequest.getId();
+    init {
+        datesDao = AppDatabase.getInstance(context)!!.datesDao
     }
 }

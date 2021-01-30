@@ -1,58 +1,47 @@
-package com.emikhalets.datesdb.viewmodels;
+package com.emikhalets.datesdb.viewmodels
 
-import android.app.Application;
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.emikhalets.datesdb.data.AppRepository
+import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
+import com.emikhalets.datesdb.data.DateItem
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.observers.DisposableSingleObserver
+import io.reactivex.schedulers.Schedulers
 
-import androidx.lifecycle.AndroidViewModel;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-
-import com.emikhalets.datesdb.data.AppRepository;
-import com.emikhalets.datesdb.data.DateItem;
-
-import java.util.List;
-
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.observers.DisposableSingleObserver;
-import io.reactivex.schedulers.Schedulers;
-
-public class DatesListViewModel extends AndroidViewModel {
-
-    private AppRepository repository;
-    private MutableLiveData<List<DateItem>> liveDataDates;
-    private MutableLiveData<String> liveDataNotice;
-
-    public DatesListViewModel(Application application) {
-        super(application);
-
-        repository = AppRepository.getInstance(application);
-
-        liveDataDates = new MutableLiveData<>();
-        liveDataNotice = new MutableLiveData<>();
+class DatesListViewModel(application: Application?) : AndroidViewModel(application!!) {
+    private val repository: AppRepository?
+    private val liveDataDates: MutableLiveData<List<DateItem?>>
+    private val liveDataNotice: MutableLiveData<String>
+    fun getLiveDataDates(): LiveData<List<DateItem?>> {
+        return liveDataDates
     }
 
-    public LiveData<List<DateItem>> getLiveDataDates() {
-        return liveDataDates;
+    fun getLiveDataNotice(): LiveData<String> {
+        return liveDataNotice
     }
 
-    public LiveData<String> getLiveDataNotice() {
-        return liveDataNotice;
-    }
-
-    public void getAllDates(LifecycleOwner lifecycleOwner) {
-        repository.getAllDates()
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new DisposableSingleObserver<List<DateItem>>() {
-                    @Override
-                    public void onSuccess(List<DateItem> dateItemList) {
-                        liveDataDates.setValue(dateItemList);
+    fun getAllDates(lifecycleOwner: LifecycleOwner?) {
+        repository!!.allDates
+                ?.subscribeOn(Schedulers.io())
+                ?.observeOn(AndroidSchedulers.mainThread())
+                ?.subscribe(object : DisposableSingleObserver<List<DateItem?>?>() {
+                    override fun onSuccess(dateItemList: List<DateItem?>) {
+                        liveDataDates.value = dateItemList
                     }
 
-                    @Override
-                    public void onError(Throwable e) {
-                        liveDataNotice.setValue(e.toString());
+                    override fun onError(e: Throwable) {
+                        liveDataNotice.value = e.toString()
                     }
-                });
+                })
+    }
+
+    init {
+        repository = getInstance(application!!)
+        liveDataDates = MutableLiveData()
+        liveDataNotice = MutableLiveData()
     }
 }

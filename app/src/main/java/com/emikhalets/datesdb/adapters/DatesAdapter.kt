@@ -1,141 +1,107 @@
-package com.emikhalets.datesdb.adapters;
+package com.emikhalets.datesdb.adapters
 
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import com.emikhalets.datesdb.data.DateItem
+import com.emikhalets.datesdb.databinding.ItemDateBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+class DatesAdapter(onDateItemClickListener: OnDateItemClickListener) : RecyclerView.Adapter<DatesAdapter.ViewHolder>() {
+    private var dates: List<DateItem?>
+    private val onDateItemClickListener: OnDateItemClickListener
 
-import com.emikhalets.datesdb.data.DateItem;
-import com.emikhalets.datesdb.databinding.ItemDateBinding;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-
-public class DatesAdapter extends RecyclerView.Adapter<DatesAdapter.ViewHolder> {
-
-    private List<DateItem> dates;
-    private OnDateItemClickListener onDateItemClickListener;
-
-    public interface OnDateItemClickListener {
-        void onDateItemClick(int id);
+    interface OnDateItemClickListener {
+        fun onDateItemClick(id: Int)
     }
 
-    public DatesAdapter(OnDateItemClickListener onDateItemClickListener) {
-        dates = new ArrayList<>();
-        this.onDateItemClickListener = onDateItemClickListener;
+    fun setDates(dates: List<DateItem?>) {
+        sortingList(dates.toMutableList())
+        this.dates = dates
+        notifyDataSetChanged()
     }
 
-    public void setDates(List<DateItem> dates) {
-        sortingList(dates);
-        this.dates = dates;
-        notifyDataSetChanged();
-    }
-
-    public void sortingList(List<DateItem> dates) {
-        boolean isSorted = false;
-        int counter = 0;
-
+    fun sortingList(dates: MutableList<DateItem?>) {
+        var isSorted = false
+        var counter = 0
         while (!isSorted) {
-            for (int y = 0; y < dates.size() - 1; y++) {
-                Calendar current = Calendar.getInstance();
-                int currentDay = current.get(Calendar.DAY_OF_YEAR);
-
-                Calendar first = Calendar.getInstance();
-                first.setTimeInMillis(dates.get(y).getDate());
-                int firstDay = first.get(Calendar.DAY_OF_YEAR);
-
-                int firstDaysLeft = 0;
-
-                if (currentDay > firstDay) {
-                    firstDaysLeft = 365 + firstDay - currentDay;
+            for (y in 0 until dates.size - 1) {
+                val current = Calendar.getInstance()
+                val currentDay = current[Calendar.DAY_OF_YEAR]
+                val first = Calendar.getInstance()
+                dates[y]?.date.also { first.timeInMillis = it!! }
+                val firstDay = first[Calendar.DAY_OF_YEAR]
+                var firstDaysLeft = 0
+                firstDaysLeft = if (currentDay > firstDay) {
+                    365 + firstDay - currentDay
                 } else {
-                    firstDaysLeft = firstDay - currentDay;
+                    firstDay - currentDay
                 }
-
-                Calendar second = Calendar.getInstance();
-                second.setTimeInMillis(dates.get(y + 1).getDate());
-                int secondDay = second.get(Calendar.DAY_OF_YEAR);
-
-                int secondDaysLeft = 0;
-
-                if (currentDay > secondDay) {
-                    secondDaysLeft = 365 + secondDay - currentDay;
+                val second = Calendar.getInstance()
+                second.timeInMillis = dates[y + 1]?.date!!
+                val secondDay = second[Calendar.DAY_OF_YEAR]
+                var secondDaysLeft = 0
+                secondDaysLeft = if (currentDay > secondDay) {
+                    365 + secondDay - currentDay
                 } else {
-                    secondDaysLeft = secondDay - currentDay;
+                    secondDay - currentDay
                 }
-
                 if (firstDaysLeft > secondDaysLeft) {
-                    counter++;
-                    DateItem temp = dates.get(y);
-                    dates.add(y, dates.get(y + 1));
-                    dates.remove(y + 1);
-                    dates.add(y + 1, temp);
-                    dates.remove(y + 2);
+                    counter++
+                    val temp = dates[y]
+                    dates.add(y, dates[y + 1])
+                    dates.removeAt(y + 1)
+                    dates.add(y + 1, temp)
+                    dates.removeAt(y + 2)
                 }
             }
-
             if (counter > 0) {
-                counter = 0;
+                counter = 0
             } else {
-                isSorted = true;
+                isSorted = true
             }
         }
     }
 
-    @NonNull
-    @Override
-    public DatesAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolder(ItemDateBinding.inflate(
-                LayoutInflater.from(parent.getContext()), parent, false));
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(ItemDateBinding.inflate(
+                LayoutInflater.from(parent.context), parent, false))
     }
 
-    @Override
-    public void onBindViewHolder(@NonNull DatesAdapter.ViewHolder holder, int position) {
-        holder.bind(dates.get(position));
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        dates[position]?.let { holder.bind(it) }
     }
 
-    @Override
-    public int getItemCount() {
-        return dates.size();
+    override fun getItemCount(): Int {
+        return dates.size
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
-
-        private ItemDateBinding binding;
-
-        public ViewHolder(ItemDateBinding binding) {
-            super(binding.getRoot());
-            this.binding = binding;
-        }
-
-        void bind(DateItem dateItem) {
-            Calendar current = Calendar.getInstance();
-            int currentDay = current.get(Calendar.DAY_OF_YEAR);
-
-            Calendar selected = Calendar.getInstance();
-            selected.setTimeInMillis(dateItem.getDate());
-            int selectedDay = selected.get(Calendar.DAY_OF_YEAR);
-
-            int daysLeft = 0;
-
-            if (currentDay > selectedDay) {
-                daysLeft = 365 + selectedDay - currentDay;
+    inner class ViewHolder(private val binding: ItemDateBinding) : RecyclerView.ViewHolder(binding.root) {
+        fun bind(dateItem: DateItem) {
+            val current = Calendar.getInstance()
+            val currentDay = current[Calendar.DAY_OF_YEAR]
+            val selected = Calendar.getInstance()
+            selected.timeInMillis = dateItem.date
+            val selectedDay = selected[Calendar.DAY_OF_YEAR]
+            var daysLeft = 0
+            daysLeft = if (currentDay > selectedDay) {
+                365 + selectedDay - currentDay
             } else {
-                daysLeft = selectedDay - currentDay;
+                selectedDay - currentDay
             }
-
-            SimpleDateFormat dateFormat = new SimpleDateFormat("d LLLL y ', ' EEEE");
-
-            binding.textName.setText(dateItem.getName());
-            binding.textDate.setText(dateFormat.format(dateItem.getDate()));
-            binding.textDaysLeft.setText(String.valueOf(dateItem.getId()));
-            binding.textDaysLeft.setText(String.valueOf(daysLeft));
-
-            binding.getRoot().setOnClickListener(
-                    v -> onDateItemClickListener.onDateItemClick(dateItem.getId()));
+            val dateFormat = SimpleDateFormat("d LLLL y ', ' EEEE")
+            binding.textName.text = dateItem.name
+            binding.textDate.text = dateFormat.format(dateItem.date)
+            binding.textDaysLeft.text = dateItem.id.toString()
+            binding.textDaysLeft.text = daysLeft.toString()
+            binding.root.setOnClickListener { v: View? -> onDateItemClickListener.onDateItemClick(dateItem.id) }
         }
+    }
+
+    init {
+        dates = ArrayList()
+        this.onDateItemClickListener = onDateItemClickListener
     }
 }

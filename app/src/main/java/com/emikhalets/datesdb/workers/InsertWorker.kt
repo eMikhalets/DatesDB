@@ -1,30 +1,20 @@
-package com.emikhalets.datesdb.workers;
+package com.emikhalets.datesdb.workers
 
-import android.content.Context;
+import android.content.Context
+import androidx.work.Worker
+import androidx.work.WorkerParameters
+import com.emikhalets.datesdb.data.AppDatabase.Companion.getInstance
+import com.emikhalets.datesdb.data.DateItem
+import com.emikhalets.datesdb.utils.Const
 
-import androidx.annotation.NonNull;
-import androidx.work.Worker;
-import androidx.work.WorkerParameters;
-
-import com.emikhalets.datesdb.data.AppDatabase;
-import com.emikhalets.datesdb.data.DateItem;
-import com.emikhalets.datesdb.utils.Const;
-
-public class InsertWorker extends Worker {
-
-    public InsertWorker(@NonNull Context context,
-                        @NonNull WorkerParameters workerParams) {
-        super(context, workerParams);
-    }
-
-    @NonNull
-    @Override
-    public Result doWork() {
-        DateItem dateItem = new DateItem(
-                getInputData().getString(Const.KEY_DATE_NAME),
-                getInputData().getLong(Const.KEY_DATE_DATE, -1),
-                getInputData().getString(Const.KEY_DATE_TYPE));
-        AppDatabase.getInstance(getApplicationContext()).getDatesDao().insert(dateItem);
-        return Result.success();
+class InsertWorker(context: Context,
+                   workerParams: WorkerParameters) : Worker(context, workerParams) {
+    override fun doWork(): Result {
+        val dateItem = DateItem(
+                inputData.getString(Const.KEY_DATE_NAME)!!,
+                inputData.getLong(Const.KEY_DATE_DATE, -1),
+                inputData.getString(Const.KEY_DATE_TYPE)!!)
+        getInstance(applicationContext)!!.datesDao!!.insert(dateItem)
+        return Result.success()
     }
 }

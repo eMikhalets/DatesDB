@@ -1,27 +1,22 @@
-package com.emikhalets.datesdb;
+package com.emikhalets.datesdb
 
-import android.os.Bundle;
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import com.emikhalets.datesdb.databinding.ActivityDateEditBinding
+import com.emikhalets.datesdb.viewmodels.DateEditViewModel
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
-
-import com.emikhalets.datesdb.databinding.ActivityDateEditBinding;
-import com.emikhalets.datesdb.viewmodels.DateEditViewModel;
-
-public class DateEditActivity extends AppCompatActivity {
-
-    private ActivityDateEditBinding binding;
-    private DateEditViewModel viewModel;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = ActivityDateEditBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        init();
+class DateEditActivity : AppCompatActivity() {
+    private var binding: ActivityDateEditBinding? = null
+    private var viewModel: DateEditViewModel? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityDateEditBinding.inflate(layoutInflater)
+        setContentView(binding!!.root)
+        init()
     }
 
-    private void init() {
-        viewModel = new ViewModelProvider(this).get(DateEditViewModel.class);
+    private fun init() {
+        viewModel = ViewModelProvider(this).get(DateEditViewModel::class.java)
     }
 }

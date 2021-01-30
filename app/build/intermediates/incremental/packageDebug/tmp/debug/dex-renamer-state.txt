@@ -1,7 +1,7 @@
-#Fri Jun 12 12:55:56 MSK 2020
-base.1=D\:\\Android\\DatesDB\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+#Sun Jan 31 01:57:51 MSK 2021
+base.1=D\:\\Android\\0_PetApps\\DatesDB\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
 path.1=classes.dex
-base.0=D\:\\Android\\DatesDB\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+base.0=D\:\\Android\\0_PetApps\\DatesDB\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 path.0=classes.dex

@@ -1,26 +1,28 @@
-package com.emikhalets.datesdb.data;
+package com.emikhalets.datesdb.data
 
-import android.content.Context;
+import android.content.Context
+import androidx.room.Database
+import androidx.room.Room
+import androidx.room.RoomDatabase
+import com.emikhalets.datesdb.data.DateItem
 
-import androidx.room.Database;
-import androidx.room.Room;
-import androidx.room.RoomDatabase;
+@Database(entities = [DateItem::class], version = 1, exportSchema = false)
+abstract class AppDatabase : RoomDatabase() {
+    abstract val datesDao: DatesDao?
 
-@Database(entities = {DateItem.class}, version = 1, exportSchema = false)
-public abstract class AppDatabase extends RoomDatabase {
-
-    public abstract DatesDao getDatesDao();
-
-    private static AppDatabase database;
-
-    public static synchronized AppDatabase getInstance(Context context) {
-        if (database == null) {
-            database = Room.databaseBuilder(
-                    context.getApplicationContext(),
-                    AppDatabase.class,
-                    "dates_database")
-                    .build();
+    companion object {
+        private var database: AppDatabase? = null
+        @JvmStatic
+        @Synchronized
+        fun getInstance(context: Context): AppDatabase? {
+            if (database == null) {
+                database = Room.databaseBuilder(
+                        context.applicationContext,
+                        AppDatabase::class.java,
+                        "dates_database")
+                        .build()
+            }
+            return database
         }
-        return database;
     }
 }
