@@ -6,21 +6,21 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.work.WorkInfo;
-import androidx.work.WorkManager;
 
 import com.emikhalets.datesdb.data.AppRepository;
 import com.emikhalets.datesdb.data.DateItem;
-import com.emikhalets.datesdb.utils.Const;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
+
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.observers.DisposableSingleObserver;
+import io.reactivex.schedulers.Schedulers;
 
 public class DatesListViewModel extends AndroidViewModel {
 
     private AppRepository repository;
     private MutableLiveData<List<DateItem>> liveDataDates;
+    private MutableLiveData<String> liveDataNotice;
 
     public DatesListViewModel(Application application) {
         super(application);
@@ -28,31 +28,30 @@ public class DatesListViewModel extends AndroidViewModel {
         repository = AppRepository.getInstance(application);
 
         liveDataDates = new MutableLiveData<>();
+        liveDataNotice = new MutableLiveData<>();
     }
 
     public LiveData<List<DateItem>> getLiveDataDates() {
         return liveDataDates;
     }
 
+    public LiveData<String> getLiveDataNotice() {
+        return liveDataNotice;
+    }
+
     public void getAllDates(LifecycleOwner lifecycleOwner) {
-        UUID id = repository.getAllDates();
+        repository.getAllDates()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new DisposableSingleObserver<List<DateItem>>() {
+                    @Override
+                    public void onSuccess(List<DateItem> dateItemList) {
+                        liveDataDates.setValue(dateItemList);
+                    }
 
-        WorkManager.getInstance(getApplication()).getWorkInfoByIdLiveData(id)
-                .observe(lifecycleOwner, info -> {
-                    if (info.getState() == WorkInfo.State.SUCCEEDED) {
-                        List<DateItem> datesList = new ArrayList<>();
-
-                        int[] ids = info.getOutputData().getIntArray(Const.KEY_DATE_ID);
-                        String[] names = info.getOutputData().getStringArray(Const.KEY_DATE_NAME);
-                        long[] dates = info.getOutputData().getLongArray(Const.KEY_DATE_DATE);
-                        String[] types = info.getOutputData().getStringArray(Const.KEY_DATE_TYPE);
-
-                        for (int i = 0; i < ids.length; i++) {
-                            DateItem dateItem = new DateItem(ids[i], names[i], dates[i], types[i]);
-                            datesList.add(dateItem);
-                        }
-
-                        liveDataDates.setValue(datesList);
+                    @Override
+                    public void onError(Throwable e) {
+                        liveDataNotice.setValue(e.toString());
                     }
                 });
     }

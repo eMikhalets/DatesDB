@@ -1,18 +1,23 @@
 package com.emikhalets.datesdb.data;
 
 import android.database.Cursor;
+import androidx.room.EmptyResultSetException;
 import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.room.RoomSQLiteQuery;
+import androidx.room.RxRoom;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
+import io.reactivex.Single;
+import java.lang.Exception;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class DatesDao_Impl implements DatesDao {
@@ -156,35 +161,46 @@ public final class DatesDao_Impl implements DatesDao {
   }
 
   @Override
-  public List<DateItem> getAllDates() {
+  public Single<List<DateItem>> getAllDates() {
     final String _sql = "SELECT * FROM dates_table";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
-      final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
-      final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
-      final int _cursorIndexOfType = CursorUtil.getColumnIndexOrThrow(_cursor, "type");
-      final List<DateItem> _result = new ArrayList<DateItem>(_cursor.getCount());
-      while(_cursor.moveToNext()) {
-        final DateItem _item;
-        final String _tmpName;
-        _tmpName = _cursor.getString(_cursorIndexOfName);
-        final long _tmpDate;
-        _tmpDate = _cursor.getLong(_cursorIndexOfDate);
-        final String _tmpType;
-        _tmpType = _cursor.getString(_cursorIndexOfType);
-        _item = new DateItem(_tmpName,_tmpDate,_tmpType);
-        final int _tmpId;
-        _tmpId = _cursor.getInt(_cursorIndexOfId);
-        _item.setId(_tmpId);
-        _result.add(_item);
+    return RxRoom.createSingle(new Callable<List<DateItem>>() {
+      @Override
+      public List<DateItem> call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfName = CursorUtil.getColumnIndexOrThrow(_cursor, "name");
+          final int _cursorIndexOfDate = CursorUtil.getColumnIndexOrThrow(_cursor, "date");
+          final int _cursorIndexOfType = CursorUtil.getColumnIndexOrThrow(_cursor, "type");
+          final List<DateItem> _result = new ArrayList<DateItem>(_cursor.getCount());
+          while(_cursor.moveToNext()) {
+            final DateItem _item;
+            final String _tmpName;
+            _tmpName = _cursor.getString(_cursorIndexOfName);
+            final long _tmpDate;
+            _tmpDate = _cursor.getLong(_cursorIndexOfDate);
+            final String _tmpType;
+            _tmpType = _cursor.getString(_cursorIndexOfType);
+            _item = new DateItem(_tmpName,_tmpDate,_tmpType);
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            _item.setId(_tmpId);
+            _result.add(_item);
+          }
+          if(_result == null) {
+            throw new EmptyResultSetException("Query returned empty result set: " + _statement.getSql());
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+        }
       }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
+
+      @Override
+      protected void finalize() {
+        _statement.release();
+      }
+    });
   }
 }

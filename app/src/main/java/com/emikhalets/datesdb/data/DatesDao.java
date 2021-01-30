@@ -8,21 +8,24 @@ import androidx.room.Update;
 
 import java.util.List;
 
+import io.reactivex.Completable;
+import io.reactivex.Single;
+
 @Dao
 public interface DatesDao {
 
 	@Insert
-	public void insert(DateItem date);
+	void insert(DateItem date);
 
 	@Update
-	public void update(DateItem date);
+	void update(DateItem date);
 
 	@Delete
-	public void delete(DateItem date);
+	void delete(DateItem date);
 
 	@Query("SELECT * FROM dates_table WHERE id = :id")
-	public DateItem getDate(int id);
+	DateItem getDate(int id);
 
 	@Query("SELECT * FROM dates_table")
-	public List<DateItem> getAllDates();
+	Single<List<DateItem>> getAllDates();
 }

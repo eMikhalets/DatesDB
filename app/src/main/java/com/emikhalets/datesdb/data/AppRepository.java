@@ -9,20 +9,24 @@ import androidx.work.WorkRequest;
 
 import com.emikhalets.datesdb.utils.Const;
 import com.emikhalets.datesdb.workers.DeleteWorker;
-import com.emikhalets.datesdb.workers.GetAllDatesWorker;
 import com.emikhalets.datesdb.workers.GetDateWorker;
 import com.emikhalets.datesdb.workers.InsertWorker;
 import com.emikhalets.datesdb.workers.UpdateWorker;
 
+import java.util.List;
 import java.util.UUID;
+
+import io.reactivex.Single;
 
 public class AppRepository {
 
     private Context context;
+    private DatesDao datesDao;
     private static AppRepository instance;
 
     private AppRepository(Context context) {
         this.context = context;
+        datesDao = AppDatabase.getInstance(context).getDatesDao();
     }
 
     public static synchronized AppRepository getInstance(Context context) {
@@ -32,13 +36,8 @@ public class AppRepository {
         return instance;
     }
 
-    public UUID getAllDates() {
-        WorkRequest workRequest = new OneTimeWorkRequest.Builder(GetAllDatesWorker.class)
-                .build();
-
-        WorkManager.getInstance(context).enqueue(workRequest);
-
-        return workRequest.getId();
+    public Single<List<DateItem>> getAllDates() {
+        return datesDao.getAllDates();
     }
 
     public UUID getDate(int id) {

@@ -12,8 +12,10 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Evgeny\.gradle\ca
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\67a1a91a194816360ad658850a0f41ad\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\ff3a4c12aa884e18fd3a3b59babd9e8d\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\627b13dc67d475ae6ef1ae031ba1efa1\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.room:room-rxjava2:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\669a4ddff6b6b8dbc59c5764a3c7f2cf\room-rxjava2-2.2.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.work:work-runtime:2.3.4] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\5bab58e1da6781f5142b9be3d485430b\work-runtime-2.3.4\AndroidManifest.xml:17:1-132:12
 MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\2a455ee52402aa8c834554ab7aa21e9a\room-runtime-2.2.5\AndroidManifest.xml:17:1-31:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\277f997ae8f5d91778840892fe7af6ca\jetified-rxandroid-2.0.1\AndroidManifest.xml:15:1-21:12
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\23d4e4c915970f04c822da67ae0813d7\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\e9e65120788981571bbeceb22136d7de\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\f7ae7daeeec1a0b4806427276c3466c1\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -145,10 +147,14 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Evgeny\.gradle\c
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\ff3a4c12aa884e18fd3a3b59babd9e8d\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\627b13dc67d475ae6ef1ae031ba1efa1\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\627b13dc67d475ae6ef1ae031ba1efa1\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-rxjava2:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\669a4ddff6b6b8dbc59c5764a3c7f2cf\room-rxjava2-2.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-rxjava2:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\669a4ddff6b6b8dbc59c5764a3c7f2cf\room-rxjava2-2.2.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.work:work-runtime:2.3.4] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\5bab58e1da6781f5142b9be3d485430b\work-runtime-2.3.4\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.work:work-runtime:2.3.4] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\5bab58e1da6781f5142b9be3d485430b\work-runtime-2.3.4\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\2a455ee52402aa8c834554ab7aa21e9a\room-runtime-2.2.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.5] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\2a455ee52402aa8c834554ab7aa21e9a\room-runtime-2.2.5\AndroidManifest.xml:20:5-22:41
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\277f997ae8f5d91778840892fe7af6ca\jetified-rxandroid-2.0.1\AndroidManifest.xml:19:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\277f997ae8f5d91778840892fe7af6ca\jetified-rxandroid-2.0.1\AndroidManifest.xml:19:5-43
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\23d4e4c915970f04c822da67ae0813d7\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.1.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\23d4e4c915970f04c822da67ae0813d7\jetified-appcompat-resources-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Evgeny\.gradle\caches\transforms-2\files-2.1\e9e65120788981571bbeceb22136d7de\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
