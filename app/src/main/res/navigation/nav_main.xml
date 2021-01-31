@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/fragmentDatesList">
+
+    <fragment
+        android:id="@+id/fragmentDatesList"
+        android:name="com.emikhalets.datesdb.ui.list.DatesListFragment"
+        android:label="FragmentDatesList"
+        tools:layout="@layout/fragment_dates_list">
+        <action
+            android:id="@+id/action_fragmentDatesList_to_fragmentDateAdd"
+            app:destination="@id/fragmentDateAdd" />
+        <action
+            android:id="@+id/action_fragmentDatesList_to_fragmentDateItem"
+            app:destination="@id/fragmentDateItem" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentDateAdd"
+        android:name="com.emikhalets.datesdb.ui.add.DateAddFragment"
+        android:label="FragmentDateAdd"
+        tools:layout="@layout/fragment_date_add" />
+
+    <fragment
+        android:id="@+id/fragmentDateItem"
+        android:name="com.emikhalets.datesdb.ui.item.DateItemFragment"
+        android:label="FragmentDateItem"
+        tools:layout="@layout/fragment_date_item">
+        <argument
+            android:name="id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_fragmentDateItem_to_fragmentDateEdit"
+            app:destination="@id/fragmentDateEdit" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentDateEdit"
+        android:name="com.emikhalets.datesdb.ui.edit.DateEditFragment"
+        android:label="FragmentDateEdit"
+        tools:layout="@layout/fragment_date_edit">
+        <argument
+            android:name="id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+</navigation>

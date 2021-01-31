@@ -25,7 +25,7 @@
         <activity android:name="com.emikhalets.datesdb.DateAddActivity" />
         <activity android:name="com.emikhalets.datesdb.DateItemActivity" />
         <activity android:name="com.emikhalets.datesdb.DateEditActivity" />
-        <activity android:name="com.emikhalets.datesdb.DatesListActivity" >
+        <activity android:name="com.emikhalets.datesdb.ui.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
