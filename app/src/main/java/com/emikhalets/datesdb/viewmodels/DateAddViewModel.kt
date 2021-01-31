@@ -7,7 +7,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.work.WorkInfo
 import androidx.work.WorkManager
-import com.emikhalets.datesdb.data.AppRepository
 import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
 
 class DateAddViewModel(application: Application?) : AndroidViewModel(application!!) {

@@ -5,7 +5,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.emikhalets.datesdb.data.AppRepository
 import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
 import com.emikhalets.datesdb.data.database.DateItem
 import io.reactivex.android.schedulers.AndroidSchedulers
