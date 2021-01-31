@@ -1,22 +1,23 @@
-package com.emikhalets.datesdb.data
+package com.emikhalets.datesdb.data.database
 
 import androidx.room.*
 import io.reactivex.Single
 
 @Dao
 interface DatesDao {
+
     @Insert
-    fun insert(date: DateItem?)
+    fun insert(date: DateItem)
 
     @Update
-    fun update(date: DateItem?)
+    fun update(date: DateItem)
 
     @Delete
-    fun delete(date: DateItem?)
+    fun delete(date: DateItem)
 
     @Query("SELECT * FROM dates_table WHERE id = :id")
-    fun getDate(id: Int): DateItem?
+    fun getDate(id: Int): DateItem
 
     @get:Query("SELECT * FROM dates_table")
-    val allDates: Single<List<DateItem?>?>?
+    val getAllDates: Single<List<DateItem>>
 }

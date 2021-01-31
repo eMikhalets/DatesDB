@@ -3,8 +3,8 @@ package com.emikhalets.datesdb.workers
 import android.content.Context
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.emikhalets.datesdb.data.AppDatabase.Companion.getInstance
-import com.emikhalets.datesdb.data.DateItem
+import com.emikhalets.datesdb.data.database.AppDatabase.Companion.getInstance
+import com.emikhalets.datesdb.data.database.DateItem
 import com.emikhalets.datesdb.utils.Const
 
 class DeleteWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {

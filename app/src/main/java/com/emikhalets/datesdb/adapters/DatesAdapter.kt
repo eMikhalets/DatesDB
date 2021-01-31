@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.emikhalets.datesdb.data.DateItem
+import com.emikhalets.datesdb.data.database.DateItem
 import com.emikhalets.datesdb.databinding.ItemDateBinding
 import java.text.SimpleDateFormat
 import java.util.*

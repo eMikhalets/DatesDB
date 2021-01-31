@@ -10,7 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.emikhalets.datesdb.adapters.DatesAdapter
 import com.emikhalets.datesdb.adapters.DatesAdapter.OnDateItemClickListener
-import com.emikhalets.datesdb.data.DateItem
+import com.emikhalets.datesdb.data.database.DateItem
 import com.emikhalets.datesdb.databinding.ActivityDatesListBinding
 import com.emikhalets.datesdb.utils.Const
 import com.emikhalets.datesdb.viewmodels.DatesListViewModel
@@ -32,7 +32,7 @@ class DatesListActivity : AppCompatActivity(), OnDateItemClickListener {
         adapter = DatesAdapter(this)
         binding!!.recyclerDates.layoutManager = LinearLayoutManager(this)
         binding!!.recyclerDates.adapter = adapter
-        binding!!.fabAddDate.setOnClickListener { v: View? -> onAddDateClick() }
+        binding!!.fabAddDate.setOnClickListener { onAddDateClick() }
     }
 
     override fun onResume() {

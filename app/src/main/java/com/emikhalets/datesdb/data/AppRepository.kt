@@ -5,6 +5,9 @@ import androidx.work.Data
 import androidx.work.OneTimeWorkRequest
 import androidx.work.WorkManager
 import androidx.work.WorkRequest
+import com.emikhalets.datesdb.data.database.AppDatabase
+import com.emikhalets.datesdb.data.database.DateItem
+import com.emikhalets.datesdb.data.database.DatesDao
 import com.emikhalets.datesdb.utils.Const
 import com.emikhalets.datesdb.workers.DeleteWorker
 import com.emikhalets.datesdb.workers.GetDateWorker
@@ -16,7 +19,7 @@ import java.util.*
 class AppRepository private constructor(private val context: Context) {
     private val datesDao: DatesDao?
     val allDates: Single<List<DateItem?>?>?
-        get() = datesDao!!.allDates
+        get() = datesDao!!.getAllDates
 
     fun getDate(id: Int): UUID {
         val data = Data.Builder()

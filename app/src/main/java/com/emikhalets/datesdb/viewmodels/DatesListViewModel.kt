@@ -7,7 +7,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.emikhalets.datesdb.data.AppRepository
 import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
-import com.emikhalets.datesdb.data.DateItem
+import com.emikhalets.datesdb.data.database.DateItem
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableSingleObserver
 import io.reactivex.schedulers.Schedulers

@@ -4,7 +4,7 @@ package com.emikhalets.datesdb.workers
 import androidx.work.Data
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.emikhalets.datesdb.data.AppDatabase.Companion.getInstance
+import com.emikhalets.datesdb.data.database.AppDatabase.Companion.getInstance
 import com.emikhalets.datesdb.utils.Const
 
 class GetDateWorker(context: Context, workerParams: WorkerParameters) : Worker(context, workerParams) {

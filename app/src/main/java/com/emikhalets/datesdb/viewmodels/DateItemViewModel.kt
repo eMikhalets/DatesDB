@@ -9,7 +9,7 @@ import androidx.work.WorkInfo
 import androidx.work.WorkManager
 import com.emikhalets.datesdb.data.AppRepository
 import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
-import com.emikhalets.datesdb.data.DateItem
+import com.emikhalets.datesdb.data.database.DateItem
 import com.emikhalets.datesdb.utils.Const
 
 class DateItemViewModel(application: Application) : AndroidViewModel(application) {
