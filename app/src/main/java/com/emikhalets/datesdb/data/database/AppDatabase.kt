@@ -16,7 +16,9 @@ abstract class AppDatabase : RoomDatabase() {
         @Volatile
         var instance: AppDatabase? = null
 
-        fun get(context: Context) = instance ?: synchronized(this) {
+        fun get() = instance!!
+
+        fun create(context: Context) = instance ?: synchronized(this) {
             instance ?: buildDatabase(context).also { instance = it }
         }
 

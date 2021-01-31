@@ -1,34 +1,32 @@
 package com.emikhalets.datesdb.viewmodels
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.work.WorkInfo
-import androidx.work.WorkManager
-import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.emikhalets.datesdb.data.database.AppDatabase
+import com.emikhalets.datesdb.data.database.DateItem
+import com.emikhalets.datesdb.data.database.DbResult
+import com.emikhalets.datesdb.data.repository.DateAddRepository
+import kotlinx.coroutines.launch
 
-class DateAddViewModel(application: Application?) : AndroidViewModel(application!!) {
-    private val repository: AppRepository?
-    private val liveDataNotice: MutableLiveData<String>
-    fun getLiveDataNotice(): LiveData<String> {
-        return liveDataNotice
-    }
+class DateAddViewModel : ViewModel() {
 
-    fun insert(lifecycleOwner: LifecycleOwner?, name: String?, date: Long, type: String?) {
-        val id = repository!!.insert(name, date, type)
-        WorkManager.getInstance(getApplication())
-                .getWorkInfoByIdLiveData(id)
-                .observe(lifecycleOwner!!, { info: WorkInfo ->
-                    if (info.state == WorkInfo.State.SUCCEEDED) {
-                        liveDataNotice.value = "OK"
-                    }
-                })
-    }
+    private val repository = DateAddRepository(AppDatabase.get().datesDao)
 
-    init {
-        repository = getInstance(application!!)
-        liveDataNotice = MutableLiveData()
+    private val _adding = MutableLiveData<Long>()
+    val adding get(): LiveData<Long> = _adding
+
+    private val _notice = MutableLiveData<String>()
+    val notice get(): LiveData<String> = _notice
+
+    fun insert(name: String, date: Long, type: String) {
+        viewModelScope.launch {
+            val dateItem = DateItem(name, date, type)
+            when (val result = repository.insert(dateItem)) {
+                is DbResult.Success -> _adding.postValue(result.result)
+                is DbResult.Error -> _notice.postValue(result.msg)
+            }
+        }
     }
 }

@@ -7,6 +7,6 @@ class DatesApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        AppDatabase.get(this)
+        AppDatabase.create(this)
     }
 }

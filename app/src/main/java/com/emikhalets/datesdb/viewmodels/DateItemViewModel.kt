@@ -1,57 +1,43 @@
 package com.emikhalets.datesdb.viewmodels
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.work.WorkInfo
-import androidx.work.WorkManager
-import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.emikhalets.datesdb.data.database.AppDatabase
 import com.emikhalets.datesdb.data.database.DateItem
-import com.emikhalets.datesdb.utils.Const
+import com.emikhalets.datesdb.data.database.DbResult
+import com.emikhalets.datesdb.data.repository.DateItemRepository
+import kotlinx.coroutines.launch
 
-class DateItemViewModel(application: Application) : AndroidViewModel(application) {
-    private val repository: AppRepository?
-    private val liveDataNotice: MutableLiveData<String>
-    var dateItem: DateItem?
-    fun getLiveDataNotice(): LiveData<String> {
-        return liveDataNotice
-    }
+class DateItemViewModel : ViewModel() {
 
-    fun getDate(lifecycleOwner: LifecycleOwner?, dateId: Int) {
-        val id = repository!!.getDate(dateId)
-        WorkManager.getInstance(getApplication())
-                .getWorkInfoByIdLiveData(id)
-                .observe(lifecycleOwner!!, { info: WorkInfo ->
-                    if (info.state == WorkInfo.State.SUCCEEDED) {
-                        dateItem = DateItem(
-                                info.outputData.getInt(Const.KEY_DATE_ID, -1),
-                                info.outputData.getString(Const.KEY_DATE_NAME)!!,
-                                info.outputData.getLong(Const.KEY_DATE_DATE, -1),
-                                info.outputData.getString(Const.KEY_DATE_TYPE)!!
-                        )
-                        liveDataNotice.value = "DATE_ITEM"
-                    }
-                })
-    }
+    private val repository = DateItemRepository(AppDatabase.get().datesDao)
 
-    fun delete(lifecycleOwner: LifecycleOwner?) {
-        if (dateItem != null) {
-            val id = repository!!.delete(dateItem!!)
-            WorkManager.getInstance(getApplication())
-                    .getWorkInfoByIdLiveData(id)
-                    .observe(lifecycleOwner!!, { info: WorkInfo ->
-                        if (info.state == WorkInfo.State.SUCCEEDED) {
-                            liveDataNotice.value = "DELETED"
-                        }
-                    })
+    private val _date = MutableLiveData<DateItem>()
+    val date get(): LiveData<DateItem> = _date
+
+    private val _deleting = MutableLiveData<Int>()
+    val deleting get(): LiveData<Int> = _deleting
+
+    private val _notice = MutableLiveData<String>()
+    val notice get(): LiveData<String> = _notice
+
+    fun getDate(id: Int) {
+        viewModelScope.launch {
+            when (val result = repository.getDate(id)) {
+                is DbResult.Success -> _date.postValue(result.result)
+                is DbResult.Error -> _notice.postValue(result.msg)
+            }
         }
     }
 
-    init {
-        repository = getInstance(application)
-        liveDataNotice = MutableLiveData()
-        dateItem = null
+    fun delete(dateItem: DateItem) {
+        viewModelScope.launch {
+            when (val result = repository.delete(dateItem)) {
+                is DbResult.Success -> _deleting.postValue(result.result)
+                is DbResult.Error -> _notice.postValue(result.msg)
+            }
+        }
     }
 }

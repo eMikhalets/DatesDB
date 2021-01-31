@@ -1,46 +1,31 @@
 package com.emikhalets.datesdb.viewmodels
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.emikhalets.datesdb.data.AppRepository.Companion.getInstance
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.emikhalets.datesdb.data.database.AppDatabase
 import com.emikhalets.datesdb.data.database.DateItem
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.observers.DisposableSingleObserver
-import io.reactivex.schedulers.Schedulers
+import com.emikhalets.datesdb.data.database.DbResult
+import com.emikhalets.datesdb.data.repository.DatesListRepository
+import kotlinx.coroutines.launch
 
-class DatesListViewModel(application: Application?) : AndroidViewModel(application!!) {
-    private val repository: AppRepository?
-    private val liveDataDates: MutableLiveData<List<DateItem?>>
-    private val liveDataNotice: MutableLiveData<String>
-    fun getLiveDataDates(): LiveData<List<DateItem?>> {
-        return liveDataDates
-    }
+class DatesListViewModel : ViewModel() {
 
-    fun getLiveDataNotice(): LiveData<String> {
-        return liveDataNotice
-    }
+    private val repository = DatesListRepository(AppDatabase.get().datesDao)
 
-    fun getAllDates(lifecycleOwner: LifecycleOwner?) {
-        repository!!.allDates
-                ?.subscribeOn(Schedulers.io())
-                ?.observeOn(AndroidSchedulers.mainThread())
-                ?.subscribe(object : DisposableSingleObserver<List<DateItem?>?>() {
-                    override fun onSuccess(dateItemList: List<DateItem?>) {
-                        liveDataDates.value = dateItemList
-                    }
+    private val _dates = MutableLiveData<List<DateItem>>()
+    val dates get(): LiveData<List<DateItem>> = _dates
 
-                    override fun onError(e: Throwable) {
-                        liveDataNotice.value = e.toString()
-                    }
-                })
-    }
+    private val _notice = MutableLiveData<String>()
+    val notice get(): LiveData<String> = _notice
 
-    init {
-        repository = getInstance(application!!)
-        liveDataDates = MutableLiveData()
-        liveDataNotice = MutableLiveData()
+    fun getAllDates() {
+        viewModelScope.launch {
+            when (val result = repository.getAllDates()) {
+                is DbResult.Success -> _dates.postValue(result.result)
+                is DbResult.Error -> _notice.postValue(result.msg)
+            }
+        }
     }
 }
