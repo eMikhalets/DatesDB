@@ -1,10 +1,12 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
+ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
 MERGED from [androidx.databinding:viewbinding:4.1.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\fd43a52b1daf24dc6a761f91d8e32d96\jetified-viewbinding-4.1.2\AndroidManifest.xml:17:1-22:12
+MERGED from [io.coil-kt:coil:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\313fcfe0d786ee6f75a0ff4846c62669\jetified-coil-1.1.1\AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt:coil-base:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\16a2e345bccbf2cd90d8ad0d6157d0f0\jetified-coil-base-1.1.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\52fc98abc6927cc71edb994c3ecbf6ff\navigation-fragment-ktx-2.3.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment-ktx:1.2.5] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\81187b2c2e976e7edb265a04ce73ac54\jetified-fragment-ktx-1.2.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-ui-ktx:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\9e4c7230194fce07e87c4afe5b336a75\navigation-ui-ktx-2.3.3\AndroidManifest.xml:17:1-24:12
@@ -15,20 +17,14 @@ MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\vorgo\.gradle\caches\transfo
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\f60ca59cc9d3b1feaa5180af3ad54339\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\04b26a196e16e588f3b82c9e2c269ffe\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\96bc8c709694c901d632978d40d01d81\jetified-room-ktx-2.2.6\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\abb3d3b69dcc301e486a20c1dac63c72\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\6de162e953ad6aa90b884a3354b216c4\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\abb3d3b69dcc301e486a20c1dac63c72\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\39d331fb0ba5561f0370df50047f51d5\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.navigation:navigation-ui:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\6a1de2bb5d1eb8ce1e98cd8e6a019f22\navigation-ui-2.3.3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a26a693b4781e754159b04f0cda5f91a\material-1.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\7696c92fdc03b5cfe77556d3296fff77\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\aedda4c2f1bc5b911d6a55f6d4486307\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\9cdfe8acfe42a193e9ed64658a26c6f7\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\412b5de8c89c57b4968f3e1bced65184\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.room:room-rxjava2:2.2.5] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\80d2976cf24634817f1dd846fe67338b\room-rxjava2-2.2.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:17:1-132:12
 MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:17:1-31:12
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\65cd3c50529857c562bfc16527d8afa9\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ce1b944e050e5832e4486ff030cab3b3\jetified-rxandroid-2.0.1\AndroidManifest.xml:15:1-21:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\5fbde37b5bc427994475fbefe6f64f33\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\be0a621e0dacb39db9fc6868bce40dbb\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\04c94fa1de3fef4f692d98fd07095595\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -36,6 +32,7 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vorgo\.gr
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e321fb57001799d17ab6bdd939385fd6\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e4aaf5f3b0e440335978a5798ba8a795\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\85e757463d500cb7d5c6704949b98b17\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\9cdfe8acfe42a193e9ed64658a26c6f7\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\0a7b86d9e93f2a8f3c6573bd53de2a1e\navigation-fragment-2.3.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.2.5] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\4e7b329467e904f20e356b97b43a5655\fragment-1.2.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.loader:loader:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\c21e289de9dd9e60dd3409dfed0541ae\loader-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -43,6 +40,7 @@ MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vorgo\.gradle\caches\t
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ddbf4361c5c1d6ee746a4e3faecfe711\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\3db8c21bc931c442d256f0eea9e148ae\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\d05d265f93f602dbe418405b19747d07\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\412b5de8c89c57b4968f3e1bced65184\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\084d9015d191cabdae7dbcb605daf4fd\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\11998129e8c1d30c7644e14cea9295c3\customview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\bc3e85bb5aa40500165db3bdf2eeb2e9\transition-1.3.0\AndroidManifest.xml:17:1-24:12
@@ -54,102 +52,91 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vorgo\.gradle\
 MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\7bde0ede67271eb785711c23bd47de45\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\92e831e8bc9ad7e76608441a3b634771\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\692594acbbcfe60885e743fb233d00b8\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:17:1-32:12
-MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a8e8d3967dc65cafc0185f850b30e45f\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\8037f67aa64e3a068d2137b404802cc8\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e1bf7773dd49f4c81ad6b6bbf8146947\lifecycle-livedata-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ba58dcf868eb41c4013f996a4acb362e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\db6184c6986195df76f08b06832e57aa\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\2086019fa23991a79bfc857b32b6530e\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ef5b784bff27e534615aa493b3322dae\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\027d20833bc494ed71552a5a44bb7509\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e93208d49c61678ddfa710ea15c5c0d6\sqlite-framework-2.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\981a387265bf60e9fdcd8b03cc323b3b\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\d2d08c6329559dba8cbc8a31124d780a\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\80ca971bf2785a91aaee85a023377804\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\58ab35fee5a84a086cb0787ae6e5c96b\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\28720480b60cf53de75e7645acf743eb\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ee665b6d1e0d84e994a2d91dcf409c13\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e1bf7773dd49f4c81ad6b6bbf8146947\lifecycle-livedata-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ba58dcf868eb41c4013f996a4acb362e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\db6184c6986195df76f08b06832e57aa\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\8037f67aa64e3a068d2137b404802cc8\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\2086019fa23991a79bfc857b32b6530e\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ac8526a730f9d4d88b3a49e067447ed7\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\48b9808fa4de17c9ad34ec08a4b536b8\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
-INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
+INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
+INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
 	package
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:3:5-37
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:4:5-37
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-24:12
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:5:5-22:19
+ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:6:5-21:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\39d331fb0ba5561f0370df50047f51d5\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\39d331fb0ba5561f0370df50047f51d5\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a26a693b4781e754159b04f0cda5f91a\material-1.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a26a693b4781e754159b04f0cda5f91a\material-1.2.1\AndroidManifest.xml:22:5-20
-MERGED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:30:5-130:19
-MERGED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:30:5-130:19
 MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:24:5-29:19
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\65cd3c50529857c562bfc16527d8afa9\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\65cd3c50529857c562bfc16527d8afa9\lifecycle-extensions-2.2.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\6851b80951574c5ae4d7f96ef2852d55\core-1.3.2\AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\6851b80951574c5ae4d7f96ef2852d55\core-1.3.2\AndroidManifest.xml:24:5-89
-MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\d2d08c6329559dba8cbc8a31124d780a\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\d2d08c6329559dba8cbc8a31124d780a\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\6851b80951574c5ae4d7f96ef2852d55\core-1.3.2\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:8:9-41
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:9:9-41
+	tools:ignore
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:13:9-35
 	android:roundIcon
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:9:9-54
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:10:9-54
 	android:icon
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:7:9-43
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:8:9-43
 	android:allowBackup
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:6:9-35
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:7:9-36
 	android:theme
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:11:9-40
-activity#com.emikhalets.datesdb.DateAddActivity
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:12:9-53
-	android:name
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:12:19-50
-activity#com.emikhalets.datesdb.DateItemActivity
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:13:9-54
-	android:name
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:13:19-51
-activity#com.emikhalets.datesdb.DateEditActivity
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:9-54
-	android:name
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:19-51
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:12:9-40
 activity#com.emikhalets.datesdb.ui.MainActivity
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:15:9-21:20
+ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:15:19-50
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:16:13-20:29
+ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:17:17-69
+ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:16:17-69
 	android:name
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:17:25-66
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:16:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:19:17-77
+ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:18:17-77
 	android:name
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:19:27-74
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:18:27-74
 uses-sdk
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 MERGED from [androidx.databinding:viewbinding:4.1.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\fd43a52b1daf24dc6a761f91d8e32d96\jetified-viewbinding-4.1.2\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:4.1.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\fd43a52b1daf24dc6a761f91d8e32d96\jetified-viewbinding-4.1.2\AndroidManifest.xml:20:5-44
+MERGED from [io.coil-kt:coil:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\313fcfe0d786ee6f75a0ff4846c62669\jetified-coil-1.1.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\313fcfe0d786ee6f75a0ff4846c62669\jetified-coil-1.1.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-base:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\16a2e345bccbf2cd90d8ad0d6157d0f0\jetified-coil-base-1.1.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-base:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\16a2e345bccbf2cd90d8ad0d6157d0f0\jetified-coil-base-1.1.1\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\52fc98abc6927cc71edb994c3ecbf6ff\navigation-fragment-ktx-2.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\52fc98abc6927cc71edb994c3ecbf6ff\navigation-fragment-ktx-2.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment-ktx:1.2.5] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\81187b2c2e976e7edb265a04ce73ac54\jetified-fragment-ktx-1.2.5\AndroidManifest.xml:20:5-22:41
@@ -170,10 +157,10 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\vorgo\.gr
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\04b26a196e16e588f3b82c9e2c269ffe\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\96bc8c709694c901d632978d40d01d81\jetified-room-ktx-2.2.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\96bc8c709694c901d632978d40d01d81\jetified-room-ktx-2.2.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\abb3d3b69dcc301e486a20c1dac63c72\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\abb3d3b69dcc301e486a20c1dac63c72\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\6de162e953ad6aa90b884a3354b216c4\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\6de162e953ad6aa90b884a3354b216c4\jetified-lifecycle-livedata-core-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\abb3d3b69dcc301e486a20c1dac63c72\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\abb3d3b69dcc301e486a20c1dac63c72\jetified-lifecycle-runtime-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\39d331fb0ba5561f0370df50047f51d5\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\39d331fb0ba5561f0370df50047f51d5\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.navigation:navigation-ui:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\6a1de2bb5d1eb8ce1e98cd8e6a019f22\navigation-ui-2.3.3\AndroidManifest.xml:20:5-22:41
@@ -184,20 +171,8 @@ MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\vorgo\.gradle\caches\t
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\7696c92fdc03b5cfe77556d3296fff77\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\aedda4c2f1bc5b911d6a55f6d4486307\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\aedda4c2f1bc5b911d6a55f6d4486307\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\9cdfe8acfe42a193e9ed64658a26c6f7\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\9cdfe8acfe42a193e9ed64658a26c6f7\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\412b5de8c89c57b4968f3e1bced65184\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\412b5de8c89c57b4968f3e1bced65184\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-rxjava2:2.2.5] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\80d2976cf24634817f1dd846fe67338b\room-rxjava2-2.2.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-rxjava2:2.2.5] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\80d2976cf24634817f1dd846fe67338b\room-rxjava2-2.2.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:21:5-23:41
 MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\65cd3c50529857c562bfc16527d8afa9\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\65cd3c50529857c562bfc16527d8afa9\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ce1b944e050e5832e4486ff030cab3b3\jetified-rxandroid-2.0.1\AndroidManifest.xml:19:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ce1b944e050e5832e4486ff030cab3b3\jetified-rxandroid-2.0.1\AndroidManifest.xml:19:5-43
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\5fbde37b5bc427994475fbefe6f64f33\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\5fbde37b5bc427994475fbefe6f64f33\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.media:media:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\be0a621e0dacb39db9fc6868bce40dbb\media-1.0.0\AndroidManifest.xml:20:5-44
@@ -212,6 +187,8 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vor
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e4aaf5f3b0e440335978a5798ba8a795\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\85e757463d500cb7d5c6704949b98b17\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\85e757463d500cb7d5c6704949b98b17\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\9cdfe8acfe42a193e9ed64658a26c6f7\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\9cdfe8acfe42a193e9ed64658a26c6f7\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\0a7b86d9e93f2a8f3c6573bd53de2a1e\navigation-fragment-2.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.3.3] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\0a7b86d9e93f2a8f3c6573bd53de2a1e\navigation-fragment-2.3.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.5] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\4e7b329467e904f20e356b97b43a5655\fragment-1.2.5\AndroidManifest.xml:20:5-22:41
@@ -226,6 +203,8 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\vorg
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\3db8c21bc931c442d256f0eea9e148ae\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\d05d265f93f602dbe418405b19747d07\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\d05d265f93f602dbe418405b19747d07\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\412b5de8c89c57b4968f3e1bced65184\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\412b5de8c89c57b4968f3e1bced65184\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\084d9015d191cabdae7dbcb605daf4fd\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\084d9015d191cabdae7dbcb605daf4fd\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\11998129e8c1d30c7644e14cea9295c3\customview-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -248,24 +227,10 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\v
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\92e831e8bc9ad7e76608441a3b634771\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\692594acbbcfe60885e743fb233d00b8\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\692594acbbcfe60885e743fb233d00b8\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a8e8d3967dc65cafc0185f850b30e45f\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a8e8d3967dc65cafc0185f850b30e45f\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\8037f67aa64e3a068d2137b404802cc8\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\8037f67aa64e3a068d2137b404802cc8\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e1bf7773dd49f4c81ad6b6bbf8146947\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e1bf7773dd49f4c81ad6b6bbf8146947\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ba58dcf868eb41c4013f996a4acb362e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ba58dcf868eb41c4013f996a4acb362e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\db6184c6986195df76f08b06832e57aa\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\db6184c6986195df76f08b06832e57aa\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\2086019fa23991a79bfc857b32b6530e\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\2086019fa23991a79bfc857b32b6530e\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ef5b784bff27e534615aa493b3322dae\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ef5b784bff27e534615aa493b3322dae\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\027d20833bc494ed71552a5a44bb7509\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\027d20833bc494ed71552a5a44bb7509\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e93208d49c61678ddfa710ea15c5c0d6\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e93208d49c61678ddfa710ea15c5c0d6\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\981a387265bf60e9fdcd8b03cc323b3b\sqlite-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\981a387265bf60e9fdcd8b03cc323b3b\sqlite-2.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\d2d08c6329559dba8cbc8a31124d780a\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\d2d08c6329559dba8cbc8a31124d780a\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\80ca971bf2785a91aaee85a023377804\documentfile-1.0.0\AndroidManifest.xml:20:5-44
@@ -276,6 +241,18 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transform
 MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\28720480b60cf53de75e7645acf743eb\print-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ee665b6d1e0d84e994a2d91dcf409c13\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ee665b6d1e0d84e994a2d91dcf409c13\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e1bf7773dd49f4c81ad6b6bbf8146947\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\e1bf7773dd49f4c81ad6b6bbf8146947\lifecycle-livedata-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ba58dcf868eb41c4013f996a4acb362e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ba58dcf868eb41c4013f996a4acb362e\lifecycle-livedata-core-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\db6184c6986195df76f08b06832e57aa\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\db6184c6986195df76f08b06832e57aa\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\8037f67aa64e3a068d2137b404802cc8\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\8037f67aa64e3a068d2137b404802cc8\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\2086019fa23991a79bfc857b32b6530e\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\2086019fa23991a79bfc857b32b6530e\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ac8526a730f9d4d88b3a49e067447ed7\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\ac8526a730f9d4d88b3a49e067447ed7\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\48b9808fa4de17c9ad34ec08a4b536b8\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\48b9808fa4de17c9ad34ec08a4b536b8\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
@@ -288,214 +265,6 @@ INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:25:5-68
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:25:22-65
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:26:5-79
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:26:22-76
-uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:27:5-81
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:27:22-78
-uses-permission#android.permission.FOREGROUND_SERVICE
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:28:5-77
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:28:22-74
-provider#androidx.work.impl.WorkManagerInitializer
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:31:9-37:35
-	android:authorities
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:33:13-68
-	android:multiprocess
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:36:13-40
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:35:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:37:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:34:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:32:13-69
-service#androidx.work.impl.background.systemalarm.SystemAlarmService
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:39:9-44:35
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:42:13-72
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:43:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:44:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:41:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:40:13-88
-service#androidx.work.impl.background.systemjob.SystemJobService
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:45:9-51:35
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:48:13-70
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:49:13-36
-	android:permission
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:50:13-69
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:51:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:47:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:46:13-84
-service#androidx.work.impl.foreground.SystemForegroundService
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:52:9-57:35
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:55:13-77
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:56:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:57:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:54:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:53:13-81
-receiver#androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:59:9-64:35
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:62:13-35
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:63:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:64:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:61:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:60:13-88
-receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:65:9-75:20
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:68:13-36
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:69:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:70:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:67:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:66:13-106
-intent-filter#action:name:android.intent.action.ACTION_POWER_CONNECTED+action:name:android.intent.action.ACTION_POWER_DISCONNECTED
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:71:13-74:29
-action#android.intent.action.ACTION_POWER_CONNECTED
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:72:17-87
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:72:25-84
-action#android.intent.action.ACTION_POWER_DISCONNECTED
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:73:17-90
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:73:25-87
-receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:76:9-86:20
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:79:13-36
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:80:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:81:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:78:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:77:13-104
-intent-filter#action:name:android.intent.action.BATTERY_LOW+action:name:android.intent.action.BATTERY_OKAY
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:82:13-85:29
-action#android.intent.action.BATTERY_OKAY
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:83:17-77
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:83:25-74
-action#android.intent.action.BATTERY_LOW
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:84:17-76
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:84:25-73
-receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:87:9-97:20
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:90:13-36
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:91:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:92:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:89:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:88:13-104
-intent-filter#action:name:android.intent.action.DEVICE_STORAGE_LOW+action:name:android.intent.action.DEVICE_STORAGE_OK
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:93:13-96:29
-action#android.intent.action.DEVICE_STORAGE_LOW
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:94:17-83
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:94:25-80
-action#android.intent.action.DEVICE_STORAGE_OK
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:95:17-82
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:95:25-79
-receiver#androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:98:9-107:20
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:101:13-36
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:102:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:103:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:100:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:99:13-103
-intent-filter#action:name:android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:104:13-106:29
-action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:105:17-79
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:105:25-76
-receiver#androidx.work.impl.background.systemalarm.RescheduleReceiver
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:108:9-119:20
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:111:13-36
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:112:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:113:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:110:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:109:13-88
-intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.TIMEZONE_CHANGED+action:name:android.intent.action.TIME_SET
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:114:13-118:29
-action#android.intent.action.BOOT_COMPLETED
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:115:17-79
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:115:25-76
-action#android.intent.action.TIME_SET
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:116:17-73
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:116:25-70
-action#android.intent.action.TIMEZONE_CHANGED
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:117:17-81
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:117:25-78
-receiver#androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:120:9-129:20
-	android:enabled
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:123:13-72
-	android:exported
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:124:13-37
-	tools:targetApi
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:125:13-32
-	android:directBootAware
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:122:13-44
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:121:13-99
-intent-filter#action:name:androidx.work.impl.background.systemalarm.UpdateProxies
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:126:13-128:29
-action#androidx.work.impl.background.systemalarm.UpdateProxies
-ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:127:17-98
-	android:name
-		ADDED from [androidx.work:work-runtime:2.3.4] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\98c94ab7bce209bbfeb94f54e7b711b3\work-runtime-2.3.4\AndroidManifest.xml:127:25-95
 service#androidx.room.MultiInstanceInvalidationService
 ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
 	android:exported
@@ -504,13 +273,3 @@ ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\tran
 		ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
 	android:name
 		ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
-provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-	android:authorities
-		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-	android:multiprocess
-		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-	android:exported
-		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\05b5d90a7f9a5bc929440a05fb7faa4d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79

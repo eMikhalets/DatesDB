@@ -1,10 +1,12 @@
 package com.emikhalets.datesdb.ui.add
 
+import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.DatePicker
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -12,6 +14,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.emikhalets.datesdb.databinding.FragmentDateAddBinding
 import java.text.SimpleDateFormat
+import java.time.LocalDateTime
+import java.time.ZoneOffset
+import java.time.format.DateTimeFormatter
 import java.util.*
 
 class DateAddFragment : Fragment() {
@@ -20,8 +25,9 @@ class DateAddFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val addViewModel: DateAddViewModel by viewModels()
+    private var typesAdapter: ArrayAdapter<String>? = null
+    private var dateListener: OnDateSetListener? = null
 
-    private var selectedDate: Long = 0
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -35,51 +41,74 @@ class DateAddFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        addViewModel.getAllTypes()
+
         addViewModel.adding.observe(viewLifecycleOwner, { insertedId ->
             binding.root.findNavController().popBackStack()
+        })
+
+        addViewModel.types.observe(viewLifecycleOwner, { list ->
+            createAdapter()
         })
 
         addViewModel.notice.observe(viewLifecycleOwner, { message ->
             Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
         })
 
-        binding.btnDatePicker.setOnClickListener { }
+        dateListener = OnDateSetListener { _, year, month, dayOfMonth ->
+            val new = LocalDateTime.now()
+                    .withYear(year)
+                    .withMonth(month + 1)
+                    .withDayOfMonth(dayOfMonth)
+            addViewModel.dateTime = new
+            setDate(new)
+        }
+
+        binding.tedDate.setOnClickListener { onDateClick() }
+        binding.acType.setOnClickListener { onTypeClick() }
         binding.fabSaveDate.setOnClickListener { onSaveClick() }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+        typesAdapter = null
+        dateListener = null
         _binding = null
     }
 
+    private fun onDateClick() {
+        DatePickerDialog(
+                requireContext(), dateListener,
+                addViewModel.dateTime.year,
+                addViewModel.dateTime.monthValue - 1,
+                addViewModel.dateTime.dayOfMonth,
+        ).show()
+
+        setDate(addViewModel.dateTime)
+    }
+
+    private fun setDate(date: LocalDateTime) {
+        val dateText = date.format(DateTimeFormatter.ofPattern("d MMM y"))
+        binding.tedDate.setText(dateText)
+    }
+
+    private fun onTypeClick() {
+        createAdapter()
+    }
+
+    private fun createAdapter() {
+        typesAdapter = ArrayAdapter(
+                requireContext(),
+                android.R.layout.simple_list_item_1,
+                addViewModel.typeItems
+        )
+        binding.acType.setAdapter(typesAdapter)
+    }
+
     private fun onSaveClick() {
-        val name = binding.etName.text.toString().trim()
-        val type = binding.spinnerType.selectedItem.toString()
-        addViewModel.insert(name, selectedDate, type)
-    }
-
-//    private fun onBtnDatePickerClick() {
-//        val current = Calendar.getInstance()
-//        DatePickerDialog(requireContext(), dateSetListener,
-//                current[Calendar.YEAR],
-//                current[Calendar.MONTH],
-//                current[Calendar.DAY_OF_MONTH])
-//                .show()
-//    }
-
-    private fun initPickDate() {
-        val current = Calendar.getInstance()
-        val dateFormat = SimpleDateFormat("d LLLL y ', ' EEEE")
-        binding.btnDatePicker.text = dateFormat.format(current.time)
-        selectedDate = current.timeInMillis
-    }
-
-    private val dateSetListener = OnDateSetListener { _: DatePicker, year: Int, month: Int, day: Int ->
-        val selected = Calendar.getInstance()
-        selected[year, month] = day
-        val dateFormat = SimpleDateFormat("d LLLL y ', ' EEEE")
-        binding.btnDatePicker.text = dateFormat.format(selected.time)
-        selectedDate = selected.timeInMillis
-        addViewModel.isDateEntered = true
+        val name = binding.tedName.text.toString().trim()
+        val type = binding.acType.text.toString().trim()
+        val date = addViewModel.dateTime.toInstant(ZoneOffset.UTC).toEpochMilli()
+        addViewModel.insert(name, date, type)
     }
 }

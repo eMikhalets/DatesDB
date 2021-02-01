@@ -5,16 +5,18 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.emikhalets.datesdb.R
+import com.emikhalets.datesdb.data.database.AppDatabase
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val database = AppDatabase.create(this.applicationContext)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_dates_list, menu)
+        menuInflater.inflate(R.menu.menu_app, menu)
         return true
     }
 

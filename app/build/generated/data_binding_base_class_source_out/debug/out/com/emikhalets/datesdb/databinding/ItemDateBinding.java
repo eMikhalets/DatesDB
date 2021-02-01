@@ -4,6 +4,7 @@ package com.emikhalets.datesdb.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,24 +20,23 @@ public final class ItemDateBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView imageAvatar;
+
+  @NonNull
   public final TextView textDate;
 
   @NonNull
   public final TextView textDaysLeft;
 
   @NonNull
-  public final TextView textDaysLeftLabel;
-
-  @NonNull
   public final TextView textName;
 
-  private ItemDateBinding(@NonNull ConstraintLayout rootView, @NonNull TextView textDate,
-      @NonNull TextView textDaysLeft, @NonNull TextView textDaysLeftLabel,
-      @NonNull TextView textName) {
+  private ItemDateBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView imageAvatar,
+      @NonNull TextView textDate, @NonNull TextView textDaysLeft, @NonNull TextView textName) {
     this.rootView = rootView;
+    this.imageAvatar = imageAvatar;
     this.textDate = textDate;
     this.textDaysLeft = textDaysLeft;
-    this.textDaysLeftLabel = textDaysLeftLabel;
     this.textName = textName;
   }
 
@@ -67,6 +67,12 @@ public final class ItemDateBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.image_avatar;
+      ImageView imageAvatar = rootView.findViewById(id);
+      if (imageAvatar == null) {
+        break missingId;
+      }
+
       id = R.id.text_date;
       TextView textDate = rootView.findViewById(id);
       if (textDate == null) {
@@ -79,20 +85,14 @@ public final class ItemDateBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.text_days_left_label;
-      TextView textDaysLeftLabel = rootView.findViewById(id);
-      if (textDaysLeftLabel == null) {
-        break missingId;
-      }
-
       id = R.id.text_name;
       TextView textName = rootView.findViewById(id);
       if (textName == null) {
         break missingId;
       }
 
-      return new ItemDateBinding((ConstraintLayout) rootView, textDate, textDaysLeft,
-          textDaysLeftLabel, textName);
+      return new ItemDateBinding((ConstraintLayout) rootView, imageAvatar, textDate, textDaysLeft,
+          textName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -9,6 +9,7 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.emikhalets.datesdb.data.database.AppDatabase
 import com.emikhalets.datesdb.databinding.FragmentDatesListBinding
 
 class DatesListFragment : Fragment() {
@@ -43,10 +44,10 @@ class DatesListFragment : Fragment() {
         listViewModel.dates.observe(viewLifecycleOwner, { dates ->
             if (dates.isNotEmpty()) {
                 binding.listDates.isVisible = true
-                binding.textAddFirstDate.isVisible = false
+                binding.textEmptyDates.isVisible = false
             } else {
                 binding.listDates.isVisible = false
-                binding.textAddFirstDate.isVisible = true
+                binding.textEmptyDates.isVisible = true
             }
         })
 

@@ -5,18 +5,17 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [DateItem::class], version = 1, exportSchema = false)
+@Database(entities = [DateItem::class, DateType::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract val datesDao: DatesDao
+    abstract val typesDao: TypesDao
 
     companion object {
 
         // TODO: temp non private instance
         @Volatile
         var instance: AppDatabase? = null
-
-        fun get() = instance!!
 
         fun create(context: Context) = instance ?: synchronized(this) {
             instance ?: buildDatabase(context).also { instance = it }
@@ -27,5 +26,7 @@ abstract class AppDatabase : RoomDatabase() {
                 AppDatabase::class.java,
                 "dates.db"
         ).build()
+
+        fun get(): AppDatabase = instance!!
     }
 }

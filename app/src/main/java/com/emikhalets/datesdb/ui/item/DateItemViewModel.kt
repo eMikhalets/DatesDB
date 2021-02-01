@@ -23,6 +23,8 @@ class DateItemViewModel : ViewModel() {
     private val _notice = MutableLiveData<String>()
     val notice get(): LiveData<String> = _notice
 
+    var id: Int = -1
+
     fun getDate(id: Int) {
         viewModelScope.launch {
             when (val result = repository.getDate(id)) {

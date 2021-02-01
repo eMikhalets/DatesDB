@@ -1,23 +1,29 @@
 <resources>
     <string name="app_name">DatesDB</string>
 
-    <string name="menu.search">Search</string>
-    <string name="menu.settings">Settings</string>
-    <string name="menu.delete">Delete</string>
-    <string name="menu_save">Save</string>
+    <string name="text_list_item_name">Family Name Patronymic</string>
+    <string name="text_list_item_date">16 May 2000, Monday (53)</string>
+    <string name="text_list_item_days_left">167\nleft</string>
 
-    <string name="text.add_date">Добавьте дату</string>
-    <string name="text.sec">СЕК</string>
-    <string name="text.min">МИН</string>
-    <string name="text.hours">ЧАСЫ</string>
-    <string name="text.days">ДНИ</string>
-    <string name="text.days_left">days left</string>
+    <string name="text_list_empty_dates">Empty list of dates</string>
 
-    <string name="text_hint_name">Имя</string>
+    <string name="text_item_name">Family Name Patronymic</string>
+    <string name="text_item_age">57 years</string>
+    <string name="text_item_date">16 May 2000\nMonday</string>
+    <string name="text_item_type">Birthday</string>
+    <string name="text_item_days_left">Days left\n167</string>
 
-    <string name="text.placeholder.name">Фамилия Имя Отчество</string>
-    <string name="text.placeholder.date">00.00.0000, День недели</string>
-    <string name="text.placeholder.type">Тип даты</string>
-    <string name="text.placeholder.00">00</string>
-    <string name="text.placeholder.days_left">000</string>
+    <string name="text_edit_avatar">Change image</string>
+    <string name="text_edit_name">Name</string>
+    <string name="text_edit_date">Choose date</string>
+    <string name="text_edit_is_year">Without year</string>
+    <string name="text_edit_type">Type of date</string>
+
+    <string name="text_add_avatar">Set image</string>
+    <string name="text_add_name">Name</string>
+    <string name="text_add_date">Choose date</string>
+    <string name="text_add_is_year">Without year</string>
+    <string name="text_add_type">Type of date</string>
+
+    <string name="menu_settings">Settings</string>
 </resources>

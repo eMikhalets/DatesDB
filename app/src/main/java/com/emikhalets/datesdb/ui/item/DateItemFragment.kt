@@ -32,6 +32,7 @@ class DateItemFragment : Fragment() {
         if (savedInstanceState != null) {
             arguments?.let {
                 val id = it.getInt("") ?: -1
+                itemViewModel.id = id
                 if (id >= 0) itemViewModel.getDate(id)
             }
         }
@@ -53,10 +54,20 @@ class DateItemFragment : Fragment() {
         })
 
         binding.fabDeleteDate.setOnClickListener { itemViewModel.delete() }
+
+        binding.fabEditDate.setOnClickListener { onEditClick() }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun onEditClick() {
+        val id = itemViewModel.id
+        if (id >= 0) {
+            val action = DateItemFragmentDirections.actionFragmentDateItemToFragmentDateEdit(id)
+            binding.root.findNavController().navigate(action)
+        }
     }
 }
