@@ -113,10 +113,10 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vo
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:7:9-36
 	android:theme
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:12:9-40
-activity#com.emikhalets.datesdb.ui.MainActivity
+activity#com.emikhalets.datesdb.view.MainActivity
 ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:19-50
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:19-52
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN

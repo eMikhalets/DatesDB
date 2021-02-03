@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentDatesList"
-        android:name="com.emikhalets.datesdb.ui.list.DatesListFragment"
+        android:name="com.emikhalets.datesdb.view.DatesListFragment"
         android:label="FragmentDatesList"
         tools:layout="@layout/fragment_dates_list">
         <action
@@ -20,13 +20,13 @@
 
     <fragment
         android:id="@+id/fragmentDateAdd"
-        android:name="com.emikhalets.datesdb.ui.add.DateAddFragment"
+        android:name="com.emikhalets.datesdb.view.DateAddFragment"
         android:label="FragmentDateAdd"
         tools:layout="@layout/fragment_date_add" />
 
     <fragment
         android:id="@+id/fragmentDateItem"
-        android:name="com.emikhalets.datesdb.ui.item.DateItemFragment"
+        android:name="com.emikhalets.datesdb.view.DateItemFragment"
         android:label="FragmentDateItem"
         tools:layout="@layout/fragment_date_item">
         <argument
@@ -40,7 +40,7 @@
 
     <fragment
         android:id="@+id/fragmentDateEdit"
-        android:name="com.emikhalets.datesdb.ui.edit.DateEditFragment"
+        android:name="com.emikhalets.datesdb.view.DateEditFragment"
         android:label="FragmentDateEdit"
         tools:layout="@layout/fragment_date_edit">
         <argument

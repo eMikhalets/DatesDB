@@ -25,31 +25,32 @@
 17-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:10:9-54
 18        android:supportsRtl="true"
 18-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:11:9-35
-19        android:theme="@style/AppTheme" >
-19-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:12:9-40
-20        <activity android:name="com.emikhalets.datesdb.ui.MainActivity" >
-20-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:9-20:20
-20-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:19-50
-21            <intent-filter>
-21-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:15:13-19:29
-22                <action android:name="android.intent.action.MAIN" />
-22-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:16:17-69
-22-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:16:25-66
-23
-24                <category android:name="android.intent.category.LAUNCHER" />
-24-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:18:17-77
-24-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:18:27-74
-25            </intent-filter>
-26        </activity>
-27
-28        <service
-28-->[androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
-29            android:name="androidx.room.MultiInstanceInvalidationService"
-29-->[androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
-30            android:directBootAware="true"
-30-->[androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
-31            android:exported="false" />
-31-->[androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
-32    </application>
-33
-34</manifest>
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:12:9-40
+21        <activity android:name="com.emikhalets.datesdb.view.MainActivity" >
+21-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:9-20:20
+21-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:19-52
+22            <intent-filter>
+22-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:15:13-19:29
+23                <action android:name="android.intent.action.MAIN" />
+23-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:16:17-69
+23-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:16:25-66
+24
+25                <category android:name="android.intent.category.LAUNCHER" />
+25-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:18:17-77
+25-->D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:18:27-74
+26            </intent-filter>
+27        </activity>
+28
+29        <service
+29-->[androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
+30            android:name="androidx.room.MultiInstanceInvalidationService"
+30-->[androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
+31            android:directBootAware="true"
+31-->[androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
+32            android:exported="false" />
+32-->[androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-2\files-2.1\a703412f6e13141368fee98a4895e377\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
+33    </application>
+34
+35</manifest>
