@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -14,7 +15,6 @@ import androidx.navigation.findNavController
 import com.emikhalets.datesdb.databinding.FragmentDateAddBinding
 import com.emikhalets.datesdb.viewmodel.DateAddViewModel
 import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
 
 class DateAddFragment : Fragment() {
 
@@ -51,19 +51,11 @@ class DateAddFragment : Fragment() {
             Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
         })
 
-        dateListener = OnDateSetListener { _, year, month, dayOfMonth ->
-            val new = LocalDateTime.now()
-                    .withYear(year)
-                    .withMonth(month + 1)
-                    .withDayOfMonth(dayOfMonth)
-            addViewModel.dateTime = new
-            setDate(new)
-        }
-
+        dateListener = onSetDateClick()
         binding.tedDate.setOnClickListener { onDateClick() }
         binding.acType.setOnClickListener { onTypeClick() }
         binding.fabSaveDate.setOnClickListener { onSaveClick() }
-        binding.cbIsYear.setOnCheckedChangeListener { _, bool -> addViewModel.isYear = bool }
+        binding.cbIsYear.setOnCheckedChangeListener(onYearClick())
     }
 
     override fun onDestroyView() {
@@ -81,12 +73,17 @@ class DateAddFragment : Fragment() {
                 addViewModel.dateTime.dayOfMonth,
         ).show()
 
-        setDate(addViewModel.dateTime)
+        binding.tedDate.setText(addViewModel.formatDateString())
     }
 
-    private fun setDate(date: LocalDateTime) {
-        val dateText = date.format(DateTimeFormatter.ofPattern("d MMM y"))
-        binding.tedDate.setText(dateText)
+    private fun onSetDateClick() = OnDateSetListener { _, year, month, dayOfMonth ->
+        val new = LocalDateTime.now()
+                .withYear(year)
+                .withMonth(month + 1)
+                .withDayOfMonth(dayOfMonth)
+        addViewModel.dateTime = new
+        addViewModel.isDateVisible = true
+        binding.tedDate.setText(addViewModel.formatDateString())
     }
 
     private fun onTypeClick() {
@@ -100,6 +97,11 @@ class DateAddFragment : Fragment() {
                 addViewModel.typeItems
         )
         binding.acType.setAdapter(typesAdapter)
+    }
+
+    private fun onYearClick() = CompoundButton.OnCheckedChangeListener { _, bool ->
+        addViewModel.isYear = !bool
+        binding.tedDate.setText(addViewModel.formatDateString())
     }
 
     private fun onSaveClick() {

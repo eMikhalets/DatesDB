@@ -8,12 +8,12 @@ import com.emikhalets.datesdb.model.database.AppDatabase
 import com.emikhalets.datesdb.model.entities.DateItem
 import com.emikhalets.datesdb.model.entities.DbResult
 import com.emikhalets.datesdb.model.repository.DateAddRepository
-import com.emikhalets.datesdb.utils.DatesHelper
+import com.emikhalets.datesdb.utils.computeAge
+import com.emikhalets.datesdb.utils.computeDaysLeft
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
-import java.time.Year
 import java.time.ZoneOffset
-import java.time.temporal.ChronoUnit
+import java.time.format.DateTimeFormatter
 
 class DateAddViewModel : ViewModel() {
 
@@ -33,7 +33,8 @@ class DateAddViewModel : ViewModel() {
 
     val typeItems = mutableListOf("+ New type")
     var dateTime: LocalDateTime = LocalDateTime.now()
-    var isYear = false
+    var isYear = true
+    var isDateVisible = false
 
     private var isNameEntered = false
     private var isTypeEntered = false
@@ -65,6 +66,17 @@ class DateAddViewModel : ViewModel() {
         }
     }
 
+    fun formatDateString(): String {
+        if (isDateVisible) {
+            return if (isYear) {
+                dateTime.format(DateTimeFormatter.ofPattern("d MMM y"))
+            } else {
+                dateTime.format(DateTimeFormatter.ofPattern("d MMM"))
+            }
+        }
+        return ""
+    }
+
     private fun checkData(name: String, type: String): Boolean {
         isNameEntered = name.isNotEmpty()
         isTypeEntered = type.isNotEmpty()
@@ -72,8 +84,8 @@ class DateAddViewModel : ViewModel() {
     }
 
     private fun computeDate(name: String, type: String): DateItem {
-        val daysLeft = DatesHelper.computeDaysLeft(dateTime)
-        val age = DatesHelper.computeAge(dateTime)
+        val daysLeft = computeDaysLeft(dateTime)
+        val age = computeAge(dateTime)
         val date = dateTime.toInstant(ZoneOffset.UTC).toEpochMilli()
         return DateItem(name, date, type, daysLeft, age, isYear)
     }

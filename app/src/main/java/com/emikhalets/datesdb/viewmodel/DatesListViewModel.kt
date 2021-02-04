@@ -8,7 +8,8 @@ import com.emikhalets.datesdb.model.database.AppDatabase
 import com.emikhalets.datesdb.model.entities.DateItem
 import com.emikhalets.datesdb.model.entities.DbResult
 import com.emikhalets.datesdb.model.repository.DatesListRepository
-import com.emikhalets.datesdb.utils.DatesHelper
+import com.emikhalets.datesdb.utils.computeAge
+import com.emikhalets.datesdb.utils.computeDaysLeft
 import kotlinx.coroutines.launch
 import java.time.Instant
 import java.time.LocalDateTime
@@ -45,8 +46,8 @@ class DatesListViewModel : ViewModel() {
                     ZoneId.of("UTC")
             )
             list[i].apply {
-                daysLeft = DatesHelper.computeDaysLeft(selected)
-                if (list[i].isYear) list[i].age = DatesHelper.computeAge(selected)
+                daysLeft = computeDaysLeft(selected)
+                if (list[i].isYear) list[i].age = computeAge(selected)
             }
         }
     }
