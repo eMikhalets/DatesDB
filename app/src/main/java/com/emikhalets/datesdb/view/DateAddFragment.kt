@@ -14,7 +14,6 @@ import androidx.navigation.findNavController
 import com.emikhalets.datesdb.databinding.FragmentDateAddBinding
 import com.emikhalets.datesdb.viewmodel.DateAddViewModel
 import java.time.LocalDateTime
-import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
 class DateAddFragment : Fragment() {
@@ -25,7 +24,6 @@ class DateAddFragment : Fragment() {
     private val addViewModel: DateAddViewModel by viewModels()
     private var typesAdapter: ArrayAdapter<String>? = null
     private var dateListener: OnDateSetListener? = null
-
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -65,6 +63,7 @@ class DateAddFragment : Fragment() {
         binding.tedDate.setOnClickListener { onDateClick() }
         binding.acType.setOnClickListener { onTypeClick() }
         binding.fabSaveDate.setOnClickListener { onSaveClick() }
+        binding.cbIsYear.setOnCheckedChangeListener { _, bool -> addViewModel.isYear = bool }
     }
 
     override fun onDestroyView() {
@@ -106,7 +105,6 @@ class DateAddFragment : Fragment() {
     private fun onSaveClick() {
         val name = binding.tedName.text.toString().trim()
         val type = binding.acType.text.toString().trim()
-        val date = addViewModel.dateTime.toInstant(ZoneOffset.UTC).toEpochMilli()
-        addViewModel.insert(name, date, type)
+        addViewModel.insert(name, type)
     }
 }

@@ -58,7 +58,7 @@ class DateEditViewModel : ViewModel() {
     fun update(name: String, date: Long, type: String) {
         viewModelScope.launch {
             if (checkData(name, date, type)) {
-                val dateItem = DateItem(name, date, type)
+                val dateItem = DateItem(name, date, type, 1, 1, false)
                 when (val result = repository.update(dateItem)) {
                     is DbResult.Success -> _updating.postValue(result.result)
                     is DbResult.Error -> _notice.postValue(result.msg)

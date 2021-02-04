@@ -5,15 +5,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.emikhalets.datesdb.model.entities.DateItem
+import com.emikhalets.datesdb.R
 import com.emikhalets.datesdb.databinding.ItemDateBinding
+import com.emikhalets.datesdb.model.entities.DateItem
+import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
-class DatesAdapter(private val click: (Int) -> Unit):
+class DatesAdapter(private val click: (Int) -> Unit) :
         ListAdapter<DateItem, DatesAdapter.ViewHolder>(DatesDiffCallback()) {
-
-    interface OnDateItemClickListener {
-        fun onDateItemClick(id: Int)
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -29,24 +30,22 @@ class DatesAdapter(private val click: (Int) -> Unit):
             RecyclerView.ViewHolder(binding.root) {
 
         fun bind(dateItem: DateItem, click: (Int) -> Unit) {
-//            val current = Calendar.getInstance()
-//            val currentDay = current[Calendar.DAY_OF_YEAR]
-//            val selected = Calendar.getInstance()
-//            selected.timeInMillis = dateItem.date
-//            val selectedDay = selected[Calendar.DAY_OF_YEAR]
-//            var daysLeft = 0
-//            daysLeft = if (currentDay > selectedDay) {
-//                365 + selectedDay - currentDay
-//            } else {
-//                selectedDay - currentDay
-//            }
-//            val dateFormat = SimpleDateFormat("d LLLL y ', ' EEEE")
-
             binding.textName.text = dateItem.name
-//            binding.textDate.text = dateFormat.format(dateItem.date)
+            binding.textDate.text = formatDate(dateItem.date)
             binding.textDaysLeft.text = dateItem.id.toString()
-//            binding.textDaysLeft.text = daysLeft.toString()
+            binding.textDaysLeft.text = binding.root.context.getString(
+                    R.string.text_list_item_days_left,
+                    dateItem.daysLeft
+            )
             binding.root.setOnClickListener { dateItem.id?.let { it1 -> click.invoke(it1) } }
+        }
+
+        private fun formatDate(timestamp: Long): String {
+            val date = LocalDateTime.ofInstant(
+                    Instant.ofEpochMilli(timestamp),
+                    ZoneId.of("UTC")
+            )
+            return date.format(DateTimeFormatter.ofPattern("d MMM y, E"))
         }
     }
 

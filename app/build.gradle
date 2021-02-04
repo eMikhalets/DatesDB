@@ -49,6 +49,7 @@ dependencies {
     def nav_version = "2.3.3"
     def room_version = '2.2.6'
     def lifecycle_version = "2.2.0"
+    def arch_version = "2.1.0"
 
     // GENERAL
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -80,4 +81,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
+    testImplementation "androidx.arch.core:core-testing:$arch_version"
 }

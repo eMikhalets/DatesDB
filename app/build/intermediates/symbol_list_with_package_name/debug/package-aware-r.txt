@@ -2117,6 +2117,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_date_add
 layout fragment_date_add
 layout fragment_date_edit
 layout fragment_date_item
@@ -2277,7 +2278,9 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string search_menu_title
 string status_bar_notification_info_overflow
+string text_add_add
 string text_add_avatar
+string text_add_cancel
 string text_add_date
 string text_add_is_year
 string text_add_name

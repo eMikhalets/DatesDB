@@ -3,7 +3,7 @@
 
     <string name="text_list_item_name">Family Name Patronymic</string>
     <string name="text_list_item_date">16 May 2000, Monday (53)</string>
-    <string name="text_list_item_days_left">167\nleft</string>
+    <string name="text_list_item_days_left">%d\nleft</string>
 
     <string name="text_list_empty_dates">Empty list of dates</string>
 
@@ -19,6 +19,8 @@
     <string name="text_edit_is_year">Without year</string>
     <string name="text_edit_type">Type of date</string>
 
+    <string name="text_add_add">Add</string>
+    <string name="text_add_cancel">Cancel</string>
     <string name="text_add_avatar">Set image</string>
     <string name="text_add_name">Name</string>
     <string name="text_add_date">Choose date</string>

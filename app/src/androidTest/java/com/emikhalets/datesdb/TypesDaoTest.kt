@@ -50,7 +50,15 @@ class TypesDaoTest {
 
     @Test
     @Throws(Exception::class)
-    fun testGetAllDates() = runBlocking {
+    fun testGetType() = runBlocking {
+        assertThat(typesDao.getType("type1").name, equalTo(type1.name))
+        assertThat(typesDao.getType("type2").name, equalTo(type2.name))
+        assertThat(typesDao.getType("type3").name, equalTo(type3.name))
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun testGetAllTypes() = runBlocking {
         val list = typesDao.getAllTypes()
 
         assertThat(list.size, equalTo(3))
@@ -61,7 +69,7 @@ class TypesDaoTest {
 
     @Test
     @Throws(Exception::class)
-    fun testInsertAndDeleteDate() = runBlocking {
+    fun testInsertAndDeleteType() = runBlocking {
         val type = DateType("type4")
         typesDao.insert(type)
 
@@ -74,7 +82,7 @@ class TypesDaoTest {
 
     @Test
     @Throws(Exception::class)
-    fun testInsertAndUpdateDate() = runBlocking {
+    fun testInsertAndUpdateType() = runBlocking {
         val type = typesDao.getAllTypes()[0]
         val oldName = type.name
         val newName = "name5"
