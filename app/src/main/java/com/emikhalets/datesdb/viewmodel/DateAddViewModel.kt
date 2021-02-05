@@ -1,5 +1,6 @@
 package com.emikhalets.datesdb.viewmodel
 
+import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -33,8 +34,9 @@ class DateAddViewModel : ViewModel() {
 
     val typeItems = mutableListOf("+ New type")
     var dateTime: LocalDateTime = LocalDateTime.now()
-    var isYear = true
     var isDateVisible = false
+    var isYear = true
+    var imageUri: Uri? = null
 
     private var isNameEntered = false
     private var isTypeEntered = false
@@ -87,6 +89,6 @@ class DateAddViewModel : ViewModel() {
         val daysLeft = computeDaysLeft(dateTime)
         val age = computeAge(dateTime)
         val date = dateTime.toInstant(ZoneOffset.UTC).toEpochMilli()
-        return DateItem(name, date, type, daysLeft, age, isYear)
+        return DateItem(name, date, type, daysLeft, age, isYear, imageUri.toString())
     }
 }

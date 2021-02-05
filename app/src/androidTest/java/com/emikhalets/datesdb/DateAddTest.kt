@@ -1,6 +1,7 @@
 package com.emikhalets.datesdb
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.emikhalets.datesdb.utils.computeDaysLeft
 import com.emikhalets.datesdb.viewmodel.DateAddViewModel
 import org.hamcrest.Matchers.equalTo
 import org.junit.Assert.assertThat
@@ -16,6 +17,6 @@ class DateAddTest {
     fun testComputeDaysLeft() {
         val viewModel = DateAddViewModel()
         val selected = LocalDateTime.of(1993, 12, 24, 0, 0)
-        assertThat(viewModel.computeDaysLeft(selected), equalTo(9904))
+        assertThat(computeDaysLeft(selected), equalTo(9904))
     }
 }

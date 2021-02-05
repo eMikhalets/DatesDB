@@ -1,8 +1,11 @@
 package com.emikhalets.datesdb.view
 
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,6 +40,10 @@ class DateAddFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        if (savedInstanceState != null) {
+            binding.imageAvatar.setImageURI(addViewModel.imageUri)
+        }
+
         addViewModel.getAllTypes()
 
         addViewModel.adding.observe(viewLifecycleOwner, { insertedId ->
@@ -52,6 +59,8 @@ class DateAddFragment : Fragment() {
         })
 
         dateListener = onSetDateClick()
+        binding.imageAvatar.setOnClickListener { onAvatarClick() }
+        binding.btnAvatar.setOnClickListener { onAvatarClick() }
         binding.tedDate.setOnClickListener { onDateClick() }
         binding.acType.setOnClickListener { onTypeClick() }
         binding.fabSaveDate.setOnClickListener { onSaveClick() }
@@ -63,6 +72,20 @@ class DateAddFragment : Fragment() {
         typesAdapter = null
         dateListener = null
         _binding = null
+    }
+
+    private fun onAvatarClick() {
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        startActivityForResult(intent, 0)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == Activity.RESULT_OK && data != null) {
+            val uri = data.data
+            binding.imageAvatar.setImageURI(uri)
+            addViewModel.imageUri = uri
+        }
     }
 
     private fun onDateClick() {

@@ -1,5 +1,8 @@
 package com.emikhalets.datesdb.utils
 
+import android.content.Context
+import android.view.View
+import android.view.inputmethod.InputMethodManager
 import java.time.LocalDateTime
 import java.time.Year
 import java.time.temporal.ChronoUnit
@@ -17,4 +20,9 @@ fun computeDaysLeft(selected: LocalDateTime): Int {
 fun computeAge(selected: LocalDateTime): Int {
     val now = LocalDateTime.now()
     return ChronoUnit.YEARS.between(selected, now).toInt()
+}
+
+fun View.hideKeyboard() {
+    val imm = context.getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+    imm.hideSoftInputFromWindow(windowToken, 0)
 }

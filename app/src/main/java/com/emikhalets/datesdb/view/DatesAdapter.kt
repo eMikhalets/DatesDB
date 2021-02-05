@@ -31,7 +31,11 @@ class DatesAdapter(private val click: (Int) -> Unit) :
 
         fun bind(dateItem: DateItem, click: (Int) -> Unit) {
             binding.textName.text = dateItem.name
-            binding.textDate.text = formatDate(dateItem.date)
+            binding.textDate.text = binding.root.context.getString(
+                    R.string.text_list_item_date,
+                    formatDate(dateItem.date),
+                    dateItem.age
+            )
             binding.textDaysLeft.text = dateItem.id.toString()
             binding.textDaysLeft.text = binding.root.context.getString(
                     R.string.text_list_item_days_left,

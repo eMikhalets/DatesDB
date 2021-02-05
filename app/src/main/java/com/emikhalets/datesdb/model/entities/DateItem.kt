@@ -11,6 +11,7 @@ data class DateItem(
         var daysLeft: Int,
         var age: Int,
         var isYear: Boolean,
+        var image: String,
         @PrimaryKey(autoGenerate = true)
         var id: Int? = null
 )

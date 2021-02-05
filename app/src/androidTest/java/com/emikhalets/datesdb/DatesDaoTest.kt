@@ -22,9 +22,9 @@ class DatesDaoTest {
     private lateinit var datesDao: DatesDao
     private lateinit var db: AppDatabase
 
-    private val date1 = DateItem("name1", 1000, "type1", 0, 0, false)
-    private val date2 = DateItem("name2", 1000, "type2", 0, 0, false)
-    private val date3 = DateItem("name3", 1000, "type3", 0, 0, false)
+    private val date1 = DateItem("name1", 1000, "type1", 0, 0, false, "")
+    private val date2 = DateItem("name2", 1000, "type2", 0, 0, false, "")
+    private val date3 = DateItem("name3", 1000, "type3", 0, 0, false, "")
 
 
     @Before
@@ -70,7 +70,7 @@ class DatesDaoTest {
     @Test
     @Throws(Exception::class)
     fun testInsertAndDeleteDate() = runBlocking {
-        val dateItem = DateItem("name4", 1000, "type4", 0, 0, false)
+        val dateItem = DateItem("name4", 1000, "type4", 0, 0, false, "")
         datesDao.insert(dateItem)
 
         assertThat(datesDao.getAllDates().last().name, equalTo(dateItem.name))

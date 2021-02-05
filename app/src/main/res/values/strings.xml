@@ -2,7 +2,7 @@
     <string name="app_name">DatesDB</string>
 
     <string name="text_list_item_name">Family Name Patronymic</string>
-    <string name="text_list_item_date">16 May 2000, Monday (53)</string>
+    <string name="text_list_item_date">%s (%d)</string>
     <string name="text_list_item_days_left">%d\nleft</string>
 
     <string name="text_list_empty_dates">Empty list of dates</string>
