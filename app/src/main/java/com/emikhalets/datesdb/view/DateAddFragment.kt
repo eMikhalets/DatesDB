@@ -6,6 +6,7 @@ import android.app.DatePickerDialog.OnDateSetListener
 import android.content.Intent
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,6 +14,7 @@ import android.widget.ArrayAdapter
 import android.widget.CompoundButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
 import com.emikhalets.datesdb.R
@@ -25,7 +27,7 @@ class DateAddFragment : Fragment() {
     private var _binding: FragmentDateAddBinding? = null
     private val binding get() = _binding!!
 
-    private val addViewModel: DateAddViewModel by viewModels()
+    private val addViewModel: DateAddViewModel by activityViewModels()
     private var typesAdapter: ArrayAdapter<String>? = null
     private var dateListener: OnDateSetListener? = null
 
@@ -40,6 +42,7 @@ class DateAddFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.d("TAG", "DateAddFragment: $addViewModel")
 
         if (savedInstanceState != null) {
             binding.imageAvatar.setImageURI(addViewModel.imageUri)
@@ -56,6 +59,11 @@ class DateAddFragment : Fragment() {
             createAdapter()
         })
 
+        addViewModel.typeAdding.observe(viewLifecycleOwner, { type ->
+            binding.acType.setText(type.name)
+            createAdapter()
+        })
+
         addViewModel.notice.observe(viewLifecycleOwner, { message ->
             Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
         })
@@ -65,6 +73,13 @@ class DateAddFragment : Fragment() {
         binding.btnAvatar.setOnClickListener { onAvatarClick() }
         binding.tedDate.setOnClickListener { onDateClick() }
         binding.acType.setOnClickListener { onTypeClick() }
+        binding.acType.setOnItemClickListener { _, _, position, _ ->
+            if (position == 0) {
+                val action = DateAddFragmentDirections.actionFragmentDateAddToAddTypeDialog()
+                binding.root.findNavController().navigate(action)
+                binding.acType.setText("")
+            }
+        }
         binding.fabSaveDate.setOnClickListener { onSaveClick() }
         binding.cbIsYear.setOnCheckedChangeListener(onYearClick())
     }

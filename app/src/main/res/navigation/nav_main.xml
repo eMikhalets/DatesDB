@@ -22,7 +22,11 @@
         android:id="@+id/fragmentDateAdd"
         android:name="com.emikhalets.datesdb.view.DateAddFragment"
         android:label="FragmentDateAdd"
-        tools:layout="@layout/fragment_date_add" />
+        tools:layout="@layout/fragment_date_add">
+        <action
+            android:id="@+id/action_fragmentDateAdd_to_addTypeDialog"
+            app:destination="@id/addTypeDialog" />
+    </fragment>
 
     <fragment
         android:id="@+id/fragmentDateItem"
@@ -47,5 +51,14 @@
             android:name="id"
             android:defaultValue="-1"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_fragmentDateEdit_to_addTypeDialog"
+            app:destination="@id/addTypeDialog" />
     </fragment>
+
+    <dialog
+        android:id="@+id/addTypeDialog"
+        android:name="com.emikhalets.datesdb.view.AddTypeDialog"
+        android:label="AddTypeDialog"
+        tools:layout="@layout/dialog_add_type" />
 </navigation>

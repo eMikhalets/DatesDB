@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">DatesDB</string>
 
+    <string name="def_type_birthday">Birthday</string>
+    <string name="def_type_holiday">Holiday</string>
+    <string name="def_type_anniversary">Anniversary</string>
+
     <string name="text_list_item_name">Family Name Patronymic</string>
     <string name="text_list_item_date">%s (%d)</string>
     <string name="text_list_item_days_left">%d\nleft</string>
@@ -28,4 +32,10 @@
 
     <string name="text_add_avatar">Set image</string>
     <string name="text_change_avatar">Change image</string>
+
+    <string name="text_dialog_new_type_title">Creating new type</string>
+    <string name="text_dialog_new_type">New type</string>
+    <string name="text_dialog_add">Add</string>
+    <string name="text_dialog_cancel">Cancel</string>
+    <string name="text_add_type_title">Creating new type</string>
 </resources>

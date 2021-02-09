@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.emikhalets.datesdb.data.database.AppDatabase
 import com.emikhalets.datesdb.data.entities.DateItem
+import com.emikhalets.datesdb.data.entities.DateType
 import com.emikhalets.datesdb.data.entities.ResultDb
 import com.emikhalets.datesdb.data.repository.DateAddRepository
 import com.emikhalets.datesdb.utils.computeAge
@@ -28,6 +29,9 @@ class DateAddViewModel : ViewModel() {
 
     private val _types = MutableLiveData<List<String>>()
     val types get(): LiveData<List<String>> = _types
+
+    private val _typeAdding = MutableLiveData<DateType>()
+    val typeAdding get(): LiveData<DateType> = _typeAdding
 
     private val _notice = MutableLiveData<String>()
     val notice get(): LiveData<String> = _notice
@@ -66,6 +70,19 @@ class DateAddViewModel : ViewModel() {
                 }
             } else {
                 _notice.postValue("Enter all data")
+            }
+        }
+    }
+
+    fun insertType(name: String) {
+        viewModelScope.launch {
+            val type = DateType(name, 0)
+            when (val result = repository.insertType(type)) {
+                is ResultDb.Success -> {
+                    typeItems.add(type.name)
+                    _typeAdding.postValue(type)
+                }
+                is ResultDb.Error -> _notice.postValue(result.msg)
             }
         }
     }

@@ -1,5 +1,6 @@
 package com.emikhalets.datesdb.view
 
+import android.content.Context.MODE_PRIVATE
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -10,7 +11,10 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.emikhalets.datesdb.R
 import com.emikhalets.datesdb.databinding.FragmentDatesListBinding
+import com.emikhalets.datesdb.utils.Tags.SP_KEY_TYPES_DB_EXS
+import com.emikhalets.datesdb.utils.Tags.SP_NAME
 import com.emikhalets.datesdb.viewmodel.DatesListViewModel
 
 class DatesListFragment : Fragment() {
@@ -19,7 +23,6 @@ class DatesListFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val listViewModel: DatesListViewModel by viewModels()
-
     private var datesAdapter: DatesAdapter? = null
 
     override fun onCreateView(
@@ -34,7 +37,7 @@ class DatesListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        if (savedInstanceState == null) listViewModel.getAllDates()
+        if (savedInstanceState == null) checkTypes()
 
         datesAdapter = DatesAdapter { onDateClick(it) }
         binding.listDates.setHasFixedSize(true)
@@ -53,6 +56,11 @@ class DatesListFragment : Fragment() {
                 binding.listDates.isVisible = false
                 binding.textEmptyDates.isVisible = true
             }
+        })
+
+        listViewModel.defTypesCreating.observe(viewLifecycleOwner, {
+            val sp = requireActivity().getSharedPreferences(SP_NAME, MODE_PRIVATE).edit()
+            sp.putBoolean(SP_KEY_TYPES_DB_EXS, true).apply()
         })
 
         listViewModel.notice.observe(viewLifecycleOwner, { message ->
@@ -83,5 +91,20 @@ class DatesListFragment : Fragment() {
     private fun onAddClick() {
         val action = DatesListFragmentDirections.actionFragmentDatesListToFragmentDateAdd()
         binding.root.findNavController().navigate(action)
+    }
+
+    private fun checkTypes() {
+        val sp = requireActivity().getSharedPreferences(SP_NAME, MODE_PRIVATE)
+        val isTypesDbExist = sp.getBoolean(SP_KEY_TYPES_DB_EXS, false)
+        if (!isTypesDbExist) {
+            listViewModel.createDefaultTypesTable(
+                    getString(R.string.def_type_birthday),
+                    R.string.def_type_birthday,
+                    getString(R.string.def_type_holiday),
+                    R.string.def_type_holiday,
+                    getString(R.string.def_type_anniversary),
+                    R.string.def_type_anniversary,
+            )
+        }
     }
 }

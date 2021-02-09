@@ -7,13 +7,16 @@ import com.emikhalets.datesdb.data.entities.DateType
 interface TypesDao {
 
     @Insert
-    suspend fun insert(date: DateType): Long
+    suspend fun insert(type: DateType): Long
+
+    @Insert
+    suspend fun insertAll(types: List<DateType>)
 
     @Update
-    suspend fun update(date: DateType): Int
+    suspend fun update(type: DateType): Int
 
     @Delete
-    suspend fun delete(date: DateType): Int
+    suspend fun delete(type: DateType): Int
 
     @Query("SELECT * FROM types_table WHERE name = :name")
     suspend fun getType(name: String): DateType

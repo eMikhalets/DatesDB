@@ -65,7 +65,6 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
-array dates_type
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1792,6 +1791,8 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
+id action_fragmentDateAdd_to_addTypeDialog
+id action_fragmentDateEdit_to_addTypeDialog
 id action_fragmentDateItem_to_fragmentDateEdit
 id action_fragmentDatesList_to_fragmentDateAdd
 id action_fragmentDatesList_to_fragmentDateItem
@@ -1805,6 +1806,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addTypeDialog
 id alertTitle
 id aligned
 id all
@@ -1824,7 +1826,9 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btn_add
 id btn_avatar
+id btn_cancel
 id buttonPanel
 id cache_measures
 id cancel_action
@@ -1897,6 +1901,7 @@ id endToStart
 id end_padder
 id enterAlways
 id enterAlwaysCollapsed
+id et_type_name
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2145,6 +2150,7 @@ id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
 id text_name
+id text_title
 id text_type
 id textinput_counter
 id textinput_error
@@ -2262,7 +2268,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout dialog_date_add
+layout dialog_add_type
 layout fragment_date_add
 layout fragment_date_edit
 layout fragment_date_item
@@ -2384,6 +2390,9 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string def_type_anniversary
+string def_type_birthday
+string def_type_holiday
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
@@ -2458,7 +2467,12 @@ string text_add_date
 string text_add_is_year
 string text_add_name
 string text_add_type
+string text_add_type_title
 string text_change_avatar
+string text_dialog_add
+string text_dialog_cancel
+string text_dialog_new_type
+string text_dialog_new_type_title
 string text_edit_avatar
 string text_edit_date
 string text_edit_is_year
