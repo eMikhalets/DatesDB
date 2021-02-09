@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emikhalets.datesdb.model.database.AppDatabase
-import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DbResult
-import com.emikhalets.datesdb.model.repository.DateItemRepository
+import com.emikhalets.datesdb.data.database.AppDatabase
+import com.emikhalets.datesdb.data.entities.DateItem
+import com.emikhalets.datesdb.data.entities.ResultDb
+import com.emikhalets.datesdb.data.repository.DateItemRepository
 import kotlinx.coroutines.launch
 
 class DateItemViewModel : ViewModel() {
@@ -28,8 +28,8 @@ class DateItemViewModel : ViewModel() {
     fun getDate(id: Int) {
         viewModelScope.launch {
             when (val result = repository.getDate(id)) {
-                is DbResult.Success -> _date.postValue(result.result)
-                is DbResult.Error -> _notice.postValue(result.msg)
+                is ResultDb.Success -> _date.postValue(result.result)
+                is ResultDb.Error -> _notice.postValue(result.msg)
             }
         }
     }
@@ -39,8 +39,8 @@ class DateItemViewModel : ViewModel() {
             val dateItem = _date.value
             dateItem?.let {
                 when (val result = repository.delete(it)) {
-                    is DbResult.Success -> _deleting.postValue(result.result)
-                    is DbResult.Error -> _notice.postValue(result.msg)
+                    is ResultDb.Success -> _deleting.postValue(result.result)
+                    is ResultDb.Error -> _notice.postValue(result.msg)
                 }
             }
         }

@@ -1,15 +1,23 @@
 package com.emikhalets.datesdb.view
 
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.emikhalets.datesdb.R
 import com.emikhalets.datesdb.databinding.FragmentDateItemBinding
 import com.emikhalets.datesdb.viewmodel.DateItemViewModel
+import java.time.Instant
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 class DateItemFragment : Fragment() {
 
@@ -30,9 +38,10 @@ class DateItemFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (savedInstanceState != null) {
+        if (savedInstanceState == null) {
             arguments?.let {
-                val id = it.getInt("") ?: -1
+                val id = DateItemFragmentArgs.fromBundle(it).id ?: -1
+                Log.d("TAG", "arguments: $id")
                 itemViewModel.id = id
                 if (id >= 0) itemViewModel.getDate(id)
             }
@@ -40,9 +49,20 @@ class DateItemFragment : Fragment() {
 
         itemViewModel.date.observe(viewLifecycleOwner, { dateItem ->
             with(binding) {
+                if (dateItem.image.isEmpty()) {
+                    imageAvatar.isVisible = false
+                } else {
+                    imageAvatar.setImageURI(Uri.parse(dateItem.image))
+                    imageAvatar.isVisible = true
+                }
+
+                if (dateItem.isYear) textDate.text = formatDate(dateItem.date)
+                else textDate.text = formatDateWithoutYear(dateItem.date)
+
                 textName.text = dateItem.name
-                textDate.text = dateItem.date.toString()
+                textAge.text = getString(R.string.text_item_age, dateItem.age)
                 textType.text = dateItem.type
+                textDaysLeft.text = getString(R.string.text_item_days_left, dateItem.daysLeft)
             }
         })
 
@@ -55,7 +75,6 @@ class DateItemFragment : Fragment() {
         })
 
         binding.fabDeleteDate.setOnClickListener { itemViewModel.delete() }
-
         binding.fabEditDate.setOnClickListener { onEditClick() }
     }
 
@@ -70,5 +89,21 @@ class DateItemFragment : Fragment() {
             val action = DateItemFragmentDirections.actionFragmentDateItemToFragmentDateEdit(id)
             binding.root.findNavController().navigate(action)
         }
+    }
+
+    private fun formatDate(timestamp: Long): String {
+        val date = LocalDateTime.ofInstant(
+                Instant.ofEpochMilli(timestamp),
+                ZoneId.of("UTC")
+        )
+        return date.format(DateTimeFormatter.ofPattern("d MMM y, E"))
+    }
+
+    private fun formatDateWithoutYear(timestamp: Long): String {
+        val date = LocalDateTime.ofInstant(
+                Instant.ofEpochMilli(timestamp),
+                ZoneId.of("UTC")
+        ).withYear(LocalDateTime.now().year + 1)
+        return date.format(DateTimeFormatter.ofPattern("d MMM, E"))
     }
 }

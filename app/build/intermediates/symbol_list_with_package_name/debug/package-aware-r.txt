@@ -1904,6 +1904,7 @@ id fab_add_date
 id fab_delete_date
 id fab_edit_date
 id fab_save_date
+id fab_update_date
 id fade
 id fill
 id fill_horizontal
@@ -2457,16 +2458,15 @@ string text_add_date
 string text_add_is_year
 string text_add_name
 string text_add_type
+string text_change_avatar
 string text_edit_avatar
 string text_edit_date
 string text_edit_is_year
 string text_edit_name
 string text_edit_type
 string text_item_age
-string text_item_date
 string text_item_days_left
 string text_item_name
-string text_item_type
 string text_list_empty_dates
 string text_list_item_date
 string text_list_item_days_left

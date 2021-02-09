@@ -1,15 +1,19 @@
 package com.emikhalets.datesdb.viewmodel
 
+import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emikhalets.datesdb.model.database.AppDatabase
-import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DbResult
-import com.emikhalets.datesdb.model.repository.DateEditRepository
+import com.emikhalets.datesdb.data.database.AppDatabase
+import com.emikhalets.datesdb.data.entities.DateItem
+import com.emikhalets.datesdb.data.entities.ResultDb
+import com.emikhalets.datesdb.data.repository.DateEditRepository
 import kotlinx.coroutines.launch
+import java.time.Instant
 import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 class DateEditViewModel : ViewModel() {
 
@@ -32,12 +36,21 @@ class DateEditViewModel : ViewModel() {
 
     val typeItems = mutableListOf("+ New type")
     var dateTime: LocalDateTime = LocalDateTime.now()
+    var isYear = true
+    var isDateVisible = false
+    var isDateDialogOpen = false
+    var id = -1
+    var imageUri: String = ""
+
+    // To check the entered data
+    private var isNameEntered = false
+    private var isTypeEntered = false
 
     fun getDate(id: Int) {
         viewModelScope.launch {
             when (val result = repository.getDate(id)) {
-                is DbResult.Success -> _date.postValue(result.result)
-                is DbResult.Error -> _notice.postValue(result.msg)
+                is ResultDb.Success -> _date.postValue(result.result)
+                is ResultDb.Error -> _notice.postValue(result.msg)
             }
         }
     }
@@ -45,29 +58,51 @@ class DateEditViewModel : ViewModel() {
     fun getAllTypes() {
         viewModelScope.launch {
             when (val result = repository.getAllTypes()) {
-                is DbResult.Success -> {
+                is ResultDb.Success -> {
                     val list = result.result.map { it.name }
                     typeItems.addAll(list)
                     _types.postValue(list)
                 }
-                is DbResult.Error -> _notice.postValue(result.msg)
+                is ResultDb.Error -> _notice.postValue(result.msg)
             }
         }
     }
 
     fun update(name: String, date: Long, type: String) {
         viewModelScope.launch {
-            if (checkData(name, date, type)) {
-                val dateItem = DateItem(name, date, type, 1, 1, false, "")
+            if (checkData(name, type)) {
+                val dateItem = DateItem(name, date, type, 1, 1, false, imageUri, id)
                 when (val result = repository.update(dateItem)) {
-                    is DbResult.Success -> _updating.postValue(result.result)
-                    is DbResult.Error -> _notice.postValue(result.msg)
+                    is ResultDb.Success -> _updating.postValue(result.result)
+                    is ResultDb.Error -> _notice.postValue(result.msg)
                 }
+            } else {
+                _notice.postValue("Enter all data")
             }
         }
     }
 
-    private fun checkData(name: String, date: Long, type: String): Boolean {
-        return name.isNotEmpty() && date > 0 && type.isNotEmpty()
+    fun formatDateString(): String {
+        if (isDateVisible) {
+            return if (isYear) {
+                dateTime.format(DateTimeFormatter.ofPattern("d MMM y"))
+            } else {
+                dateTime.format(DateTimeFormatter.ofPattern("d MMM"))
+            }
+        }
+        return ""
+    }
+
+    fun setDateTime(timestamp: Long) {
+        dateTime = LocalDateTime.ofInstant(
+                Instant.ofEpochMilli(timestamp),
+                ZoneId.of("UTC")
+        )
+    }
+
+    private fun checkData(name: String, type: String): Boolean {
+        isNameEntered = name.isNotEmpty()
+        isTypeEntered = type.isNotEmpty()
+        return isNameEntered && isTypeEntered
     }
 }

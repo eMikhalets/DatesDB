@@ -3,7 +3,7 @@ package com.emikhalets.datesdb.view
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.emikhalets.datesdb.databinding.ActivityMainBinding
-import com.emikhalets.datesdb.model.database.AppDatabase
+import com.emikhalets.datesdb.data.database.AppDatabase
 
 class MainActivity : AppCompatActivity() {
 

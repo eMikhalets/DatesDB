@@ -5,10 +5,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emikhalets.datesdb.model.database.AppDatabase
-import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DbResult
-import com.emikhalets.datesdb.model.repository.DateAddRepository
+import com.emikhalets.datesdb.data.database.AppDatabase
+import com.emikhalets.datesdb.data.entities.DateItem
+import com.emikhalets.datesdb.data.entities.ResultDb
+import com.emikhalets.datesdb.data.repository.DateAddRepository
 import com.emikhalets.datesdb.utils.computeAge
 import com.emikhalets.datesdb.utils.computeDaysLeft
 import kotlinx.coroutines.launch
@@ -33,23 +33,25 @@ class DateAddViewModel : ViewModel() {
     val notice get(): LiveData<String> = _notice
 
     val typeItems = mutableListOf("+ New type")
-    var dateTime: LocalDateTime = LocalDateTime.now()
-    var isDateVisible = false
-    var isYear = true
     var imageUri: Uri? = null
+    var dateTime: LocalDateTime = LocalDateTime.now()
+    var isYear = true
+    var isDateVisible = false
+    var isDateDialogOpen = false
 
+    // To check the entered data
     private var isNameEntered = false
     private var isTypeEntered = false
 
     fun getAllTypes() {
         viewModelScope.launch {
             when (val result = repository.getAllTypes()) {
-                is DbResult.Success -> {
+                is ResultDb.Success -> {
                     val list = result.result.map { it.name }
                     typeItems.addAll(list)
                     _types.postValue(list)
                 }
-                is DbResult.Error -> _notice.postValue(result.msg)
+                is ResultDb.Error -> _notice.postValue(result.msg)
             }
         }
     }
@@ -59,8 +61,8 @@ class DateAddViewModel : ViewModel() {
             if (checkData(name, type)) {
                 val dateItem = computeDate(name, type)
                 when (val result = repository.insert(dateItem)) {
-                    is DbResult.Success -> _adding.postValue(result.result)
-                    is DbResult.Error -> _notice.postValue(result.msg)
+                    is ResultDb.Success -> _adding.postValue(result.result)
+                    is ResultDb.Error -> _notice.postValue(result.msg)
                 }
             } else {
                 _notice.postValue("Enter all data")

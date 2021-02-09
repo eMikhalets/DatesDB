@@ -4,10 +4,10 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emikhalets.datesdb.model.database.AppDatabase
-import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DbResult
-import com.emikhalets.datesdb.model.repository.DatesListRepository
+import com.emikhalets.datesdb.data.database.AppDatabase
+import com.emikhalets.datesdb.data.entities.DateItem
+import com.emikhalets.datesdb.data.entities.ResultDb
+import com.emikhalets.datesdb.data.repository.DatesListRepository
 import com.emikhalets.datesdb.utils.computeAge
 import com.emikhalets.datesdb.utils.computeDaysLeft
 import kotlinx.coroutines.launch
@@ -28,26 +28,32 @@ class DatesListViewModel : ViewModel() {
     fun getAllDates() {
         viewModelScope.launch {
             when (val result = repository.getAllDates()) {
-                is DbResult.Success -> {
+                is ResultDb.Success -> {
                     val list = result.result
-                    computeDatesList(list)
+                    computeAndUpdateDates(list)
                     list.sortedBy { it.daysLeft }
                     _dates.postValue(result.result)
                 }
-                is DbResult.Error -> _notice.postValue(result.msg)
+                is ResultDb.Error -> _notice.postValue(result.msg)
             }
         }
     }
 
-    private fun computeDatesList(list: List<DateItem>) {
+    private fun computeAndUpdateDates(list: List<DateItem>) {
         for (i in list.indices) {
             val selected = LocalDateTime.ofInstant(
                     Instant.ofEpochMilli(list[i].date),
                     ZoneId.of("UTC")
             )
+            val oldDaysLeft = list[i].daysLeft
+            val oldAge = list[i].age
             list[i].apply {
                 daysLeft = computeDaysLeft(selected)
                 if (list[i].isYear) list[i].age = computeAge(selected)
+            }
+
+            if (oldDaysLeft != list[i].daysLeft || oldAge != list[i].age) {
+                viewModelScope.launch { repository.update(list[i]) }
             }
         }
     }

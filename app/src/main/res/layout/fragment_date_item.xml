@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="@+id/text_date"
         app:layout_constraintStart_toStartOf="@+id/text_date"
         app:layout_constraintTop_toBottomOf="@+id/text_name"
-        tools:text="@string/text_item_age" />
+        tools:text="57 years" />
 
     <TextView
         android:id="@+id/text_date"
@@ -51,7 +51,7 @@
         app:layout_constraintEnd_toEndOf="@+id/text_name"
         app:layout_constraintStart_toStartOf="@+id/text_name"
         app:layout_constraintTop_toBottomOf="@+id/text_age"
-        tools:text="@string/text_item_date" />
+        tools:text="16 May 2000, Monday" />
 
     <TextView
         android:id="@+id/text_type"
@@ -63,7 +63,7 @@
         app:layout_constraintEnd_toEndOf="@+id/text_date"
         app:layout_constraintStart_toStartOf="@+id/text_date"
         app:layout_constraintTop_toBottomOf="@+id/text_date"
-        tools:text="@string/text_item_type" />
+        tools:text="Birthday" />
 
     <TextView
         android:id="@+id/text_days_left"
@@ -77,7 +77,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_type"
-        tools:text="@string/text_item_days_left" />
+        tools:text="Days left\n167" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_delete_date"

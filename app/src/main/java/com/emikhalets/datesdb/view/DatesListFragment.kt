@@ -1,6 +1,7 @@
 package com.emikhalets.datesdb.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,16 +34,19 @@ class DatesListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        if (savedInstanceState != null) {
-            listViewModel.getAllDates()
-        }
+//        if (savedInstanceState == null) listViewModel.getAllDates()
 
         datesAdapter = DatesAdapter { onDateClick(it) }
         binding.listDates.setHasFixedSize(true)
         binding.listDates.adapter = datesAdapter
 
         listViewModel.dates.observe(viewLifecycleOwner, { dates ->
+            Log.d("TAG", "dates.observe: ${dates.size}")
+            dates.forEach {
+                Log.d("TAG", "dates.observe: ${it.id} ${it.name}")
+            }
             if (dates.isNotEmpty()) {
+                datesAdapter?.submitList(dates)
                 binding.listDates.isVisible = true
                 binding.textEmptyDates.isVisible = false
             } else {
@@ -58,6 +62,12 @@ class DatesListFragment : Fragment() {
         binding.fabAddDate.setOnClickListener { onAddClick() }
     }
 
+    override fun onResume() {
+        super.onResume()
+        datesAdapter?.submitList(null)
+        listViewModel.getAllDates()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         datesAdapter = null
@@ -65,6 +75,7 @@ class DatesListFragment : Fragment() {
     }
 
     private fun onDateClick(id: Int) {
+        Log.d("TAG", "onAddClick: $id")
         val action = DatesListFragmentDirections.actionFragmentDatesListToFragmentDateItem(id)
         binding.root.findNavController().navigate(action)
     }

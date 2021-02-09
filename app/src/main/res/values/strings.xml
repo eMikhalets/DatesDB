@@ -8,10 +8,8 @@
     <string name="text_list_empty_dates">Empty list of dates</string>
 
     <string name="text_item_name">Family Name Patronymic</string>
-    <string name="text_item_age">57 years</string>
-    <string name="text_item_date">16 May 2000\nMonday</string>
-    <string name="text_item_type">Birthday</string>
-    <string name="text_item_days_left">Days left\n167</string>
+    <string name="text_item_age">%d years</string>
+    <string name="text_item_days_left">Days left\n%d</string>
 
     <string name="text_edit_avatar">Change image</string>
     <string name="text_edit_name">Name</string>
@@ -21,11 +19,13 @@
 
     <string name="text_add_add">Add</string>
     <string name="text_add_cancel">Cancel</string>
-    <string name="text_add_avatar">Set image</string>
     <string name="text_add_name">Name</string>
     <string name="text_add_date">Choose date</string>
     <string name="text_add_is_year">Without year</string>
     <string name="text_add_type">Type of date</string>
 
     <string name="menu_settings">Settings</string>
+
+    <string name="text_add_avatar">Set image</string>
+    <string name="text_change_avatar">Change image</string>
 </resources>

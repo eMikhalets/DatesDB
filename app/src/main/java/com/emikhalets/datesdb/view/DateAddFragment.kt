@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import com.emikhalets.datesdb.R
 import com.emikhalets.datesdb.databinding.FragmentDateAddBinding
 import com.emikhalets.datesdb.viewmodel.DateAddViewModel
 import java.time.LocalDateTime
@@ -42,6 +43,7 @@ class DateAddFragment : Fragment() {
 
         if (savedInstanceState != null) {
             binding.imageAvatar.setImageURI(addViewModel.imageUri)
+            if (addViewModel.isDateDialogOpen) onDateClick()
         }
 
         addViewModel.getAllTypes()
@@ -75,7 +77,8 @@ class DateAddFragment : Fragment() {
     }
 
     private fun onAvatarClick() {
-        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        intent.type = "image/*"
         startActivityForResult(intent, 0)
     }
 
@@ -85,18 +88,20 @@ class DateAddFragment : Fragment() {
             val uri = data.data
             binding.imageAvatar.setImageURI(uri)
             addViewModel.imageUri = uri
+            binding.btnAvatar.text = getString(R.string.text_change_avatar)
         }
     }
 
-    private fun onDateClick() {
-        DatePickerDialog(
-                requireContext(), dateListener,
-                addViewModel.dateTime.year,
-                addViewModel.dateTime.monthValue - 1,
-                addViewModel.dateTime.dayOfMonth,
-        ).show()
+    private fun initDateDialog() = DatePickerDialog(
+            requireContext(), dateListener,
+            addViewModel.dateTime.year,
+            addViewModel.dateTime.monthValue - 1,
+            addViewModel.dateTime.dayOfMonth,
+    )
 
-        binding.tedDate.setText(addViewModel.formatDateString())
+    private fun onDateClick() {
+        addViewModel.isDateDialogOpen = true
+        initDateDialog().show()
     }
 
     private fun onSetDateClick() = OnDateSetListener { _, year, month, dayOfMonth ->
@@ -106,6 +111,7 @@ class DateAddFragment : Fragment() {
                 .withDayOfMonth(dayOfMonth)
         addViewModel.dateTime = new
         addViewModel.isDateVisible = true
+        addViewModel.isDateDialogOpen = false
         binding.tedDate.setText(addViewModel.formatDateString())
     }
 
