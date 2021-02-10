@@ -11,21 +11,11 @@
         android:label="FragmentDatesList"
         tools:layout="@layout/fragment_dates_list">
         <action
-            android:id="@+id/action_fragmentDatesList_to_fragmentDateAdd"
-            app:destination="@id/fragmentDateAdd" />
-        <action
             android:id="@+id/action_fragmentDatesList_to_fragmentDateItem"
             app:destination="@id/fragmentDateItem" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/fragmentDateAdd"
-        android:name="com.emikhalets.datesdb.view.DateAddFragment"
-        android:label="FragmentDateAdd"
-        tools:layout="@layout/fragment_date_add">
         <action
-            android:id="@+id/action_fragmentDateAdd_to_addTypeDialog"
-            app:destination="@id/addTypeDialog" />
+            android:id="@+id/action_fragmentDatesList_to_fragmentDateEdit"
+            app:destination="@id/fragmentDateEdit" />
     </fragment>
 
     <fragment

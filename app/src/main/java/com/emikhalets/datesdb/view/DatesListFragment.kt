@@ -89,7 +89,7 @@ class DatesListFragment : Fragment() {
     }
 
     private fun onAddClick() {
-        val action = DatesListFragmentDirections.actionFragmentDatesListToFragmentDateAdd()
+        val action = DatesListFragmentDirections.actionFragmentDatesListToFragmentDateEdit()
         binding.root.findNavController().navigate(action)
     }
 

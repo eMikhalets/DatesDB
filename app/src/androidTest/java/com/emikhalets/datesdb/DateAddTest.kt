@@ -2,7 +2,6 @@ package com.emikhalets.datesdb
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.emikhalets.datesdb.utils.computeDaysLeft
-import com.emikhalets.datesdb.viewmodel.DateAddViewModel
 import org.hamcrest.Matchers.equalTo
 import org.junit.Assert.assertThat
 import org.junit.Test

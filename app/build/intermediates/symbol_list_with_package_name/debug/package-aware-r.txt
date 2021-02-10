@@ -1791,10 +1791,9 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_divider
-id action_fragmentDateAdd_to_addTypeDialog
 id action_fragmentDateEdit_to_addTypeDialog
 id action_fragmentDateItem_to_fragmentDateEdit
-id action_fragmentDatesList_to_fragmentDateAdd
+id action_fragmentDatesList_to_fragmentDateEdit
 id action_fragmentDatesList_to_fragmentDateItem
 id action_image
 id action_menu_divider
@@ -1909,7 +1908,6 @@ id fab_add_date
 id fab_delete_date
 id fab_edit_date
 id fab_save_date
-id fab_update_date
 id fade
 id fill
 id fill_horizontal
@@ -1920,7 +1918,6 @@ id fixed
 id flip
 id floating
 id forever
-id fragmentDateAdd
 id fragmentDateEdit
 id fragmentDateItem
 id fragmentDatesList
@@ -2269,7 +2266,6 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_add_type
-layout fragment_date_add
 layout fragment_date_edit
 layout fragment_date_item
 layout fragment_dates_list
