@@ -16,7 +16,7 @@ interface DatesDao {
     suspend fun delete(date: DateItem): Int
 
     @Query("SELECT * FROM dates_table WHERE id = :id")
-    suspend fun getDate(id: Int): DateItem
+    suspend fun getDate(id: Long): DateItem
 
     @Query("SELECT * FROM dates_table ORDER BY daysLeft ASC")
     suspend fun getAllDates(): List<DateItem>

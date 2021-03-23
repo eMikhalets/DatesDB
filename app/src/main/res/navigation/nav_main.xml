@@ -25,8 +25,8 @@
         tools:layout="@layout/fragment_date_item">
         <argument
             android:name="id"
-            android:defaultValue="-1"
-            app:argType="integer" />
+            android:defaultValue="-1L"
+            app:argType="long" />
         <action
             android:id="@+id/action_fragmentDateItem_to_fragmentDateEdit"
             app:destination="@id/fragmentDateEdit" />
@@ -39,11 +39,14 @@
         tools:layout="@layout/fragment_date_edit">
         <argument
             android:name="id"
-            android:defaultValue="-1"
-            app:argType="integer" />
+            app:argType="long"
+            android:defaultValue="-1L" />
         <action
-            android:id="@+id/action_fragmentDateEdit_to_addTypeDialog"
-            app:destination="@id/addTypeDialog" />
+            android:id="@+id/action_fragmentDateEdit_to_datePickerDialog"
+            app:destination="@id/datePickerDialog" />
+        <action
+            android:id="@+id/action_fragmentDateEdit_to_typesDialog"
+            app:destination="@id/typesDialog" />
     </fragment>
 
     <dialog
@@ -51,4 +54,20 @@
         android:name="com.emikhalets.datesdb.view.AddTypeDialog"
         android:label="AddTypeDialog"
         tools:layout="@layout/dialog_add_type" />
+
+    <fragment
+        android:id="@+id/datePickerDialog"
+        tools:layout="@layout/dialog_date_picker"
+        android:name="com.emikhalets.datesdb.view.DatePickerDialog"
+        android:label="DatePickerDialog" />
+
+    <fragment
+        android:id="@+id/typesDialog"
+        tools:layout="@layout/dialog_types"
+        android:name="com.emikhalets.datesdb.view.TypesDialog"
+        android:label="TypesDialog" >
+        <action
+            android:id="@+id/action_typesDialog_to_addTypeDialog"
+            app:destination="@id/addTypeDialog" />
+    </fragment>
 </navigation>

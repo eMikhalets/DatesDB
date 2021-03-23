@@ -1,9 +1,11 @@
-package com.emikhalets.datesdb.di
+package com.emikhalets.datesdb
 
 import com.emikhalets.datesdb.data.database.AppDatabase
 import com.emikhalets.datesdb.data.repository.ActivityRepository
+import com.emikhalets.datesdb.data.repository.DateEditRepository
 import com.emikhalets.datesdb.data.repository.DatesListRepository
 import com.emikhalets.datesdb.viewmodel.ActivityViewModel
+import com.emikhalets.datesdb.viewmodel.DateEditViewModel
 import com.emikhalets.datesdb.viewmodel.DatesListViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -16,10 +18,12 @@ val androidModule = module {
 
 val repositoryModule = module {
     factory { ActivityRepository(get()) }
-    factory { DatesListRepository(get(), get()) }
+    factory { DatesListRepository(get()) }
+    factory { DateEditRepository(get(), get()) }
 }
 
 val viewModelsModule = module {
     viewModel { ActivityViewModel(get()) }
     viewModel { DatesListViewModel(get()) }
+    viewModel { DateEditViewModel(get()) }
 }

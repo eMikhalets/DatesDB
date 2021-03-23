@@ -38,4 +38,8 @@
     <string name="text_dialog_add">Add</string>
     <string name="text_dialog_cancel">Cancel</string>
     <string name="text_add_type_title">Creating new type</string>
+
+
+    <string name="dialog_btn_ok">OK</string>
+    <string name="dialog_btn_cancel">Cancel</string>
 </resources>

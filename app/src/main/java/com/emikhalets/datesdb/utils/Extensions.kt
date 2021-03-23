@@ -5,6 +5,13 @@ import java.time.LocalDateTime
 import java.time.Year
 import java.time.temporal.ChronoUnit
 
+fun setLocalDateTime(day: Int, month: Int, year: Int): LocalDateTime {
+    return LocalDateTime.now()
+            .withYear(year)
+            .withMonth(month + 1)
+            .withDayOfMonth(day)
+}
+
 fun computeDaysLeft(selected: LocalDateTime): Int {
     val now = LocalDateTime.now()
     val date = LocalDateTime.from(selected).withYear(now.year)

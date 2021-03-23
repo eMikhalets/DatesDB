@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val isTypesDbExist = sp.getBoolean(SP_KEY_TYPES_DB_EXS, false)
         if (!isTypesDbExist) viewModel.createDefaultTypesTable(listOf(
                 getString(R.string.def_type_birthday),
-                getString(R.string.def_type_holiday),
                 getString(R.string.def_type_anniversary)
         ))
     }
