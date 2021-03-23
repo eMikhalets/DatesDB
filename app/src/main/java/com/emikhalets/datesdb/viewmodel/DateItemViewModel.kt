@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.emikhalets.datesdb.data.database.AppDatabase
 import com.emikhalets.datesdb.data.entities.DateItem
-import com.emikhalets.datesdb.data.entities.ResultDb
 import com.emikhalets.datesdb.data.repository.DateItemRepository
 import kotlinx.coroutines.launch
 
@@ -28,8 +27,8 @@ class DateItemViewModel : ViewModel() {
     fun getDate(id: Int) {
         viewModelScope.launch {
             when (val result = repository.getDate(id)) {
-                is ResultDb.Success -> _date.postValue(result.result)
-                is ResultDb.Error -> _notice.postValue(result.msg)
+                is com.emikhalets.datesdb.data.entities.ResultDb.Result.Success -> _date.postValue(result.result)
+                is com.emikhalets.datesdb.data.entities.ResultDb.Result.Error -> _notice.postValue(result.msg)
             }
         }
     }
@@ -39,8 +38,8 @@ class DateItemViewModel : ViewModel() {
             val dateItem = _date.value
             dateItem?.let {
                 when (val result = repository.delete(it)) {
-                    is ResultDb.Success -> _deleting.postValue(result.result)
-                    is ResultDb.Error -> _notice.postValue(result.msg)
+                    is com.emikhalets.datesdb.data.entities.ResultDb.Result.Success -> _deleting.postValue(result.result)
+                    is com.emikhalets.datesdb.data.entities.ResultDb.Result.Error -> _notice.postValue(result.msg)
                 }
             }
         }

@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.emikhalets.datesdb.data.database.AppDatabase
 import com.emikhalets.datesdb.data.entities.DateItem
 import com.emikhalets.datesdb.data.entities.DateType
-import com.emikhalets.datesdb.data.entities.ResultDb
 import com.emikhalets.datesdb.data.repository.DateEditRepository
 import com.emikhalets.datesdb.utils.computeAge
 import com.emikhalets.datesdb.utils.computeDaysLeft
@@ -64,8 +63,8 @@ class DateEditViewModel : ViewModel() {
     fun getDate(id: Int) {
         viewModelScope.launch {
             when (val result = repository.getDate(id)) {
-                is ResultDb.Success -> _date.postValue(result.result)
-                is ResultDb.Error -> _notice.postValue(result.msg)
+                is com.emikhalets.datesdb.data.entities.ResultDb.Result.Success -> _date.postValue(result.result)
+                is com.emikhalets.datesdb.data.entities.ResultDb.Result.Error -> _notice.postValue(result.msg)
             }
         }
     }
@@ -75,8 +74,8 @@ class DateEditViewModel : ViewModel() {
             if (checkData()) {
                 val dateItem = computeDate()
                 when (val result = repository.insertDate(dateItem)) {
-                    is ResultDb.Success -> _insertingDate.postValue(result.result)
-                    is ResultDb.Error -> _notice.postValue(result.msg)
+                    is com.emikhalets.datesdb.data.entities.ResultDb.Result.Success -> _insertingDate.postValue(result.result)
+                    is com.emikhalets.datesdb.data.entities.ResultDb.Result.Error -> _notice.postValue(result.msg)
                 }
             } else {
                 _notice.postValue("Enter all data")
@@ -98,8 +97,8 @@ class DateEditViewModel : ViewModel() {
                         id = currentDateId
                 )
                 when (val result = repository.updateDate(dateItem)) {
-                    is ResultDb.Success -> _updatingDate.postValue(result.result)
-                    is ResultDb.Error -> _notice.postValue(result.msg)
+                    is com.emikhalets.datesdb.data.entities.ResultDb.Result.Success -> _updatingDate.postValue(result.result)
+                    is com.emikhalets.datesdb.data.entities.ResultDb.Result.Error -> _notice.postValue(result.msg)
                 }
             } else {
                 _notice.postValue("Enter all data")
@@ -110,12 +109,12 @@ class DateEditViewModel : ViewModel() {
     fun getAllTypes() {
         viewModelScope.launch {
             when (val result = repository.getAllTypes()) {
-                is ResultDb.Success -> {
+                is com.emikhalets.datesdb.data.entities.ResultDb.Result.Success -> {
                     val list = result.result.map { it.name }
                     typesItems.addAll(list)
                     _types.postValue(list)
                 }
-                is ResultDb.Error -> _notice.postValue(result.msg)
+                is com.emikhalets.datesdb.data.entities.ResultDb.Result.Error -> _notice.postValue(result.msg)
             }
         }
     }
@@ -124,11 +123,11 @@ class DateEditViewModel : ViewModel() {
         viewModelScope.launch {
             val type = DateType(name, 0)
             when (val result = repository.insertType(type)) {
-                is ResultDb.Success -> {
+                is com.emikhalets.datesdb.data.entities.ResultDb.Result.Success -> {
                     typesItems.add(type.name)
                     _insertingType.postValue(type)
                 }
-                is ResultDb.Error -> _notice.postValue(result.msg)
+                is com.emikhalets.datesdb.data.entities.ResultDb.Result.Error -> _notice.postValue(result.msg)
             }
         }
     }

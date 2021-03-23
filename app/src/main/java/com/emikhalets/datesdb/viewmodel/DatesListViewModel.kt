@@ -4,10 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emikhalets.datesdb.data.database.AppDatabase
 import com.emikhalets.datesdb.data.entities.DateItem
-import com.emikhalets.datesdb.data.entities.DateType
-import com.emikhalets.datesdb.data.entities.ResultDb
+import com.emikhalets.datesdb.data.entities.Result
 import com.emikhalets.datesdb.data.repository.DatesListRepository
 import com.emikhalets.datesdb.utils.computeAge
 import com.emikhalets.datesdb.utils.computeDaysLeft
@@ -16,18 +14,10 @@ import java.time.Instant
 import java.time.LocalDateTime
 import java.time.ZoneId
 
-class DatesListViewModel : ViewModel() {
-
-    private val repository = DatesListRepository(
-            AppDatabase.get().typesDao,
-            AppDatabase.get().datesDao
-    )
+class DatesListViewModel(private val repository: DatesListRepository) : ViewModel() {
 
     private val _dates = MutableLiveData<List<DateItem>>()
     val dates get(): LiveData<List<DateItem>> = _dates
-
-    private val _defTypesCreating = MutableLiveData<Boolean>()
-    val defTypesCreating get(): LiveData<Boolean> = _defTypesCreating
 
     private val _notice = MutableLiveData<String>()
     val notice get(): LiveData<String> = _notice
@@ -35,26 +25,13 @@ class DatesListViewModel : ViewModel() {
     fun getAllDates() {
         viewModelScope.launch {
             when (val result = repository.getAllDates()) {
-                is ResultDb.Success -> {
+                is Result.Success -> {
                     val list = result.result
                     computeAndUpdateDates(list)
                     list.sortedBy { it.daysLeft }
                     _dates.postValue(result.result)
                 }
-                is ResultDb.Error -> _notice.postValue(result.msg)
-            }
-        }
-    }
-
-    fun createDefaultTypesTable(name1: String, res1: Int, name2: String, res2: Int, name3: String, res3: Int) {
-        viewModelScope.launch {
-            val list = mutableListOf<DateType>()
-            list.add(DateType(name1, res1))
-            list.add(DateType(name2, res2))
-            list.add(DateType(name3, res3))
-            when (val result = repository.insertTypes(list)) {
-                is ResultDb.Success -> _defTypesCreating.postValue(true)
-                is ResultDb.Error -> _notice.postValue(result.msg)
+                is Result.Error -> _notice.postValue(result.msg)
             }
         }
     }
