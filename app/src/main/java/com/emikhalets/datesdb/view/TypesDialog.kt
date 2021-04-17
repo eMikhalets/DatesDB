@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import com.emikhalets.datesdb.databinding.DialogAddTypeBinding
-import com.emikhalets.datesdb.viewmodel.DateEditViewModel
+import com.emikhalets.datesdb.ui.date_edit.DateEditViewModel
 
 class TypesDialog : DialogFragment() {
 

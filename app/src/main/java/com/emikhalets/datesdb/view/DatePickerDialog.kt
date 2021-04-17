@@ -7,7 +7,7 @@ import android.os.Bundle
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import com.emikhalets.datesdb.utils.setLocalDateTime
-import com.emikhalets.datesdb.viewmodel.DateEditViewModel
+import com.emikhalets.datesdb.ui.date_edit.DateEditViewModel
 import java.time.LocalDateTime
 
 class DatePickerDialog : DialogFragment() {

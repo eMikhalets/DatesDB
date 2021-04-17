@@ -4,8 +4,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emikhalets.datesdb.data.database.AppDatabase
-import com.emikhalets.datesdb.data.entities.DateItem
+import com.emikhalets.datesdb.model.database.AppDatabase
+import com.emikhalets.datesdb.model.entities.DateItem
 import com.emikhalets.datesdb.data.repository.DateItemRepository
 import kotlinx.coroutines.launch
 

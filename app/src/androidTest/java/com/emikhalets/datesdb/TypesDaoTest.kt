@@ -4,9 +4,9 @@ import android.content.Context
 import androidx.room.Room
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.emikhalets.datesdb.data.database.AppDatabase
-import com.emikhalets.datesdb.data.database.TypesDao
-import com.emikhalets.datesdb.data.entities.DateType
+import com.emikhalets.datesdb.model.database.AppDatabase
+import com.emikhalets.datesdb.model.database.TypesDao
+import com.emikhalets.datesdb.model.entities.DateType
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.Matchers.equalTo
 import org.junit.After

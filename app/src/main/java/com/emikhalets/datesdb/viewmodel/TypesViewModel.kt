@@ -4,18 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emikhalets.datesdb.data.entities.DateItem
-import com.emikhalets.datesdb.data.entities.DateType
+import com.emikhalets.datesdb.model.entities.DateItem
+import com.emikhalets.datesdb.model.entities.DateType
 import com.emikhalets.datesdb.data.entities.Result
 import com.emikhalets.datesdb.data.repository.DateEditRepository
 import com.emikhalets.datesdb.utils.computeAge
 import com.emikhalets.datesdb.utils.computeDaysLeft
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import java.time.Instant
 import java.time.LocalDateTime
-import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 

@@ -1,12 +1,12 @@
 package com.emikhalets.datesdb
 
-import com.emikhalets.datesdb.data.database.AppDatabase
+import com.emikhalets.datesdb.model.database.AppDatabase
 import com.emikhalets.datesdb.data.repository.ActivityRepository
 import com.emikhalets.datesdb.data.repository.DateEditRepository
 import com.emikhalets.datesdb.data.repository.DatesListRepository
 import com.emikhalets.datesdb.viewmodel.ActivityViewModel
-import com.emikhalets.datesdb.viewmodel.DateEditViewModel
-import com.emikhalets.datesdb.viewmodel.DatesListViewModel
+import com.emikhalets.datesdb.ui.date_edit.DateEditViewModel
+import com.emikhalets.datesdb.ui.dates_list.DatesListViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

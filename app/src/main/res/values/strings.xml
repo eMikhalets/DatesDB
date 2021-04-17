@@ -1,5 +1,15 @@
 <resources>
+    <!-- APPLICATION -->
     <string name="app_name">DatesDB</string>
+    <string name="app_btn_ok">OK</string>
+    <string name="app_btn_cancel">Cancel</string>
+
+    <!-- ADD DATE SCREEN -->
+    <string name="add_date_text_label">New Date</string>
+    <string name="add_date_text_without_year">Without year</string>
+    <string name="add_date_hint_name">Name</string>
+    <string name="add_date_hint_type">Type of date</string>
+    <string name="add_date_hint_date">Date</string>
 
     <string name="def_type_birthday">Birthday</string>
     <string name="def_type_holiday">Holiday</string>
