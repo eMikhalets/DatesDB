@@ -1,4 +1,4 @@
-package com.emikhalets.datesdb.viewmodel
+package com.emikhalets.datesdb.ui.types
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.emikhalets.datesdb.model.entities.DateItem
 import com.emikhalets.datesdb.model.entities.DateType
-import com.emikhalets.datesdb.data.entities.Result
 import com.emikhalets.datesdb.data.repository.DateEditRepository
 import com.emikhalets.datesdb.utils.computeAge
 import com.emikhalets.datesdb.utils.computeDaysLeft

@@ -12,8 +12,8 @@ abstract class BaseFragment<I : ViewIntent, A : ViewAction, S : ViewState, VM : 
 
     abstract val viewModel: VM
 
-    abstract fun initData(savedInstanceState: Bundle?)
-    abstract fun initEvent()
+    abstract fun initData()
+    abstract fun initEvents()
     abstract fun initView()
 
     private lateinit var viewState: S
@@ -21,8 +21,8 @@ abstract class BaseFragment<I : ViewIntent, A : ViewAction, S : ViewState, VM : 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initData(savedInstanceState)
-        initEvent()
+        if (savedInstanceState == null) initData()
+        initEvents()
         initView()
         observeState()
     }

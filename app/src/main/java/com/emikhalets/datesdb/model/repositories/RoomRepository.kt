@@ -40,9 +40,10 @@ class RoomRepository(
         }
     }
 
-    override suspend fun updateDate(dateItem: DateItem): Flow<AppResult<Int>> = flow {
+    override suspend fun updateDate(id: Long): Flow<AppResult<Nothing>> = flow {
         try {
-            datesDao.update(dateItem).run { emit(AppResult.Success(this)) }
+            val dateItem = datesDao.getItem(id)
+            datesDao.update(dateItem).run { emit(AppResult.Complete) }
         } catch (ex: Exception) {
             emit(AppResult.Error.DatabaseError(ex))
         }

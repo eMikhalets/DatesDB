@@ -1,55 +1,48 @@
 <resources>
-    <!-- APPLICATION -->
+
+    <!-- Common -->
     <string name="app_name">DatesDB</string>
     <string name="app_btn_ok">OK</string>
     <string name="app_btn_cancel">Cancel</string>
+    <string name="app_def_name">Family Name Patronymic</string>
+    <string name="app_def_age">30 years</string>
+    <string name="app_def_date">16 May 2000, Monday</string>
+    <string name="app_def_date_list">16 May 2000, Monday (53)</string>
+    <string name="app_def_type">Birthday</string>
+    <string name="app_def_days_left">100 days</string>
 
-    <!-- ADD DATE SCREEN -->
-    <string name="add_date_text_label">New Date</string>
-    <string name="add_date_text_without_year">Without year</string>
-    <string name="add_date_hint_name">Name</string>
-    <string name="add_date_hint_type">Type of date</string>
-    <string name="add_date_hint_date">Date</string>
+    <!-- Dates List Screen -->
+    <string name="date_list_text_days_left">Days left</string>
 
-    <string name="def_type_birthday">Birthday</string>
-    <string name="def_type_holiday">Holiday</string>
-    <string name="def_type_anniversary">Anniversary</string>
+    <!-- Date Item Screen -->
+    <string name="date_item_text_name_label">Name:</string>
+    <string name="date_item_text_age_label">Age:</string>
+    <string name="date_item_text_date_label">Date:</string>
+    <string name="date_item_text_type_label">Type of date:</string>
+    <string name="date_item_text_days_left_label">Days left:</string>
+    <plurals name="date_item_text_age">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+    <plurals name="date_item_text_days_left">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
 
-    <string name="text_list_item_name">Family Name Patronymic</string>
-    <string name="text_list_item_date">%s (%d)</string>
-    <string name="text_list_item_days_left">%d\nleft</string>
+    <!-- Date Edit Screen -->
+    <string name="date_edit_text_name_label">Name</string>
+    <string name="date_edit_text_date_label">Date</string>
+    <string name="date_edit_text_type_label">Type of date</string>
+    <string name="date_edit_text_year_label">Without year</string>
 
-    <string name="text_list_empty_dates">Empty list of dates</string>
+    <!-- Add Date Screen -->
 
-    <string name="text_item_name">Family Name Patronymic</string>
-    <string name="text_item_age">%d years</string>
-    <string name="text_item_days_left">Days left\n%d</string>
+    <!-- Add Type Screen -->
+    <string name="add_type_text_label">Add Type</string>
+    <string name="add_type_hint_type">Type of date</string>
 
-    <string name="text_edit_avatar">Change image</string>
-    <string name="text_edit_name">Name</string>
-    <string name="text_edit_date">Choose date</string>
-    <string name="text_edit_is_year">Without year</string>
-    <string name="text_edit_type">Type of date</string>
+    <!-- Date Picker Screen -->
+    <string name="date_picker_text_label">Pick Date</string>
 
-    <string name="text_add_add">Add</string>
-    <string name="text_add_cancel">Cancel</string>
-    <string name="text_add_name">Name</string>
-    <string name="text_add_date">Choose date</string>
-    <string name="text_add_is_year">Without year</string>
-    <string name="text_add_type">Type of date</string>
-
-    <string name="menu_settings">Settings</string>
-
-    <string name="text_add_avatar">Set image</string>
-    <string name="text_change_avatar">Change image</string>
-
-    <string name="text_dialog_new_type_title">Creating new type</string>
-    <string name="text_dialog_new_type">New type</string>
-    <string name="text_dialog_add">Add</string>
-    <string name="text_dialog_cancel">Cancel</string>
-    <string name="text_add_type_title">Creating new type</string>
-
-
-    <string name="dialog_btn_ok">OK</string>
-    <string name="dialog_btn_cancel">Cancel</string>
+    <!-- Types Screen -->
 </resources>

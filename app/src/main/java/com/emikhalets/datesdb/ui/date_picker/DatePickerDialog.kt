@@ -1,4 +1,4 @@
-package com.emikhalets.datesdb.view
+package com.emikhalets.datesdb.ui.date_picker
 
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener

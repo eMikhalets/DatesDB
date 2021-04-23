@@ -4,55 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    android:padding="8dp">
+    android:layout_margin="@dimen/app_margin_very_small">
 
     <ImageView
         android:id="@+id/image_avatar"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:src="@drawable/placeholder_avatar"
+        android:layout_width="@dimen/date_image_list_size"
+        android:layout_height="@dimen/date_image_list_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/placeholder_avatar" />
 
     <TextView
         android:id="@+id/text_name"
+        style="@style/AppTextList"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textColor="@android:color/black"
-        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/text_date"
         app:layout_constraintEnd_toStartOf="@+id/text_days_left"
         app:layout_constraintStart_toEndOf="@+id/image_avatar"
         app:layout_constraintTop_toTopOf="@+id/image_avatar"
-        tools:text="@string/text_list_item_name" />
+        tools:text="@string/app_def_name" />
 
     <TextView
         android:id="@+id/text_date"
+        style="@style/AppTextListSub"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/image_avatar"
         app:layout_constraintEnd_toStartOf="@+id/text_days_left"
         app:layout_constraintStart_toEndOf="@+id/image_avatar"
         app:layout_constraintTop_toBottomOf="@+id/text_name"
-        tools:text="16 May 2000, Monday (53)" />
+        tools:text="@string/app_def_date_list" />
+
+    <TextView
+        android:id="@+id/text_days_left_label"
+        style="@style/AppTextListSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/date_list_text_days_left"
+        app:layout_constraintBottom_toTopOf="@id/text_days_left"
+        app:layout_constraintEnd_toEndOf="@+id/text_days_left"
+        app:layout_constraintStart_toStartOf="@+id/text_days_left"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/text_days_left"
+        style="@style/AppTextList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="167\nleft" />
+        app:layout_constraintTop_toBottomOf="@id/text_days_left_label"
+        tools:text="@string/app_def_days_left" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -30,7 +30,7 @@ class DatesListFragment : BaseFragment<DatesListIntent, DatesListAction, DatesLi
         if (savedInstanceState == null) dispatchIntent(DatesListIntent.LoadAllDates)
     }
 
-    override fun initEvent() {
+    override fun initEvents() {
         binding.fabAddDate.setOnClickListener {
             val action = DatesListFragmentDirections.actionDatesListToAddDate()
             findNavController().navigate(action)

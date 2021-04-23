@@ -1,4 +1,4 @@
-package com.emikhalets.datesdb.view
+package com.emikhalets.datesdb.ui.add_type
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,7 +9,7 @@ import androidx.fragment.app.activityViewModels
 import com.emikhalets.datesdb.databinding.DialogAddTypeBinding
 import com.emikhalets.datesdb.ui.date_edit.DateEditViewModel
 
-class TypesDialog : DialogFragment() {
+class AddTypeDialog : DialogFragment() {
 
     private var _binding: DialogAddTypeBinding? = null
     private val binding get() = _binding!!

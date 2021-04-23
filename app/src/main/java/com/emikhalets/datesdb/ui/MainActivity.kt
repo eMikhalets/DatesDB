@@ -1,4 +1,4 @@
-package com.emikhalets.datesdb.view
+package com.emikhalets.datesdb.ui
 
 import android.os.Bundle
 import android.widget.Toast
@@ -6,7 +6,6 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.emikhalets.datesdb.R
 import com.emikhalets.datesdb.databinding.ActivityMainBinding
-import com.emikhalets.datesdb.viewmodel.ActivityViewModel
 
 class MainActivity : AppCompatActivity() {
 

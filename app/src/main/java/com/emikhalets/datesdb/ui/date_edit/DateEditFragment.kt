@@ -44,25 +44,19 @@ class DateEditFragment : BaseFragment<DateEditIntent, DateEditAction, DateEditSt
     override fun initView() {
     }
 
-    override fun initData(savedInstanceState: Bundle?) {
-        if (savedInstanceState == null && args.id > 0) dispatchIntent(DatesListIntent.LoadAllDates)
+    override fun initData() {
+        if (args.id > 0) dispatchIntent(DateEditIntent.LoadDateItem(args.id))
     }
 
-    override fun initEvent() {
-        binding.fabAddDate.setOnClickListener {
-            val action = DatesListFragmentDirections.actionFragmentDatesListToFragmentDateEdit()
-            findNavController().navigate(action)
+    override fun initEvents() {
+        binding.fabSaveDate.setOnClickListener {
+            dispatchIntent(DateEditIntent.UpdateDateItem(args.id))
         }
-    }
-
-    private fun onDateClick(id: Long) {
-        val action = DatesListFragmentDirections.actionFragmentDatesListToFragmentDateItem(id)
-        findNavController().navigate(action)
     }
 
     override fun render(state: DateEditState) {
         binding.progressBar.isVisible = state is DateEditState.Loading
-        binding.textError.isVisible = state is DateEditState.Error
+        binding..isVisible = state is DateEditState.Error
         binding.listDates.isVisible = state is DateEditState.ResultDateItem
 
         when (state) {

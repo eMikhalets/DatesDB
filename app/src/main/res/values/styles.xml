@@ -1,17 +1,103 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <!-- Text Styles -->
+
+    <style name="AppTextError">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">?attr/colorTextMain</item>
+        <item name="android:textSize">@dimen/app_text_size_large</item>
     </style>
 
-    <style name="ActionBar" parent="AppTheme">
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTextLabel">
+        <item name="android:textColor">?attr/colorTextLabel</item>
+        <item name="android:textSize">@dimen/app_text_size</item>
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginTop">@dimen/app_margin</item>
     </style>
 
+    <style name="AppTextInfo">
+        <item name="android:textColor">?attr/colorTextMain</item>
+        <item name="android:textSize">@dimen/app_text_size</item>
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginTop">@dimen/app_margin_small</item>
+    </style>
+
+    <style name="AppTextType">
+        <item name="android:textColor">?attr/colorTextMain</item>
+        <item name="android:textSize">@dimen/app_text_size_mid</item>
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginTop">@dimen/app_margin</item>
+        <item name="android:layout_marginEnd">@dimen/app_margin</item>
+        <item name="android:layout_marginBottom">@dimen/app_margin</item>
+    </style>
+
+    <style name="AppTextDialogLabel">
+        <item name="android:textColor">?attr/colorTextMain</item>
+        <item name="android:textSize">@dimen/app_text_size_large</item>
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginTop">@dimen/app_margin</item>
+        <item name="android:layout_marginEnd">@dimen/app_margin</item>
+        <item name="android:layout_marginBottom">@dimen/app_margin</item>
+    </style>
+
+    <style name="AppTextList">
+        <item name="android:textColor">?attr/colorTextMain</item>
+        <item name="android:textSize">@dimen/app_text_size</item>
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginEnd">@dimen/app_margin</item>
+    </style>
+
+    <style name="AppTextListSub">
+        <item name="android:textColor">?attr/colorTextLight</item>
+        <item name="android:textSize">@dimen/app_text_size_small</item>
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginEnd">@dimen/app_margin</item>
+    </style>
+
+    <!-- Edit Text Styles -->
+
+    <style name="AppEditTextLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginEnd">@dimen/app_margin</item>
+        <item name="android:layout_marginTop">@dimen/app_margin_small</item>
+    </style>
+
+    <style name="AppEditTextDropMenuLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginEnd">@dimen/app_margin</item>
+        <item name="android:layout_marginTop">@dimen/app_margin_small</item>
+    </style>
+
+    <style name="AppEditText">
+        <item name="android:lines">@dimen/date_edit_lines</item>
+    </style>
+
+    <!-- Button Styles -->
+
+    <style name="AppButtonFloating">
+        <item name="android:layout_margin">@dimen/app_margin</item>
+        <item name="android:backgroundTint">?attr/colorBackgroundButton</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="AppButtonDialog" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:layout_marginTop">@dimen/app_margin_small</item>
+        <item name="android:textColor">?attr/colorTextLight</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Image Styles -->
+
+    <style name="AppImageDate">
+        <item name="android:layout_marginTop">@dimen/app_margin_small</item>
+    </style>
+
+    <!-- Check Box Styles -->
+
+    <style name="AppCheckBox">
+        <item name="android:textSize">@dimen/app_text_size</item>
+        <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginTop">@dimen/app_margin_small</item>
+    </style>
 </resources>

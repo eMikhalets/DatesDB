@@ -10,7 +10,7 @@ interface DatabaseRepository {
     suspend fun getAllDates(): Flow<AppResult<List<DateItem>>>
     suspend fun getDateById(id: Long): Flow<AppResult<DateItem>>
     suspend fun insertDate(dateItem: DateItem): Flow<AppResult<Long>>
-    suspend fun updateDate(dateItem: DateItem): Flow<AppResult<Int>>
+    suspend fun updateDate(id: Long): Flow<AppResult<Nothing>>
     suspend fun deleteDate(id: Long): Flow<AppResult<Nothing>>
 
     suspend fun getAllTypes(): Flow<AppResult<List<DateType>>>

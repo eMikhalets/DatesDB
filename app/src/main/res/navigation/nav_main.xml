@@ -49,7 +49,7 @@
 
     <dialog
         android:id="@+id/typesDialog"
-        android:name="com.emikhalets.datesdb.view.TypesDialog"
+        android:name="com.emikhalets.datesdb.ui.types.TypesDialog"
         android:label="TypesDialog"
         tools:layout="@layout/dialog_types">
         <action
@@ -59,7 +59,7 @@
 
     <dialog
         android:id="@+id/addTypeDialog"
-        android:name="com.emikhalets.datesdb.view.AddTypeDialog"
+        android:name="com.emikhalets.datesdb.ui.add_type.AddTypeDialog"
         android:label="AddTypeDialog"
         tools:layout="@layout/dialog_add_type" />
 
@@ -78,7 +78,7 @@
 
     <dialog
         android:id="@+id/datePickerDialog"
-        android:name="com.emikhalets.datesdb.view.DatePickerDialog"
+        android:name="com.emikhalets.datesdb.ui.date_picker.DatePickerDialog"
         android:label="DatePickerDialog"
         tools:layout="@layout/dialog_date_picker" >
         <argument
