@@ -1,8 +1,10 @@
 package com.emikhalets.datesdb.ui.date_item
 
 import com.emikhalets.datesdb.common.ViewIntent
+import com.emikhalets.datesdb.model.entities.DateItem
 
 sealed class DateItemIntent : ViewIntent() {
-    data class LoadDateItem(val id: Long) : DateItemIntent()
-    data class DeleteDateItem(val id: Long) : DateItemIntent()
+    object NavigateBack : DateItemIntent()
+    data class PressDelete(val date: DateItem) : DateItemIntent()
+    data class PressEdit(val date: DateItem) : DateItemIntent()
 }

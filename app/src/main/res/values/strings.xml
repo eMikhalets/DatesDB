@@ -39,6 +39,7 @@
 
     <!-- Add Type Screen -->
     <string name="add_type_text_label">Add Type</string>
+    <string name="add_type_text_new_type">New Type</string>
     <string name="add_type_hint_type">Type of date</string>
 
     <!-- Date Picker Screen -->

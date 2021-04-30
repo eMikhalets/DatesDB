@@ -5,7 +5,6 @@ sealed class AppResult<out T : Any> {
     object Complete : AppResult<Nothing>()
     data class Success<out T : Any>(val data: T) : AppResult<T>()
     sealed class Error(val exception: Exception) : AppResult<Nothing>() {
-        object EmptyData : AppResult<Nothing>()
         class DatabaseError(exception: Exception) : Error(exception)
     }
 }

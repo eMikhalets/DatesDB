@@ -65,7 +65,7 @@
 
     <dialog
         android:id="@+id/addDateDialog"
-        android:name="com.emikhalets.datesdb.ui.add_date.AddDateDialog"
+        android:name="com.emikhalets.datesdb.ui.add_date_item.AddDateItemDialog"
         android:label="AddDateDialog"
         tools:layout="@layout/dialog_add_date" >
         <action
