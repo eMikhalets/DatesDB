@@ -5,6 +5,7 @@ import com.emikhalets.datesdb.model.entities.DateItem
 
 sealed class DatesListState : ViewState() {
     object Loading : DatesListState()
-    data class ResultAllDates(val data: List<DateItem>) : DatesListState()
+    object ResultEmptyDateItems : DatesListState()
+    data class ResultAllDateItems(val data: List<DateItem>) : DatesListState()
     data class Error(val message: String) : DatesListState()
 }
