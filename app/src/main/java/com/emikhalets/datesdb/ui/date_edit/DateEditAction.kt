@@ -1,9 +1,9 @@
 package com.emikhalets.datesdb.ui.date_edit
 
-import com.emikhalets.datesdb.common.ViewAction
+import com.emikhalets.datesdb.mvi.MviAction
 import com.emikhalets.datesdb.model.entities.DateItem
 
-sealed class DateEditAction : ViewAction() {
+sealed class DateEditAction : MviAction() {
     object NavigateBack : DateEditAction()
     object StartGetImageIntent : DateEditAction()
     object NavigateToDatePicker : DateEditAction()

@@ -31,7 +31,7 @@
         tools:listitem="@layout/item_date" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab_add_date"
+        android:id="@+id/btn_add_date_item"
         style="@style/AppButtonFloating"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

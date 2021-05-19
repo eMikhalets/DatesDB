@@ -9,23 +9,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult
-import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.emikhalets.datesdb.R
-import com.emikhalets.datesdb.common.BaseFragment
+import com.emikhalets.datesdb.mvi.MviFragment
 import com.emikhalets.datesdb.databinding.FragmentDateEditBinding
 import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.ui.dates_list.DatesListIntent
-import com.emikhalets.datesdb.view.DateEditFragmentArgs
-import com.emikhalets.datesdb.view.DateEditFragmentDirections
-import com.emikhalets.datesdb.view.DatesListFragmentDirections
 
-class DateEditFragment : BaseFragment<DateEditIntent, DateEditAction, DateEditState, DateEditViewModel>(
+class DateEditFragment : MviFragment<DateEditIntent, DateEditAction, DateEditState, DateEditViewModel>(
         R.layout.fragment_date_edit,
         DateEditViewModel::class.java
 ) {
@@ -48,13 +42,13 @@ class DateEditFragment : BaseFragment<DateEditIntent, DateEditAction, DateEditSt
         if (args.id > 0) dispatchIntent(DateEditIntent.LoadDateItem(args.id))
     }
 
-    override fun initEvents() {
+    override fun initIntents() {
         binding.fabSaveDate.setOnClickListener {
             dispatchIntent(DateEditIntent.UpdateDateItem(args.id))
         }
     }
 
-    override fun render(state: DateEditState) {
+    override fun fetchState(state: DateEditState) {
         binding.progressBar.isVisible = state is DateEditState.Loading
         binding..isVisible = state is DateEditState.Error
         binding.listDates.isVisible = state is DateEditState.ResultDateItem

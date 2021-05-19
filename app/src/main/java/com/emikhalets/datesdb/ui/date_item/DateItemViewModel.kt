@@ -1,43 +1,49 @@
 package com.emikhalets.datesdb.ui.date_item
 
-import com.emikhalets.datesdb.common.BaseViewModel
-import com.emikhalets.datesdb.model.entities.AppResult
+import com.emikhalets.datesdb.model.CompleteResult
+import com.emikhalets.datesdb.model.SingleResult
 import com.emikhalets.datesdb.model.entities.DateItem
+import com.emikhalets.datesdb.model.entities.DateType
 import com.emikhalets.datesdb.model.repositories.RoomRepository
-import kotlinx.coroutines.flow.collect
+import com.emikhalets.datesdb.mvi.MviViewModel
 
 class DateItemViewModel(
-        private val repository: RoomRepository
-) : BaseViewModel<DateItemIntent, DateItemAction, DateItemState>() {
+    private val repository: RoomRepository
+) : MviViewModel<DateItemIntent, DateItemAction, DateItemState>() {
 
     override fun intentToAction(intent: DateItemIntent): DateItemAction {
         return when (intent) {
-            is DateItemIntent.LoadDateItem -> DateItemAction.LoadDateItem(intent.id)
-            is DateItemIntent.DeleteDateItem -> DateItemAction.DeleteDateItem(intent.id)
+            is DateItemIntent.LoadDateType -> DateItemAction.GetDateType(intent.id)
+            is DateItemIntent.ClickDeleteDateItem -> DateItemAction.DeleteDateItem(intent.dateItem)
         }
     }
 
     override fun handleAction(action: DateItemAction) {
         launch {
-            _state.postValue(DateItemState.Loading)
             when (action) {
-                is DateItemAction.DeleteDateItem -> repository.deleteDate(action.id).collect {
-                    _state.postValue(it.reduce())
+                is DateItemAction.GetDateType -> {
+                    val result = repository.getTypeById(action.id)
+                    stateProtected.postValue(result.reduce())
                 }
-                is DateItemAction.LoadDateItem -> repository.getDateById(action.id).collect {
-                    _state.postValue(it.reduce())
+                is DateItemAction.DeleteDateItem -> {
+                    val result = repository.deleteDate(action.dateItem)
+                    stateProtected.postValue(result.reduce())
                 }
             }
         }
     }
 
-    private fun AppResult<DateItem>.reduce(): DateItemState {
+    private fun SingleResult<DateType>.reduce(): DateItemState {
         return when (this) {
-            is AppResult.Loading -> DateItemState.Loading
-            is AppResult.Success -> DateItemState.ResultDateItem(data)
-            is AppResult.Error.EmptyData -> DateItemState.Error("Empty data")
-            is AppResult.Error.DatabaseError -> DateItemState.Error(exception.message.toString())
-            else -> DateItemState.Error("Empty data")
+            is SingleResult.Success -> DateItemState.DateTypeLoaded(data)
+            is SingleResult.Error -> DateItemState.Error(message)
+        }
+    }
+
+    private fun CompleteResult<DateItem>.reduce(): DateItemState {
+        return when (this) {
+            CompleteResult.Complete -> DateItemState.Deleted
+            is CompleteResult.Error -> DateItemState.Error(message)
         }
     }
 }

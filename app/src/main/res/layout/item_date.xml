@@ -43,7 +43,7 @@
         style="@style/AppTextListSub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/date_list_text_days_left"
+        android:text="@string/dates_list_text_days_left"
         app:layout_constraintBottom_toTopOf="@id/text_days_left"
         app:layout_constraintEnd_toEndOf="@+id/text_days_left"
         app:layout_constraintStart_toStartOf="@+id/text_days_left"

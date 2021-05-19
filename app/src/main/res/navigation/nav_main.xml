@@ -23,12 +23,12 @@
         android:name="com.emikhalets.datesdb.ui.date_item.DateItemFragment"
         android:label="FragmentDateItem"
         tools:layout="@layout/fragment_date_item">
-        <argument
-            android:name="id"
-            app:argType="long" />
         <action
             android:id="@+id/action_dateItem_to_dateEdit"
             app:destination="@id/fragmentDateEdit" />
+        <argument
+            android:name="dateItem"
+            app:argType="com.emikhalets.datesdb.model.entities.DateItem" />
     </fragment>
 
     <fragment
@@ -37,8 +37,8 @@
         android:label="FragmentDateEdit"
         tools:layout="@layout/fragment_date_edit">
         <argument
-            android:name="id"
-            app:argType="long" />
+            android:name="dateItem"
+            app:argType="com.emikhalets.datesdb.model.entities.DateItem" />
         <action
             android:id="@+id/action_dateEdit_to_datePicker"
             app:destination="@id/datePickerDialog" />
@@ -67,7 +67,7 @@
         android:id="@+id/addDateDialog"
         android:name="com.emikhalets.datesdb.ui.add_date_item.AddDateItemDialog"
         android:label="AddDateDialog"
-        tools:layout="@layout/dialog_add_date" >
+        tools:layout="@layout/dialog_add_date">
         <action
             android:id="@+id/action_addDate_to_datePicker"
             app:destination="@id/datePickerDialog" />
@@ -80,7 +80,7 @@
         android:id="@+id/datePickerDialog"
         android:name="com.emikhalets.datesdb.ui.date_picker.DatePickerDialog"
         android:label="DatePickerDialog"
-        tools:layout="@layout/dialog_date_picker" >
+        tools:layout="@layout/dialog_date_picker">
         <argument
             android:name="timestamp"
             app:argType="long" />

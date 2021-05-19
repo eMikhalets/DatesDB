@@ -6,12 +6,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.emikhalets.datesdb.R
 import com.emikhalets.datesdb.databinding.ItemDateBinding
 import com.emikhalets.datesdb.model.entities.DateItem
 
-class DatesAdapter(private val click: (Long) -> Unit)
-    : ListAdapter<DateItem, DatesAdapter.ViewHolder>(DatesDiffCallback()) {
+class DatesAdapter(private val click: (DateItem) -> Unit) :
+    ListAdapter<DateItem, DatesAdapter.ViewHolder>(DatesDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -21,7 +20,7 @@ class DatesAdapter(private val click: (Long) -> Unit)
 
     override fun onViewAttachedToWindow(holder: ViewHolder) {
         super.onViewAttachedToWindow(holder)
-        holder.itemView.setOnClickListener { click.invoke(getItem(holder.adapterPosition).id) }
+        holder.itemView.setOnClickListener { click.invoke(getItem(holder.adapterPosition)) }
     }
 
     override fun onViewDetachedFromWindow(holder: ViewHolder) {
@@ -33,17 +32,16 @@ class DatesAdapter(private val click: (Long) -> Unit)
         holder.bind(getItem(position))
     }
 
-    class ViewHolder(private val binding: ItemDateBinding)
-        : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder(private val binding: ItemDateBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(dateItem: DateItem) {
             with(binding) {
-                imageAvatar.setImageURI(Uri.parse(dateItem.image))
+                imageAvatar.setImageURI(Uri.parse(dateItem.imageUri))
                 textName.text = dateItem.name
-                textDaysLeft.text = root.context.getString(
-                        R.string.text_list_item_days_left,
-                        dateItem.daysLeft
-                )
+//                textDaysLeft.text = root.context.getString(
+//                        R.string.text_list_item_days_left,
+//                        dateItem.daysLeft
+//                )
 
 //                if (dateItem.isYear) textDate.text = root.context.getString(
 //                        R.string.text_list_item_date,
@@ -58,9 +56,9 @@ class DatesAdapter(private val click: (Long) -> Unit)
     class DatesDiffCallback : DiffUtil.ItemCallback<DateItem>() {
 
         override fun areItemsTheSame(oldItem: DateItem, newItem: DateItem): Boolean =
-                oldItem.id == newItem.id
+            oldItem.id == newItem.id
 
         override fun areContentsTheSame(oldItem: DateItem, newItem: DateItem): Boolean =
-                oldItem == newItem
+            oldItem == newItem
     }
 }

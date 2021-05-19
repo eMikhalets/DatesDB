@@ -1,9 +1,9 @@
 package com.emikhalets.datesdb.ui.types
 
-import com.emikhalets.datesdb.common.ViewAction
+import com.emikhalets.datesdb.mvi.MviAction
 import com.emikhalets.datesdb.model.entities.DateType
 
-sealed class TypesAction : ViewAction() {
+sealed class TypesAction : MviAction() {
     object AddTypeToDatabase : TypesAction()
     object NavigateBack : TypesAction()
     object GetAllTypes : TypesAction()

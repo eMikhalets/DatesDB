@@ -4,72 +4,68 @@ ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
-MERGED from [com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.4.4] C:\Users\vorgo\.gradle\caches\transforms-3\a183bd981564e0fad21ab15fd9fd50fe\transformed\jetified-viewbindingpropertydelegate-noreflection-1.4.4\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.databinding:viewbinding:4.1.3] C:\Users\vorgo\.gradle\caches\transforms-3\31bc8fa352dc47451e7d6bfee31b69ee\transformed\jetified-viewbinding-4.1.3\AndroidManifest.xml:17:1-22:12
-MERGED from [io.coil-kt:coil:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\a236737e012a488d0519cb5234e2e1ad\transformed\jetified-coil-1.1.1\AndroidManifest.xml:2:1-9:12
-MERGED from [io.coil-kt:coil-base:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\c1c108cab08b600128ff94a7fb59969c\transformed\jetified-coil-base-1.1.1\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\667d16d9a722344699824d2243aa0d5e\transformed\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment-ktx:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\bb7478c157cef70560a202fbb706b8a9\transformed\jetified-fragment-ktx-1.3.2\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\a823f12bba19806523ed5770ca9ab5cd\transformed\navigation-ui-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\ae9ef96f6a211220748bc96192d9825d\transformed\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\2b6b82ff61a858168877d8058dc8e005\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\ec9a45970d8113b1e145034ace8f7a16\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\107836bf85952549967d23377eb93dbf\transformed\jetified-core-ktx-1.3.2\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5a32aa5416044d91aabb0f39c82dbb65\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\a1582122d22fb522173fc84921dc97a4\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\7e39cf195e8387bd9c18096993341e45\transformed\jetified-room-ktx-2.2.6\AndroidManifest.xml:17:1-24:12
-MERGED from [org.koin:koin-android-viewmodel:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\6228ceb1832d9da6311aa15cf18fd076\transformed\jetified-koin-android-viewmodel-2.2.2\AndroidManifest.xml:2:1-9:12
-MERGED from [org.koin:koin-android-scope:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\c82eb9d28a4b21045efc26ab6f32cb11\transformed\jetified-koin-android-scope-2.2.2\AndroidManifest.xml:2:1-9:12
-MERGED from [org.koin:koin-android:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\55f8e2bc847cf30fd371833e26461dac\transformed\jetified-koin-android-2.2.2\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5f18cbaeef3ea0632419ed04d7561d31\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\aaa4cfb6edbe1508868f41ee82a26dbe\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\4954206a5e553b5fac693bcc36b36ee7\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\2e5081a59dbc6ec4cccebe4108aa5d0e\transformed\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\4f89d3f38c76d6a7de2975d2869f3c93\transformed\material-1.3.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\05195b78103b661524bd08197f75eb91\transformed\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-3\9ea24d2281774b56d60d6572d1145830\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:17:1-31:12
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-3\8107bfa543e43a392f8608179d975bc3\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\d1f89b2252193fe22c22e0134948ed77\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\4a52e010e3cec4fc004099b019fa3f48\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ab29ee7d44a29912b881ec8443f62cd2\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:17:1-25:12
-MERGED from [androidx.fragment:fragment:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\99e47badd3e393522a3a7fd133aa9c38\transformed\fragment-1.3.2\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\0bf2bf369720dae7137562ccf41654ac\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\780ffb684d816623bb08fb7dc25dcd07\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\b314cc83d9d58088a84a0a39a2983956\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\0bdb3194f112c42547cda869794210dd\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\36d6333237eebe1ff74072487e67978d\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\e1b38b65dd4f93164c3cba4e698808bd\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\00bb055d24e49b29f2d217456272fc3c\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ef00ba68dd58327451795f81a00297db\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\9b766f85dd0f08c5ff224aa7cea0ffa2\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\1b1f97bd58a1fb3c1e3a0275c996fda6\transformed\jetified-activity-1.2.2\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\9cadcfe008774684d85a1dabf6c33b2d\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\ccee0e2ab26302a3f880a000a4ef05a0\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.transition:transition:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\aa02c8f8e516b8e1f856c6081595bcd0\transformed\transition-1.3.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\6e307859e246c6212e96a67c24e706f0\transformed\navigation-common-2.3.5\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\ad5229d2cd24eb36e3e647e4982438ee\transformed\core-1.3.2\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\b182ad759517c755a6fc52bd4fe587a5\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\13fdc696a30a23793a0fdfb616ab1f2f\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\06f917ff2ea58fe12f37b67cd050a75e\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\8ae8ba007b7e36198697512da4b98d89\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-3\92823c9597ae9581a5debb4e711cddbf\transformed\sqlite-framework-2.0.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-3\ba6b0ddae5e32ea046acfbbdf7eb353c\transformed\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\1638e24a17666c42e1378d474e3cfbb3\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\02b4fe7373bd3b52665d018c187206c3\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\91ed591d43aa4c40973ee85cb6603824\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\72cbc035655f958fc93138c7f648796e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\695fc999d81418a241b07576d5c7ce0f\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\e9fc2da5f5729f60553309366362814e\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\fb8607de11308ef4c191bce04fb23544\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\d95167515f8414dfa1cfc44349156759\transformed\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\d08b9b621a803a2cee4551ef23495455\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\85176a341de41dce6e48e47b8f959d0a\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a91c99a821179506c2e7691413bb15f8\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\95595a8773a09423af308e23a044f26b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\1e8de9ffbdad049be862dc5861e5e90a\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\1a96cfbac1270ed309d895f807a26588\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.4.6] C:\Users\vorgo\.gradle\caches\transforms-3\9d7ae1665abd6ec01954565e6021bc20\transformed\jetified-viewbindingpropertydelegate-noreflection-1.4.6\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.databinding:viewbinding:4.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\9d14adbb730be11c271ff9cb818e4e0e\transformed\jetified-viewbinding-4.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [io.coil-kt:coil:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\fbcea6568baeb9da1160454c6baa818b\transformed\jetified-coil-1.2.1\AndroidManifest.xml:2:1-9:12
+MERGED from [io.coil-kt:coil-base:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\638e831acde6594cf6e85e18a1d6fcd9\transformed\jetified-coil-base-1.2.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\d48d323e0b68a965944ea7387b52f8f5\transformed\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.3.4] C:\Users\vorgo\.gradle\caches\transforms-3\51644504c3cba794b72ad78611b650f5\transformed\jetified-fragment-ktx-1.3.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\7733fea4febcc16919dc24fa5da24779\transformed\navigation-ui-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\b7012fa58b41d1187d0168be0945612f\transformed\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\cf17c4d5b1eac3cd2d622605af02758e\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\4f2914e2721b115f78ba1d76d045b8fb\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\e450a0ed7b955a619129a70572260aa3\transformed\jetified-core-ktx-1.5.0\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\ffb17a9d548d3fd4ee2e275b5ee34c38\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\93821728676dd2cd5abe01a2daa6d427\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-ktx:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\82050af41917b21749a9ff062479c846\transformed\jetified-room-ktx-2.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\88e4defe4931657537b7b54fd81fe54c\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\053bf9cb24c09d08c5ac4149ef6e747c\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\a8e9886194d36002f2e0b80e2400a63e\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\2a4cd55cd886f6b51c2c2a8247b918e1\transformed\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\24638e353a685a9cf12d737070a51f3f\transformed\material-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\eaf4f414624deeb46433d42bd319b478\transformed\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\5236e221e4d23fd569068e5fa5e86a3e\transformed\appcompat-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:17:1-31:12
+MERGED from [com.google.dagger:hilt-android:2.35] C:\Users\vorgo\.gradle\caches\transforms-3\72d6d5fa7d0f888dabc7601e8c35a7eb\transformed\jetified-hilt-android-2.35\AndroidManifest.xml:16:1-19:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\0ffd9dc10cf4815563c28bf224679756\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\5e21363f5c9471fc2b0e89b04586703f\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\vorgo\.gradle\caches\transforms-3\88c446f9ceab9a2caffd01c0d1a2bc07\transformed\fragment-1.3.4\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\dbfd61b4d62c2a89bcfd7e2b0dcfcb13\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\vorgo\.gradle\caches\transforms-3\b57c648a553d82c7d23e2f9259a2d116\transformed\jetified-activity-1.2.3\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\56510e25276fad197ac7fcb1d10f6bc9\transformed\jetified-appcompat-resources-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\be060290f6033bb15fb7253b3e408a1d\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\70d4cca3e155bf46ee408356218b407c\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\a6587288ff0a7b7aeb91e53063ca3089\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\4d63b26cb71bfd993699bd6f9f8899d3\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\3bf67e603a82f234e22361dac5ed174e\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\7d7f05cfc40e18a7d42c4dfc0f4dbdef\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\b41822235a91fa8b4cef7f907d0d0fbe\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\03826de994c33cc4afcc27acfd8c4b38\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\4be8e35b4f30d02a262087e6a90db492\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\f3fd4ed353162a2f869f5f477170e48b\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\d16b69ffdfdbee90cf0fa0910ce3595d\transformed\transition-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\aadf02cce31d9220bad4d13977c0db3f\transformed\navigation-common-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\777270b1361c74097d354519756facd5\transformed\core-1.5.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a0c89cabc0522964fa1e45d3775aa5e0\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\d1c4a88a33905534bb2371d027b5c48a\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\f9e9e2f857e3df180a21be3f7d7cf36b\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\b8bce6be5a5c4c47602b917b315f4fd7\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\c3c0f691512fb0eacad6a17029248205\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a84c669753503fa0f39855c02a4cf4e7\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\55aa64fab7c4870f5f3f813726f58495\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\17ea0271582eadf4453486f5e796088f\transformed\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\9e5ec6c33da412e00814018e7dcc91c2\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5ffaf08585fc90bf8d64f97a4b18eebc\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\9385b132e114c2a984dad1a5fdff3298\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\7e57d8c87621b659e9b55c772e3a6dd4\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\83cef01be023d4cffb46a2361edf5912\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\440fbab054a9f0fb29d36fb862f4c332\transformed\exifinterface-1.3.2\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\81713a8ce925a0e629b3df7a05f2e72f\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ad7ca12bdda5018e225d358200dd7d93\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\13b5bb198250e3a00deecdf3217bf790\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\85c9d0c8754d41a27d73c122efecfa8f\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\9eb87be809d3fed6af88f55fb917dfc2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.dagger:dagger-lint-aar:2.35] C:\Users\vorgo\.gradle\caches\transforms-3\c3e190cc8559046d251fb4f3701dc09a\transformed\jetified-dagger-lint-aar-2.35\AndroidManifest.xml:16:1-19:12
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-23:12
@@ -91,26 +87,18 @@ INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:1-
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:2:11-69
 application
 ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:6:5-21:19
-MERGED from [org.koin:koin-android-viewmodel:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\6228ceb1832d9da6311aa15cf18fd076\transformed\jetified-koin-android-viewmodel-2.2.2\AndroidManifest.xml:7:5-20
-MERGED from [org.koin:koin-android-viewmodel:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\6228ceb1832d9da6311aa15cf18fd076\transformed\jetified-koin-android-viewmodel-2.2.2\AndroidManifest.xml:7:5-20
-MERGED from [org.koin:koin-android-scope:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\c82eb9d28a4b21045efc26ab6f32cb11\transformed\jetified-koin-android-scope-2.2.2\AndroidManifest.xml:7:5-20
-MERGED from [org.koin:koin-android-scope:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\c82eb9d28a4b21045efc26ab6f32cb11\transformed\jetified-koin-android-scope-2.2.2\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\4f89d3f38c76d6a7de2975d2869f3c93\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\4f89d3f38c76d6a7de2975d2869f3c93\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\05195b78103b661524bd08197f75eb91\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\05195b78103b661524bd08197f75eb91\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
-MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:24:5-29:19
-MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:24:5-29:19
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ab29ee7d44a29912b881ec8443f62cd2\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ab29ee7d44a29912b881ec8443f62cd2\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\ad5229d2cd24eb36e3e647e4982438ee\transformed\core-1.3.2\AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\ad5229d2cd24eb36e3e647e4982438ee\transformed\core-1.3.2\AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\1638e24a17666c42e1378d474e3cfbb3\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\1638e24a17666c42e1378d474e3cfbb3\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:22:5-28:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:22:5-28:19
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\24638e353a685a9cf12d737070a51f3f\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\24638e353a685a9cf12d737070a51f3f\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\eaf4f414624deeb46433d42bd319b478\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\eaf4f414624deeb46433d42bd319b478\transformed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.core:core:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\777270b1361c74097d354519756facd5\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\777270b1361c74097d354519756facd5\transformed\core-1.5.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\9385b132e114c2a984dad1a5fdff3298\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\9385b132e114c2a984dad1a5fdff3298\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\ad5229d2cd24eb36e3e647e4982438ee\transformed\core-1.3.2\AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\777270b1361c74097d354519756facd5\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:11:9-35
 	android:label
@@ -125,10 +113,10 @@ MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:7:9-36
 	android:theme
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:12:9-40
-activity#com.emikhalets.datesdb.view.MainActivity
+activity#com.emikhalets.datesdb.ui.MainActivity
 ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:9-20:20
 	android:name
-		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:19-52
+		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:14:19-50
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml:15:13-19:29
 action#android.intent.action.MAIN
@@ -143,138 +131,130 @@ uses-sdk
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
-MERGED from [com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.4.4] C:\Users\vorgo\.gradle\caches\transforms-3\a183bd981564e0fad21ab15fd9fd50fe\transformed\jetified-viewbindingpropertydelegate-noreflection-1.4.4\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.4.4] C:\Users\vorgo\.gradle\caches\transforms-3\a183bd981564e0fad21ab15fd9fd50fe\transformed\jetified-viewbindingpropertydelegate-noreflection-1.4.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.databinding:viewbinding:4.1.3] C:\Users\vorgo\.gradle\caches\transforms-3\31bc8fa352dc47451e7d6bfee31b69ee\transformed\jetified-viewbinding-4.1.3\AndroidManifest.xml:20:5-44
-MERGED from [androidx.databinding:viewbinding:4.1.3] C:\Users\vorgo\.gradle\caches\transforms-3\31bc8fa352dc47451e7d6bfee31b69ee\transformed\jetified-viewbinding-4.1.3\AndroidManifest.xml:20:5-44
-MERGED from [io.coil-kt:coil:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\a236737e012a488d0519cb5234e2e1ad\transformed\jetified-coil-1.1.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.coil-kt:coil:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\a236737e012a488d0519cb5234e2e1ad\transformed\jetified-coil-1.1.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.coil-kt:coil-base:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\c1c108cab08b600128ff94a7fb59969c\transformed\jetified-coil-base-1.1.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.coil-kt:coil-base:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\c1c108cab08b600128ff94a7fb59969c\transformed\jetified-coil-base-1.1.1\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\667d16d9a722344699824d2243aa0d5e\transformed\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\667d16d9a722344699824d2243aa0d5e\transformed\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment-ktx:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\bb7478c157cef70560a202fbb706b8a9\transformed\jetified-fragment-ktx-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment-ktx:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\bb7478c157cef70560a202fbb706b8a9\transformed\jetified-fragment-ktx-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\a823f12bba19806523ed5770ca9ab5cd\transformed\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\a823f12bba19806523ed5770ca9ab5cd\transformed\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\ae9ef96f6a211220748bc96192d9825d\transformed\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\ae9ef96f6a211220748bc96192d9825d\transformed\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\2b6b82ff61a858168877d8058dc8e005\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\2b6b82ff61a858168877d8058dc8e005\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\ec9a45970d8113b1e145034ace8f7a16\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\ec9a45970d8113b1e145034ace8f7a16\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\107836bf85952549967d23377eb93dbf\transformed\jetified-core-ktx-1.3.2\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\107836bf85952549967d23377eb93dbf\transformed\jetified-core-ktx-1.3.2\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5a32aa5416044d91aabb0f39c82dbb65\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5a32aa5416044d91aabb0f39c82dbb65\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\a1582122d22fb522173fc84921dc97a4\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\a1582122d22fb522173fc84921dc97a4\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\7e39cf195e8387bd9c18096993341e45\transformed\jetified-room-ktx-2.2.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-ktx:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\7e39cf195e8387bd9c18096993341e45\transformed\jetified-room-ktx-2.2.6\AndroidManifest.xml:20:5-22:41
-MERGED from [org.koin:koin-android-viewmodel:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\6228ceb1832d9da6311aa15cf18fd076\transformed\jetified-koin-android-viewmodel-2.2.2\AndroidManifest.xml:5:5-44
-MERGED from [org.koin:koin-android-viewmodel:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\6228ceb1832d9da6311aa15cf18fd076\transformed\jetified-koin-android-viewmodel-2.2.2\AndroidManifest.xml:5:5-44
-MERGED from [org.koin:koin-android-scope:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\c82eb9d28a4b21045efc26ab6f32cb11\transformed\jetified-koin-android-scope-2.2.2\AndroidManifest.xml:5:5-44
-MERGED from [org.koin:koin-android-scope:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\c82eb9d28a4b21045efc26ab6f32cb11\transformed\jetified-koin-android-scope-2.2.2\AndroidManifest.xml:5:5-44
-MERGED from [org.koin:koin-android:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\55f8e2bc847cf30fd371833e26461dac\transformed\jetified-koin-android-2.2.2\AndroidManifest.xml:5:5-44
-MERGED from [org.koin:koin-android:2.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\55f8e2bc847cf30fd371833e26461dac\transformed\jetified-koin-android-2.2.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5f18cbaeef3ea0632419ed04d7561d31\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5f18cbaeef3ea0632419ed04d7561d31\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\aaa4cfb6edbe1508868f41ee82a26dbe\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\aaa4cfb6edbe1508868f41ee82a26dbe\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\4954206a5e553b5fac693bcc36b36ee7\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\4954206a5e553b5fac693bcc36b36ee7\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\2e5081a59dbc6ec4cccebe4108aa5d0e\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\2e5081a59dbc6ec4cccebe4108aa5d0e\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\4f89d3f38c76d6a7de2975d2869f3c93\transformed\material-1.3.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\4f89d3f38c76d6a7de2975d2869f3c93\transformed\material-1.3.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\05195b78103b661524bd08197f75eb91\transformed\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\05195b78103b661524bd08197f75eb91\transformed\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-3\9ea24d2281774b56d60d6572d1145830\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-3\9ea24d2281774b56d60d6572d1145830\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-3\8107bfa543e43a392f8608179d975bc3\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\vorgo\.gradle\caches\transforms-3\8107bfa543e43a392f8608179d975bc3\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\d1f89b2252193fe22c22e0134948ed77\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\d1f89b2252193fe22c22e0134948ed77\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\4a52e010e3cec4fc004099b019fa3f48\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\4a52e010e3cec4fc004099b019fa3f48\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ab29ee7d44a29912b881ec8443f62cd2\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-extensions:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ab29ee7d44a29912b881ec8443f62cd2\transformed\lifecycle-extensions-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\99e47badd3e393522a3a7fd133aa9c38\transformed\fragment-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\99e47badd3e393522a3a7fd133aa9c38\transformed\fragment-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\0bf2bf369720dae7137562ccf41654ac\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\0bf2bf369720dae7137562ccf41654ac\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\780ffb684d816623bb08fb7dc25dcd07\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\780ffb684d816623bb08fb7dc25dcd07\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\b314cc83d9d58088a84a0a39a2983956\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\b314cc83d9d58088a84a0a39a2983956\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\0bdb3194f112c42547cda869794210dd\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\0bdb3194f112c42547cda869794210dd\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\36d6333237eebe1ff74072487e67978d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\36d6333237eebe1ff74072487e67978d\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\e1b38b65dd4f93164c3cba4e698808bd\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\e1b38b65dd4f93164c3cba4e698808bd\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\00bb055d24e49b29f2d217456272fc3c\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\00bb055d24e49b29f2d217456272fc3c\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ef00ba68dd58327451795f81a00297db\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ef00ba68dd58327451795f81a00297db\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\9b766f85dd0f08c5ff224aa7cea0ffa2\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\9b766f85dd0f08c5ff224aa7cea0ffa2\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\1b1f97bd58a1fb3c1e3a0275c996fda6\transformed\jetified-activity-1.2.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\1b1f97bd58a1fb3c1e3a0275c996fda6\transformed\jetified-activity-1.2.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\9cadcfe008774684d85a1dabf6c33b2d\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\9cadcfe008774684d85a1dabf6c33b2d\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\ccee0e2ab26302a3f880a000a4ef05a0\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\ccee0e2ab26302a3f880a000a4ef05a0\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\aa02c8f8e516b8e1f856c6081595bcd0\transformed\transition-1.3.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\aa02c8f8e516b8e1f856c6081595bcd0\transformed\transition-1.3.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\6e307859e246c6212e96a67c24e706f0\transformed\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\6e307859e246c6212e96a67c24e706f0\transformed\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\ad5229d2cd24eb36e3e647e4982438ee\transformed\core-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\ad5229d2cd24eb36e3e647e4982438ee\transformed\core-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\b182ad759517c755a6fc52bd4fe587a5\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\b182ad759517c755a6fc52bd4fe587a5\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\13fdc696a30a23793a0fdfb616ab1f2f\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\13fdc696a30a23793a0fdfb616ab1f2f\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\06f917ff2ea58fe12f37b67cd050a75e\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\06f917ff2ea58fe12f37b67cd050a75e\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\8ae8ba007b7e36198697512da4b98d89\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\8ae8ba007b7e36198697512da4b98d89\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-3\92823c9597ae9581a5debb4e711cddbf\transformed\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-3\92823c9597ae9581a5debb4e711cddbf\transformed\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-3\ba6b0ddae5e32ea046acfbbdf7eb353c\transformed\sqlite-2.0.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\vorgo\.gradle\caches\transforms-3\ba6b0ddae5e32ea046acfbbdf7eb353c\transformed\sqlite-2.0.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\1638e24a17666c42e1378d474e3cfbb3\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\1638e24a17666c42e1378d474e3cfbb3\transformed\versionedparcelable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\02b4fe7373bd3b52665d018c187206c3\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\02b4fe7373bd3b52665d018c187206c3\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\91ed591d43aa4c40973ee85cb6603824\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\91ed591d43aa4c40973ee85cb6603824\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\72cbc035655f958fc93138c7f648796e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\72cbc035655f958fc93138c7f648796e\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\695fc999d81418a241b07576d5c7ce0f\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-service:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\695fc999d81418a241b07576d5c7ce0f\transformed\jetified-lifecycle-service-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\e9fc2da5f5729f60553309366362814e\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\e9fc2da5f5729f60553309366362814e\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\fb8607de11308ef4c191bce04fb23544\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\fb8607de11308ef4c191bce04fb23544\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\d95167515f8414dfa1cfc44349156759\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\d95167515f8414dfa1cfc44349156759\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\d08b9b621a803a2cee4551ef23495455\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\d08b9b621a803a2cee4551ef23495455\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\85176a341de41dce6e48e47b8f959d0a\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\85176a341de41dce6e48e47b8f959d0a\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a91c99a821179506c2e7691413bb15f8\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a91c99a821179506c2e7691413bb15f8\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\95595a8773a09423af308e23a044f26b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\95595a8773a09423af308e23a044f26b\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\1e8de9ffbdad049be862dc5861e5e90a\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\1e8de9ffbdad049be862dc5861e5e90a\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\1a96cfbac1270ed309d895f807a26588\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\1a96cfbac1270ed309d895f807a26588\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.4.6] C:\Users\vorgo\.gradle\caches\transforms-3\9d7ae1665abd6ec01954565e6021bc20\transformed\jetified-viewbindingpropertydelegate-noreflection-1.4.6\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.kirich1409:viewbindingpropertydelegate-noreflection:1.4.6] C:\Users\vorgo\.gradle\caches\transforms-3\9d7ae1665abd6ec01954565e6021bc20\transformed\jetified-viewbindingpropertydelegate-noreflection-1.4.6\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:4.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\9d14adbb730be11c271ff9cb818e4e0e\transformed\jetified-viewbinding-4.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:4.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\9d14adbb730be11c271ff9cb818e4e0e\transformed\jetified-viewbinding-4.2.1\AndroidManifest.xml:20:5-44
+MERGED from [io.coil-kt:coil:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\fbcea6568baeb9da1160454c6baa818b\transformed\jetified-coil-1.2.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\fbcea6568baeb9da1160454c6baa818b\transformed\jetified-coil-1.2.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-base:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\638e831acde6594cf6e85e18a1d6fcd9\transformed\jetified-coil-base-1.2.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.coil-kt:coil-base:1.2.1] C:\Users\vorgo\.gradle\caches\transforms-3\638e831acde6594cf6e85e18a1d6fcd9\transformed\jetified-coil-base-1.2.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\d48d323e0b68a965944ea7387b52f8f5\transformed\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\d48d323e0b68a965944ea7387b52f8f5\transformed\navigation-fragment-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.3.4] C:\Users\vorgo\.gradle\caches\transforms-3\51644504c3cba794b72ad78611b650f5\transformed\jetified-fragment-ktx-1.3.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.3.4] C:\Users\vorgo\.gradle\caches\transforms-3\51644504c3cba794b72ad78611b650f5\transformed\jetified-fragment-ktx-1.3.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\7733fea4febcc16919dc24fa5da24779\transformed\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\7733fea4febcc16919dc24fa5da24779\transformed\navigation-ui-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\b7012fa58b41d1187d0168be0945612f\transformed\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\b7012fa58b41d1187d0168be0945612f\transformed\navigation-runtime-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\cf17c4d5b1eac3cd2d622605af02758e\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.2.2] C:\Users\vorgo\.gradle\caches\transforms-3\cf17c4d5b1eac3cd2d622605af02758e\transformed\jetified-activity-ktx-1.2.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\4f2914e2721b115f78ba1d76d045b8fb\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\4f2914e2721b115f78ba1d76d045b8fb\transformed\navigation-common-ktx-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\e450a0ed7b955a619129a70572260aa3\transformed\jetified-core-ktx-1.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\e450a0ed7b955a619129a70572260aa3\transformed\jetified-core-ktx-1.5.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\ffb17a9d548d3fd4ee2e275b5ee34c38\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\ffb17a9d548d3fd4ee2e275b5ee34c38\transformed\jetified-lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\93821728676dd2cd5abe01a2daa6d427\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\93821728676dd2cd5abe01a2daa6d427\transformed\jetified-lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\82050af41917b21749a9ff062479c846\transformed\jetified-room-ktx-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\82050af41917b21749a9ff062479c846\transformed\jetified-room-ktx-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\88e4defe4931657537b7b54fd81fe54c\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\88e4defe4931657537b7b54fd81fe54c\transformed\jetified-lifecycle-livedata-core-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\053bf9cb24c09d08c5ac4149ef6e747c\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\053bf9cb24c09d08c5ac4149ef6e747c\transformed\jetified-savedstate-ktx-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\a8e9886194d36002f2e0b80e2400a63e\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\a8e9886194d36002f2e0b80e2400a63e\transformed\jetified-lifecycle-runtime-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\2a4cd55cd886f6b51c2c2a8247b918e1\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\2a4cd55cd886f6b51c2c2a8247b918e1\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\24638e353a685a9cf12d737070a51f3f\transformed\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\24638e353a685a9cf12d737070a51f3f\transformed\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\eaf4f414624deeb46433d42bd319b478\transformed\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\vorgo\.gradle\caches\transforms-3\eaf4f414624deeb46433d42bd319b478\transformed\constraintlayout-2.0.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\5236e221e4d23fd569068e5fa5e86a3e\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\5236e221e4d23fd569068e5fa5e86a3e\transformed\appcompat-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:hilt-android:2.35] C:\Users\vorgo\.gradle\caches\transforms-3\72d6d5fa7d0f888dabc7601e8c35a7eb\transformed\jetified-hilt-android-2.35\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:hilt-android:2.35] C:\Users\vorgo\.gradle\caches\transforms-3\72d6d5fa7d0f888dabc7601e8c35a7eb\transformed\jetified-hilt-android-2.35\AndroidManifest.xml:18:3-42
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\0ffd9dc10cf4815563c28bf224679756\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\0ffd9dc10cf4815563c28bf224679756\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\5e21363f5c9471fc2b0e89b04586703f\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\5e21363f5c9471fc2b0e89b04586703f\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\vorgo\.gradle\caches\transforms-3\88c446f9ceab9a2caffd01c0d1a2bc07\transformed\fragment-1.3.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.4] C:\Users\vorgo\.gradle\caches\transforms-3\88c446f9ceab9a2caffd01c0d1a2bc07\transformed\fragment-1.3.4\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\dbfd61b4d62c2a89bcfd7e2b0dcfcb13\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\dbfd61b4d62c2a89bcfd7e2b0dcfcb13\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\vorgo\.gradle\caches\transforms-3\b57c648a553d82c7d23e2f9259a2d116\transformed\jetified-activity-1.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.2.3] C:\Users\vorgo\.gradle\caches\transforms-3\b57c648a553d82c7d23e2f9259a2d116\transformed\jetified-activity-1.2.3\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\56510e25276fad197ac7fcb1d10f6bc9\transformed\jetified-appcompat-resources-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\56510e25276fad197ac7fcb1d10f6bc9\transformed\jetified-appcompat-resources-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\be060290f6033bb15fb7253b3e408a1d\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\be060290f6033bb15fb7253b3e408a1d\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\70d4cca3e155bf46ee408356218b407c\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\70d4cca3e155bf46ee408356218b407c\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\a6587288ff0a7b7aeb91e53063ca3089\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\a6587288ff0a7b7aeb91e53063ca3089\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\4d63b26cb71bfd993699bd6f9f8899d3\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\4d63b26cb71bfd993699bd6f9f8899d3\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\3bf67e603a82f234e22361dac5ed174e\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\3bf67e603a82f234e22361dac5ed174e\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\7d7f05cfc40e18a7d42c4dfc0f4dbdef\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\7d7f05cfc40e18a7d42c4dfc0f4dbdef\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\b41822235a91fa8b4cef7f907d0d0fbe\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\b41822235a91fa8b4cef7f907d0d0fbe\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\03826de994c33cc4afcc27acfd8c4b38\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\03826de994c33cc4afcc27acfd8c4b38\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\4be8e35b4f30d02a262087e6a90db492\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\4be8e35b4f30d02a262087e6a90db492\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\f3fd4ed353162a2f869f5f477170e48b\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\f3fd4ed353162a2f869f5f477170e48b\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\d16b69ffdfdbee90cf0fa0910ce3595d\transformed\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\d16b69ffdfdbee90cf0fa0910ce3595d\transformed\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\aadf02cce31d9220bad4d13977c0db3f\transformed\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vorgo\.gradle\caches\transforms-3\aadf02cce31d9220bad4d13977c0db3f\transformed\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\777270b1361c74097d354519756facd5\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.5.0] C:\Users\vorgo\.gradle\caches\transforms-3\777270b1361c74097d354519756facd5\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a0c89cabc0522964fa1e45d3775aa5e0\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a0c89cabc0522964fa1e45d3775aa5e0\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\d1c4a88a33905534bb2371d027b5c48a\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\d1c4a88a33905534bb2371d027b5c48a\transformed\jetified-lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\f9e9e2f857e3df180a21be3f7d7cf36b\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\f9e9e2f857e3df180a21be3f7d7cf36b\transformed\jetified-savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\b8bce6be5a5c4c47602b917b315f4fd7\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\b8bce6be5a5c4c47602b917b315f4fd7\transformed\lifecycle-runtime-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\c3c0f691512fb0eacad6a17029248205\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\c3c0f691512fb0eacad6a17029248205\transformed\lifecycle-viewmodel-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a84c669753503fa0f39855c02a4cf4e7\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\a84c669753503fa0f39855c02a4cf4e7\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\55aa64fab7c4870f5f3f813726f58495\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\55aa64fab7c4870f5f3f813726f58495\transformed\sqlite-framework-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\17ea0271582eadf4453486f5e796088f\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\17ea0271582eadf4453486f5e796088f\transformed\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\9e5ec6c33da412e00814018e7dcc91c2\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\9e5ec6c33da412e00814018e7dcc91c2\transformed\lifecycle-livedata-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5ffaf08585fc90bf8d64f97a4b18eebc\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] C:\Users\vorgo\.gradle\caches\transforms-3\5ffaf08585fc90bf8d64f97a4b18eebc\transformed\lifecycle-livedata-core-2.3.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\9385b132e114c2a984dad1a5fdff3298\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\vorgo\.gradle\caches\transforms-3\9385b132e114c2a984dad1a5fdff3298\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\7e57d8c87621b659e9b55c772e3a6dd4\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\7e57d8c87621b659e9b55c772e3a6dd4\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\83cef01be023d4cffb46a2361edf5912\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\83cef01be023d4cffb46a2361edf5912\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\440fbab054a9f0fb29d36fb862f4c332\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.2] C:\Users\vorgo\.gradle\caches\transforms-3\440fbab054a9f0fb29d36fb862f4c332\transformed\exifinterface-1.3.2\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\81713a8ce925a0e629b3df7a05f2e72f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\81713a8ce925a0e629b3df7a05f2e72f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ad7ca12bdda5018e225d358200dd7d93\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\ad7ca12bdda5018e225d358200dd7d93\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\13b5bb198250e3a00deecdf3217bf790\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\13b5bb198250e3a00deecdf3217bf790\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\85c9d0c8754d41a27d73c122efecfa8f\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\85c9d0c8754d41a27d73c122efecfa8f\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\9eb87be809d3fed6af88f55fb917dfc2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\vorgo\.gradle\caches\transforms-3\9eb87be809d3fed6af88f55fb917dfc2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.dagger:dagger-lint-aar:2.35] C:\Users\vorgo\.gradle\caches\transforms-3\c3e190cc8559046d251fb4f3701dc09a\transformed\jetified-dagger-lint-aar-2.35\AndroidManifest.xml:18:3-42
+MERGED from [com.google.dagger:dagger-lint-aar:2.35] C:\Users\vorgo\.gradle\caches\transforms-3\c3e190cc8559046d251fb4f3701dc09a\transformed\jetified-dagger-lint-aar-2.35\AndroidManifest.xml:18:3-42
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -286,20 +266,10 @@ INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 		ADDED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Android\0_PetApps\DatesDB\app\src\main\AndroidManifest.xml
 service#androidx.room.MultiInstanceInvalidationService
-ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
+ADDED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:25:9-28:40
 	android:exported
-		ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
+		ADDED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:28:13-37
 	android:directBootAware
-		ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
+		ADDED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:27:13-43
 	android:name
-		ADDED from [androidx.room:room-runtime:2.2.6] C:\Users\vorgo\.gradle\caches\transforms-3\54fdcb3e2507d1125c96c4a0257eaab8\transformed\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
-provider#androidx.lifecycle.ProcessLifecycleOwnerInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:23:9-27:43
-	android:authorities
-		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:25:13-69
-	android:multiprocess
-		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:27:13-40
-	android:exported
-		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:26:13-37
-	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.0.0] C:\Users\vorgo\.gradle\caches\transforms-3\608f36cf0c8b0f0f3837b380615b4b04\transformed\jetified-lifecycle-process-2.0.0\AndroidManifest.xml:24:13-79
+		ADDED from [androidx.room:room-runtime:2.3.0] C:\Users\vorgo\.gradle\caches\transforms-3\c01a1c7bc5a49b7b5ed9afb18ff0a271\transformed\room-runtime-2.3.0\AndroidManifest.xml:26:13-74

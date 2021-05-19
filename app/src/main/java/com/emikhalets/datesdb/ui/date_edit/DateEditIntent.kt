@@ -1,9 +1,9 @@
 package com.emikhalets.datesdb.ui.date_edit
 
-import com.emikhalets.datesdb.common.ViewIntent
+import com.emikhalets.datesdb.mvi.MviIntent
 import com.emikhalets.datesdb.model.entities.DateItem
 
-sealed class DateEditIntent : ViewIntent() {
+sealed class DateEditIntent : MviIntent() {
     object NavigateBack : DateEditIntent()
     object PressChangeImage : DateEditIntent()
     object PressChangeDate : DateEditIntent()

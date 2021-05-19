@@ -1,75 +1,77 @@
 package com.emikhalets.datesdb.ui.date_item
 
 import android.net.Uri
-import androidx.core.view.isVisible
+import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.emikhalets.datesdb.R
-import com.emikhalets.datesdb.common.BaseFragment
 import com.emikhalets.datesdb.databinding.FragmentDateItemBinding
-import com.emikhalets.datesdb.view.DateItemFragmentArgs
-import com.emikhalets.datesdb.view.DateItemFragmentDirections
+import com.emikhalets.datesdb.model.entities.DateItem
+import com.emikhalets.datesdb.mvi.MviFragment
 
-class DateItemFragment : BaseFragment<DateItemIntent, DateItemAction, DateItemState, DateItemViewModel>(
+class DateItemFragment :
+    MviFragment<DateItemIntent, DateItemAction, DateItemState, DateItemViewModel>(
         R.layout.fragment_date_item,
         DateItemViewModel::class.java
-) {
+    ) {
+
+    override val viewModel: DateItemViewModel by viewModels()
 
     private val binding by viewBinding(FragmentDateItemBinding::bind)
-    override val viewModel: DateItemViewModel by viewModels()
     private val args: DateItemFragmentArgs by navArgs()
-
-    override fun initView() {
-    }
+    private lateinit var dateItem: DateItem
 
     override fun initData() {
-        if (args.id > 0) dispatchIntent(DateItemIntent.LoadDateItem(args.id))
+        dateItem = args.dateItem
+        viewModel.dispatchIntent(DateItemIntent.LoadDateType(dateItem.typeId))
     }
 
-    override fun initEvents() {
+    override fun initView() {
         binding.apply {
-            fabDeleteDate.setOnClickListener {
-                if (args.id > 0) {
-                    viewModel.dispatchIntent(DateItemIntent.DeleteDateItem(args.id))
-                }
+            if (dateItem.imageUri.isEmpty()) {
+                imageAvatar.visibility = View.GONE
+            } else {
+                imageAvatar.setImageURI(Uri.parse(dateItem.imageUri))
+                imageAvatar.visibility = View.VISIBLE
             }
-            fabEditDate.setOnClickListener {
-                if (args.id > 0) {
-                    val action = DateItemFragmentDirections.actionDateItemToDateEdit(args.id)
-                    findNavController().navigate(action)
-                }
+            textName.text = dateItem.name
+            textAge.text = resources.getQuantityText(
+                R.plurals.date_item_text_age,
+                dateItem.age
+            )
+            textDaysLeft.text = resources.getQuantityText(
+                R.plurals.date_item_text_days_left,
+                dateItem.daysLeft
+            )
+        }
+    }
+
+    override fun initIntents() {
+        binding.apply {
+            btnDeleteDate.setOnClickListener {
+                viewModel.dispatchIntent(DateItemIntent.ClickDeleteDateItem(dateItem))
+            }
+            btnEditDate.setOnClickListener {
+                val action = DateItemFragmentDirections.actionDateItemToDateEdit(dateItem)
+                findNavController().navigate(action)
             }
         }
     }
 
-    override fun render(state: DateItemState) {
-        binding.progressBar.isVisible = state is DateItemState.Loading
-        binding.textError.isVisible = state is DateItemState.Error
-        binding.layoutDateItem.isVisible = state is DateItemState.ResultDateItem
-
+    override fun fetchState(state: DateItemState) {
         when (state) {
-            is DateItemState.Error -> binding.textError.text = state.message
-            is DateItemState.Deleted -> findNavController().popBackStack()
-            is DateItemState.ResultDateItem -> {
-                binding.apply {
-                    // TODO: set data
-                    if (state.data.image.isEmpty()) {
-                        imageAvatar.isVisible = false
-                    } else {
-                        imageAvatar.setImageURI(Uri.parse(state.data.image))
-                        imageAvatar.isVisible = true
-                    }
-//                    if (state.data.isYear) textDate.text = formatDate(state.data.date)
-//                    else textDate.text = formatDateWithoutYear(state.data.date)
-                    textName.text = state.data.name
-                    textAge.text = getString(R.string.text_item_age, state.data.age)
-                    textType.text = state.data.type
-                    textDaysLeft.text = getString(R.string.text_item_days_left, state.data.daysLeft)
-                }
+            DateItemState.Deleted -> {
+                findNavController().popBackStack()
             }
-            else -> {
+            is DateItemState.DateTypeLoaded -> {
+                binding.textType.text = state.dateType.name
+            }
+            is DateItemState.Error -> {
+                binding.textError.text = state.message
+                binding.textError.visibility = View.VISIBLE
+                binding.layoutInfo.visibility = View.GONE
             }
         }
     }

@@ -1,22 +1,28 @@
 package com.emikhalets.datesdb.ui.dates_list
 
-import android.os.Bundle
-import androidx.core.view.isVisible
+import android.view.View
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.emikhalets.datesdb.R
-import com.emikhalets.datesdb.common.BaseFragment
 import com.emikhalets.datesdb.databinding.FragmentDatesListBinding
+import com.emikhalets.datesdb.model.entities.DateItem
+import com.emikhalets.datesdb.mvi.MviFragment
 
-class DatesListFragment : BaseFragment<DatesListIntent, DatesListAction, DatesListState, DatesListViewModel>(
+class DatesListFragment :
+    MviFragment<DatesListIntent, DatesListAction, DatesListState, DatesListViewModel>(
         R.layout.fragment_dates_list,
         DatesListViewModel::class.java
-) {
+    ) {
+
+    override val viewModel: DatesListViewModel by viewModels()
 
     private val binding by viewBinding(FragmentDatesListBinding::bind)
     private lateinit var datesAdapter: DatesAdapter
-    override val viewModel: DatesListViewModel by viewModels()
+
+    override fun initData() {
+        dispatchIntent(DatesListIntent.LoadDatesList)
+    }
 
     override fun initView() {
         datesAdapter = DatesAdapter { onDateClick(it) }
@@ -26,31 +32,42 @@ class DatesListFragment : BaseFragment<DatesListIntent, DatesListAction, DatesLi
         }
     }
 
-    override fun initData(savedInstanceState: Bundle?) {
-        if (savedInstanceState == null) dispatchIntent(DatesListIntent.LoadAllDates)
-    }
-
-    override fun initEvents() {
-        binding.fabAddDate.setOnClickListener {
+    override fun initIntents() {
+        binding.btnAddDateItem.setOnClickListener {
             val action = DatesListFragmentDirections.actionDatesListToAddDate()
             findNavController().navigate(action)
         }
     }
 
-    private fun onDateClick(id: Long) {
-        val action = DatesListFragmentDirections.actionDatesListToDateItem(id)
+    private fun onDateClick(dateItem: DateItem) {
+        val action = DatesListFragmentDirections.actionDatesListToDateItem(dateItem)
         findNavController().navigate(action)
     }
 
-    override fun render(state: DatesListState) {
-        binding.progressBar.isVisible = state is DatesListState.Loading
-        binding.textError.isVisible = state is DatesListState.Error
-        binding.listDates.isVisible = state is DatesListState.ResultAllDates
-
+    override fun fetchState(state: DatesListState) {
         when (state) {
-            is DatesListState.ResultAllDates -> datesAdapter.submitList(state.data)
-            is DatesListState.Error -> binding.textError.text = state.message
-            else -> {
+            DatesListState.Loading -> {
+                binding.progressBar.visibility = View.VISIBLE
+                binding.textError.visibility = View.GONE
+                binding.listDates.visibility = View.GONE
+            }
+            DatesListState.ResultEmptyDatesList -> {
+                binding.textError.text = getString(R.string.dates_list_text_empty_list)
+                binding.textError.visibility = View.VISIBLE
+                binding.progressBar.visibility = View.GONE
+                binding.listDates.visibility = View.GONE
+            }
+            is DatesListState.ResultDatesList -> {
+                datesAdapter.submitList(state.data)
+                binding.listDates.visibility = View.VISIBLE
+                binding.progressBar.visibility = View.GONE
+                binding.textError.visibility = View.GONE
+            }
+            is DatesListState.Error -> {
+                binding.textError.text = state.message
+                binding.textError.visibility = View.VISIBLE
+                binding.progressBar.visibility = View.GONE
+                binding.listDates.visibility = View.GONE
             }
         }
     }

@@ -1,40 +1,82 @@
 package com.emikhalets.datesdb.ui.add_date_item
 
+import android.app.Dialog
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
-import by.kirich1409.viewbindingdelegate.viewBinding
-import com.emikhalets.datesdb.databinding.DialogAddTypeBinding
-import com.emikhalets.datesdb.databinding.FragmentDatesListBinding
-import com.emikhalets.datesdb.ui.dates_list.DatesAdapter
-import com.emikhalets.datesdb.ui.dates_list.DatesListViewModel
+import com.emikhalets.datesdb.databinding.DialogAddDateBinding
+import com.emikhalets.datesdb.utils.navFromAddDateToDatePicker
+import com.emikhalets.datesdb.utils.navFromAddDateToTypes
 
 class AddDateItemDialog : DialogFragment() {
 
-    private val binding by viewBinding(FragmentDatesListBinding::bind)
-    private lateinit var datesAdapter: DatesAdapter
-    override val viewModel: DatesListViewModel by viewModels()
+    private var _binding: DialogAddDateBinding? = null
+    private val binding get() = _binding!!
 
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View {
-        _binding = DialogAddTypeBinding.inflate(inflater, container, false)
-        return binding.root
+    private val viewModel: AddDateItemViewModel by viewModels()
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        _binding = DialogAddDateBinding.inflate(layoutInflater)
+        viewModel.state.observe(viewLifecycleOwner, { state ->
+            fetchState(state)
+        })
+
+        binding.apply {
+            imageAvatar.setOnClickListener {
+                // TODO: register take image result intent
+            }
+            layoutDate.setOnClickListener {
+                navFromAddDateToDatePicker()
+            }
+            layoutType.setOnClickListener {
+                navFromAddDateToTypes()
+            }
+            btnAdd.setOnClickListener {
+                // TODO: get date ts and type id
+                viewModel.dispatchIntent(
+                    AddDateItemIntent.ClickAddDateItem(
+                        binding.inputName.text.toString(),
+                        0,
+                        0
+                    )
+                )
+            }
+            btnCancel.setOnClickListener {
+                dismiss()
+            }
+        }
+
+        return AlertDialog.Builder(requireContext())
+            .setView(binding.root)
+            .create()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 
-        viewModel.insertingType.observe(viewLifecycleOwner, { dismiss() })
-        binding.btnCancel.setOnClickListener { dismiss() }
-        binding.btnAdd.setOnClickListener {
-            val name = binding.etTypeName.text.toString().trim()
-            if (name.isNotEmpty()) viewModel.insertType(name)
+    // TODO: set data when fetching states
+    private fun fetchState(state: AddDateItemState) {
+        when (state) {
+            AddDateItemState.Added -> {
+                binding.textError.visibility = View.GONE
+            }
+            is AddDateItemState.ResultChangeImage -> {
+                binding.textError.visibility = View.GONE
+            }
+            is AddDateItemState.ResultChangeDate -> {
+                binding.textError.visibility = View.GONE
+            }
+            is AddDateItemState.ResultChangeType -> {
+                binding.textError.visibility = View.GONE
+            }
+            is AddDateItemState.Error -> {
+                binding.textError.text = state.message
+                binding.textError.visibility = View.VISIBLE
+            }
         }
     }
 }

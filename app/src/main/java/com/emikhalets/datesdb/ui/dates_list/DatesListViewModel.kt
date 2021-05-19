@@ -1,39 +1,37 @@
 package com.emikhalets.datesdb.ui.dates_list
 
-import com.emikhalets.datesdb.common.BaseViewModel
-import com.emikhalets.datesdb.model.entities.AppResult
+import com.emikhalets.datesdb.model.ListResult
 import com.emikhalets.datesdb.model.entities.DateItem
 import com.emikhalets.datesdb.model.repositories.RoomRepository
-import kotlinx.coroutines.flow.collect
+import com.emikhalets.datesdb.mvi.MviViewModel
 
 class DatesListViewModel(
-        private val repository: RoomRepository
-) : BaseViewModel<DatesListIntent, DatesListAction, DatesListState>() {
+    private val repository: RoomRepository
+) : MviViewModel<DatesListIntent, DatesListAction, DatesListState>() {
 
     override fun intentToAction(intent: DatesListIntent): DatesListAction {
         return when (intent) {
-            is DatesListIntent.LoadAllDates -> DatesListAction.AllDates
+            DatesListIntent.LoadDatesList -> DatesListAction.GetDatesList
         }
     }
 
     override fun handleAction(action: DatesListAction) {
         launch {
-            _state.postValue(DatesListState.Loading)
+            stateProtected.postValue(DatesListState.Loading)
             when (action) {
-                is DatesListAction.AllDates -> repository.getAllDates().collect {
-                    _state.postValue(it.reduce())
+                DatesListAction.GetDatesList -> {
+                    val result = repository.getAllDates()
+                    stateProtected.postValue(result.reduce())
                 }
             }
         }
     }
 
-    private fun AppResult<List<DateItem>>.reduce(): DatesListState {
+    private fun ListResult<List<DateItem>>.reduce(): DatesListState {
         return when (this) {
-            is AppResult.Loading -> DatesListState.Loading
-            is AppResult.Success -> DatesListState.ResultAllDates(data)
-            is AppResult.Error.EmptyData -> DatesListState.Error("Empty data")
-            is AppResult.Error.DatabaseError -> DatesListState.Error(exception.message.toString())
-            else -> DatesListState.Error("Empty data")
+            ListResult.EmptyList -> DatesListState.ResultEmptyDatesList
+            is ListResult.Success -> DatesListState.ResultDatesList(data)
+            is ListResult.Error -> DatesListState.Error(message)
         }
     }
 }

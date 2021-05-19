@@ -59,7 +59,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/layout_name">
 
                 <AutoCompleteTextView
-                    android:id="@+id/ted_date"
+                    android:id="@+id/input_date"
                     style="@style/AppEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -83,7 +83,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/check_year">
 
                 <AutoCompleteTextView
-                    android:id="@+id/ac_type"
+                    android:id="@+id/input_type"
                     style="@style/AppEditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

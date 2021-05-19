@@ -1,9 +1,9 @@
 package com.emikhalets.datesdb.ui.date_edit
 
-import com.emikhalets.datesdb.common.ViewState
+import com.emikhalets.datesdb.mvi.MviState
 import com.emikhalets.datesdb.model.entities.DateItem
 
-sealed class DateEditState : ViewState() {
+sealed class DateEditState : MviState() {
     object Loading : DateEditState()
     object Saved : DateEditState()
     data class ResultDateItem(val data: DateItem) : DateEditState()
