@@ -13,13 +13,13 @@ data class DateItem(
     var id: Long = 0,
     var name: String,
     var date: Long,
-    var typeId: Long,
+    var group: String,
     var daysLeft: Int = 0,
     var age: Int = 0,
     var imageUri: String = ""
 ) : Parcelable {
 
     @Ignore
-    constructor(name: String, date: Long, typeId: Long) :
-            this(0, name, date, typeId, 0, 0, "")
+    constructor(name: String, date: Long, group: String) :
+            this(0, name, date, group, 0, 0, "")
 }

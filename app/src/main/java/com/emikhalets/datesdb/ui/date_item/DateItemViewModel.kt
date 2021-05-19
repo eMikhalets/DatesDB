@@ -3,7 +3,7 @@ package com.emikhalets.datesdb.ui.date_item
 import com.emikhalets.datesdb.model.CompleteResult
 import com.emikhalets.datesdb.model.SingleResult
 import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DateType
+import com.emikhalets.datesdb.model.entities.Group
 import com.emikhalets.datesdb.model.repositories.RoomRepository
 import com.emikhalets.datesdb.mvi.MviViewModel
 
@@ -33,7 +33,7 @@ class DateItemViewModel(
         }
     }
 
-    private fun SingleResult<DateType>.reduce(): DateItemState {
+    private fun SingleResult<Group>.reduce(): DateItemState {
         return when (this) {
             is SingleResult.Success -> DateItemState.DateTypeLoaded(data)
             is SingleResult.Error -> DateItemState.Error(message)

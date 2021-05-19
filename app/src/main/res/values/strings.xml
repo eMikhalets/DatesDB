@@ -8,7 +8,7 @@
     <string name="app_def_age">30 years</string>
     <string name="app_def_date">16 May 2000, Monday</string>
     <string name="app_def_date_list">16 May 2000, Monday (53)</string>
-    <string name="app_def_type">Birthday</string>
+    <string name="app_def_group">Birthdays</string>
     <string name="app_def_days_left">100 days</string>
 
     <!-- Dates List Screen -->
@@ -19,7 +19,7 @@
     <string name="date_item_text_name_label">Name:</string>
     <string name="date_item_text_age_label">Age:</string>
     <string name="date_item_text_date_label">Date:</string>
-    <string name="date_item_text_type_label">Type of date:</string>
+    <string name="date_item_text_group_label">Group of date:</string>
     <string name="date_item_text_days_left_label">Days left:</string>
     <plurals name="date_item_text_age">
         <item quantity="one">%d year</item>
@@ -33,18 +33,16 @@
     <!-- Date Edit Screen -->
     <string name="date_edit_text_name_label">Name</string>
     <string name="date_edit_text_date_label">Date</string>
-    <string name="date_edit_text_type_label">Type of date</string>
+    <string name="date_edit_text_group_label">Group of date</string>
     <string name="date_edit_text_year_label">Without year</string>
 
-    <!-- Add Date Screen -->
-
-    <!-- Add Type Screen -->
-    <string name="add_type_text_label">Add Type</string>
-    <string name="add_type_text_new_type">New Type</string>
-    <string name="add_type_hint_type">Type of date</string>
+    <!-- Add Group Screen -->
+    <string name="add_group_text_label">Add Group</string>
+    <string name="add_group_text_new_group">New Group</string>
+    <string name="add_group_hint_group">Group of date</string>
 
     <!-- Date Picker Screen -->
     <string name="date_picker_text_label">Pick Date</string>
 
-    <!-- Types Screen -->
+    <!-- Groups List Screen -->
 </resources>

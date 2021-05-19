@@ -5,13 +5,13 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DateType
+import com.emikhalets.datesdb.model.entities.Group
 
-@Database(entities = [DateItem::class, DateType::class], version = 1, exportSchema = false)
+@Database(entities = [DateItem::class, Group::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract val datesDao: DatesDao
-    abstract val typesDao: TypesDao
+    abstract val groupsDao: GroupsDao
 
     companion object {
 

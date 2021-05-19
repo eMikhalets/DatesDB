@@ -21,6 +21,6 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_add_type"
-        tools:listitem="@layout/item_type" />
+        tools:listitem="@layout/item_group" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

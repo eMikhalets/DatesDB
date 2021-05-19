@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.emikhalets.datesdb.model.entities.DateType
+import com.emikhalets.datesdb.model.entities.Group
 import com.emikhalets.datesdb.data.repository.ActivityRepository
 import kotlinx.coroutines.launch
 
@@ -18,7 +18,7 @@ class ActivityViewModel(private val repository: ActivityRepository) : ViewModel(
 
     fun createDefaultTypesTable(names: List<String>) {
         viewModelScope.launch {
-            val list = names.map { DateType(name = it) }
+            val list = names.map { Group(name = it) }
             when (val result = repository.insertTypes(list)) {
                 is Result.Success -> _defTypesCreating.postValue(true)
                 is Result.Error -> _notice.postValue(result.msg)

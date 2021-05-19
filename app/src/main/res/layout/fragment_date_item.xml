@@ -50,7 +50,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/text_name_label"
                 app:layout_constraintTop_toBottomOf="@+id/text_name_label"
-                tools:text="@string/text_item_name" />
+                tools:text="@string/app_def_name" />
 
             <TextView
                 android:id="@+id/text_age_label"
@@ -93,7 +93,7 @@
                 style="@style/AppTextLabel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/date_item_text_type_label"
+                android:text="@string/date_item_text_group_label"
                 app:layout_constraintTop_toBottomOf="@+id/text_date" />
 
             <TextView
@@ -104,7 +104,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/text_type_label"
                 app:layout_constraintTop_toBottomOf="@+id/text_type_label"
-                tools:text="@string/app_def_type" />
+                tools:text="@string/app_def_group" />
 
             <TextView
                 android:id="@+id/text_days_left_label"

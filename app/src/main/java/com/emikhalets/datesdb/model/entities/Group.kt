@@ -6,8 +6,8 @@ import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
-@Entity(tableName = "types_table")
-data class DateType(
+@Entity(tableName = "groups_table")
+data class Group(
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0,
     var name: String

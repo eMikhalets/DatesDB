@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DateType
+import com.emikhalets.datesdb.model.entities.Group
 import com.emikhalets.datesdb.data.repository.DateEditRepository
 import com.emikhalets.datesdb.utils.computeAge
 import com.emikhalets.datesdb.utils.computeDaysLeft
@@ -22,8 +22,8 @@ class TypesViewModel(private val repository: DateEditRepository) : ViewModel() {
     private val _dateString = MutableLiveData<String>()
     val dateString get(): LiveData<String> = _dateString
 
-    private val _insertingType = MutableLiveData<DateType>()
-    val insertingType get(): LiveData<DateType> = _insertingType
+    private val _insertingType = MutableLiveData<Group>()
+    val insertingType get(): LiveData<Group> = _insertingType
 
     private val _notice = MutableLiveData<String>()
     val notice get(): LiveData<String> = _notice
@@ -66,7 +66,7 @@ class TypesViewModel(private val repository: DateEditRepository) : ViewModel() {
 
     fun insertType(name: String) {
         viewModelScope.launch {
-            val type = DateType(name, 0)
+            val type = Group(name, 0)
             when (val result = repository.insertType(type)) {
                 is Result.Success -> {
                     typesItems.add(type.name)

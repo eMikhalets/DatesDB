@@ -1,14 +1,14 @@
 package com.emikhalets.datesdb.ui.date_item
 
 import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DateType
+import com.emikhalets.datesdb.model.entities.Group
 import com.emikhalets.datesdb.mvi.MviAction
 import com.emikhalets.datesdb.mvi.MviIntent
 import com.emikhalets.datesdb.mvi.MviState
 
 sealed class DateItemState : MviState() {
     object Deleted : DateItemState()
-    data class DateTypeLoaded(val dateType: DateType) : DateItemState()
+    data class DateTypeLoaded(val dateType: Group) : DateItemState()
     data class Error(val message: String) : DateItemState()
 }
 

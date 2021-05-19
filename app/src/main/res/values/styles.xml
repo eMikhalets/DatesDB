@@ -98,6 +98,7 @@
     <style name="AppCheckBox">
         <item name="android:textSize">@dimen/app_text_size</item>
         <item name="android:layout_marginStart">@dimen/app_margin</item>
+        <item name="android:layout_marginEnd">@dimen/app_margin</item>
         <item name="android:layout_marginTop">@dimen/app_margin_small</item>
     </style>
 </resources>

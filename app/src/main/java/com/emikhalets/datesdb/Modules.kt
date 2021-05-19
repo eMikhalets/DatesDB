@@ -12,7 +12,7 @@ import org.koin.dsl.module
 
 val androidModule = module {
     single { AppDatabase.get(get()) }
-    single { AppDatabase.get(get()).typesDao }
+    single { AppDatabase.get(get()).groupsDao }
     single { AppDatabase.get(get()).datesDao }
 }
 

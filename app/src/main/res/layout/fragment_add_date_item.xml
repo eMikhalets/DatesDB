@@ -70,15 +70,15 @@
             app:layout_constraintTop_toBottomOf="@+id/layout_date" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/layout_type"
+            android:id="@+id/layout_group"
             style="@style/AppEditTextDropMenuLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/date_edit_text_type_label"
+            android:hint="@string/date_edit_text_group_label"
             app:layout_constraintTop_toBottomOf="@+id/check_year">
 
             <AutoCompleteTextView
-                android:id="@+id/input_type"
+                android:id="@+id/input_group"
                 style="@style/AppEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
             android:layout_height="wrap_content"
             android:text="@string/app_btn_cancel"
             app:layout_constraintEnd_toStartOf="@+id/btn_add"
-            app:layout_constraintTop_toBottomOf="@+id/layout_type" />
+            app:layout_constraintTop_toBottomOf="@+id/layout_group" />
 
         <Button
             android:id="@+id/btn_add"
@@ -100,8 +100,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/app_btn_ok"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layout_type" />
+            app:layout_constraintEnd_toEndOf="@+id/layout_group"
+            app:layout_constraintTop_toBottomOf="@+id/layout_group" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

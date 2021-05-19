@@ -51,7 +51,7 @@
         android:id="@+id/fragmentTypesList"
         android:name="com.emikhalets.datesdb.ui.types_list.TypesListFragment"
         android:label="TypesDialog"
-        tools:layout="@layout/fragment_types_list">
+        tools:layout="@layout/fragment_groups_list">
         <action
             android:id="@+id/action_types_to_addType"
             app:destination="@id/fragmentAddType" />

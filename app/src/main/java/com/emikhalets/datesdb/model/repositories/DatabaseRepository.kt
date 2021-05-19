@@ -4,8 +4,7 @@ import com.emikhalets.datesdb.model.CompleteResult
 import com.emikhalets.datesdb.model.ListResult
 import com.emikhalets.datesdb.model.SingleResult
 import com.emikhalets.datesdb.model.entities.DateItem
-import com.emikhalets.datesdb.model.entities.DateType
-import kotlinx.coroutines.flow.Flow
+import com.emikhalets.datesdb.model.entities.Group
 
 interface DatabaseRepository {
 
@@ -15,10 +14,10 @@ interface DatabaseRepository {
     suspend fun updateDate(dateItem: DateItem): CompleteResult<Nothing>
     suspend fun deleteDate(dateItem: DateItem): CompleteResult<Nothing>
 
-    suspend fun getAllTypes(): ListResult<List<DateType>>
-    suspend fun insertTypes(list: List<DateType>): CompleteResult<Nothing>
-    suspend fun getTypeById(id: Long): SingleResult<DateType>
-    suspend fun insertType(type: DateType): CompleteResult<Nothing>
-    suspend fun updateType(type: DateType): CompleteResult<Nothing>
-    suspend fun deleteType(type: DateType): CompleteResult<Nothing>
+    suspend fun getAllGroups(): ListResult<List<Group>>
+    suspend fun insertGroups(list: List<Group>): CompleteResult<Nothing>
+    suspend fun getGroupByName(name: String): SingleResult<Group>
+    suspend fun insertGroup(group: Group): CompleteResult<Nothing>
+    suspend fun updateGroup(group: Group): CompleteResult<Nothing>
+    suspend fun deleteGroup(group: Group): CompleteResult<Nothing>
 }
