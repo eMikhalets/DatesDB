@@ -1,4 +1,4 @@
-package com.emikhalets.datesdb.ui.types_list
+package com.emikhalets.datesdb.ui.groups_list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,7 +14,7 @@ import java.time.LocalDateTime
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
 
-class TypesViewModel(private val repository: DateEditRepository) : ViewModel() {
+class GroupsViewModel(private val repository: DateEditRepository) : ViewModel() {
 
     private val _dateItem = MutableLiveData<DateItem>()
     val dateItem get(): LiveData<DateItem> = _dateItem

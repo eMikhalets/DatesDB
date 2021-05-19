@@ -8,16 +8,13 @@ import com.emikhalets.datesdb.mvi.MviState
 
 sealed class DateItemState : MviState() {
     object Deleted : DateItemState()
-    data class DateTypeLoaded(val dateType: Group) : DateItemState()
     data class Error(val message: String) : DateItemState()
 }
 
 sealed class DateItemAction : MviAction() {
-    data class GetDateType(val id: Long) : DateItemAction()
     data class DeleteDateItem(val dateItem: DateItem) : DateItemAction()
 }
 
 sealed class DateItemIntent : MviIntent() {
-    data class LoadDateType(val id: Long) : DateItemIntent()
     data class ClickDeleteDateItem(val dateItem: DateItem) : DateItemIntent()
 }

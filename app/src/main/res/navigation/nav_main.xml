@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/fragmentTypesList"
-        android:name="com.emikhalets.datesdb.ui.types_list.TypesListFragment"
+        android:name="com.emikhalets.datesdb.ui.groups_list.GroupsListFragment"
         android:label="TypesDialog"
         tools:layout="@layout/fragment_groups_list">
         <action
@@ -59,7 +59,7 @@
 
     <fragment
         android:id="@+id/fragmentAddType"
-        android:name="com.emikhalets.datesdb.ui.add_type.AddTypeFragment"
+        android:name="com.emikhalets.datesdb.ui.add_group.AddGroupFragment"
         android:label="AddTypeDialog"
         tools:layout="@layout/fragment_add_type" />
 

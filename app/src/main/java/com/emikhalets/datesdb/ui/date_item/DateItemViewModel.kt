@@ -13,7 +13,7 @@ class DateItemViewModel(
 
     override fun intentToAction(intent: DateItemIntent): DateItemAction {
         return when (intent) {
-            is DateItemIntent.LoadDateType -> DateItemAction.GetDateType(intent.id)
+            is DateItemIntent.LoadDateType -> DateItemAction.GetDateGroup(intent.id)
             is DateItemIntent.ClickDeleteDateItem -> DateItemAction.DeleteDateItem(intent.dateItem)
         }
     }
@@ -21,7 +21,7 @@ class DateItemViewModel(
     override fun handleAction(action: DateItemAction) {
         launch {
             when (action) {
-                is DateItemAction.GetDateType -> {
+                is DateItemAction.GetDateGroup -> {
                     val result = repository.getTypeById(action.id)
                     stateProtected.postValue(result.reduce())
                 }

@@ -6,7 +6,6 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
-import com.emikhalets.datesdb.databinding.DialogAddDateBinding
 import com.emikhalets.datesdb.databinding.FragmentAddDateItemBinding
 import com.emikhalets.datesdb.utils.navFromAddDateToDatePicker
 import com.emikhalets.datesdb.utils.navFromAddDateToTypes
@@ -71,7 +70,7 @@ class AddDateItemFragment : DialogFragment() {
             is AddDateItemState.ResultChangeDate -> {
                 binding.textError.visibility = View.GONE
             }
-            is AddDateItemState.ResultChangeType -> {
+            is AddDateItemState.ResultChangeGroup -> {
                 binding.textError.visibility = View.GONE
             }
             is AddDateItemState.Error -> {
