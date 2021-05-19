@@ -1,4 +1,4 @@
-package com.emikhalets.datesdb.ui.types
+package com.emikhalets.datesdb.ui.types_list
 
 import com.emikhalets.datesdb.mvi.MviIntent
 import com.emikhalets.datesdb.model.entities.DateType

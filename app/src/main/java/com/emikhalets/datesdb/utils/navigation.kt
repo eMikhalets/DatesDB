@@ -7,7 +7,7 @@ import com.emikhalets.datesdb.ui.add_date_item.AddDateItemDialogDirections
 import com.emikhalets.datesdb.ui.date_edit.DateEditFragmentDirections
 import com.emikhalets.datesdb.ui.date_item.DateItemFragmentDirections
 import com.emikhalets.datesdb.ui.dates_list.DatesListFragmentDirections
-import com.emikhalets.datesdb.ui.types.TypesDialogDirections
+import com.emikhalets.datesdb.ui.types_list.TypesDialogDirections
 
 fun Fragment.navFromDatesListToDateItem(dateItem: DateItem) {
     val action = DatesListFragmentDirections.actionDatesListToDateItem(dateItem)

@@ -4,11 +4,11 @@ import android.content.Context
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 
-fun View.setVisible() {
+fun View.visible() {
     this.visibility = View.VISIBLE
 }
 
-fun View.setGone() {
+fun View.gone() {
     this.visibility = View.GONE
 }
 

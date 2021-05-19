@@ -7,18 +7,19 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.viewModels
 import com.emikhalets.datesdb.databinding.DialogAddDateBinding
+import com.emikhalets.datesdb.databinding.FragmentAddDateItemBinding
 import com.emikhalets.datesdb.utils.navFromAddDateToDatePicker
 import com.emikhalets.datesdb.utils.navFromAddDateToTypes
 
-class AddDateItemDialog : DialogFragment() {
+class AddDateItemFragment : DialogFragment() {
 
-    private var _binding: DialogAddDateBinding? = null
+    private var _binding: FragmentAddDateItemBinding? = null
     private val binding get() = _binding!!
 
     private val viewModel: AddDateItemViewModel by viewModels()
 
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-        _binding = DialogAddDateBinding.inflate(layoutInflater)
+        _binding = FragmentAddDateItemBinding.inflate(layoutInflater)
         viewModel.state.observe(viewLifecycleOwner, { state ->
             fetchState(state)
         })

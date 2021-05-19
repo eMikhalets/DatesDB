@@ -15,7 +15,7 @@
             app:destination="@id/fragmentDateItem" />
         <action
             android:id="@+id/action_datesList_to_addDate"
-            app:destination="@id/addDateDialog" />
+            app:destination="@id/fragmentAddDateItem" />
     </fragment>
 
     <fragment
@@ -44,45 +44,45 @@
             app:destination="@id/datePickerDialog" />
         <action
             android:id="@+id/action_dateEdit_to_types"
-            app:destination="@id/typesDialog" />
+            app:destination="@id/fragmentTypesList" />
     </fragment>
 
-    <dialog
-        android:id="@+id/typesDialog"
-        android:name="com.emikhalets.datesdb.ui.types.TypesDialog"
+    <fragment
+        android:id="@+id/fragmentTypesList"
+        android:name="com.emikhalets.datesdb.ui.types_list.TypesListFragment"
         android:label="TypesDialog"
-        tools:layout="@layout/dialog_types">
+        tools:layout="@layout/fragment_types_list">
         <action
             android:id="@+id/action_types_to_addType"
-            app:destination="@id/addTypeDialog" />
-    </dialog>
+            app:destination="@id/fragmentAddType" />
+    </fragment>
 
-    <dialog
-        android:id="@+id/addTypeDialog"
-        android:name="com.emikhalets.datesdb.ui.add_type.AddTypeDialog"
+    <fragment
+        android:id="@+id/fragmentAddType"
+        android:name="com.emikhalets.datesdb.ui.add_type.AddTypeFragment"
         android:label="AddTypeDialog"
-        tools:layout="@layout/dialog_add_type" />
+        tools:layout="@layout/fragment_add_type" />
 
-    <dialog
-        android:id="@+id/addDateDialog"
-        android:name="com.emikhalets.datesdb.ui.add_date_item.AddDateItemDialog"
+    <fragment
+        android:id="@+id/fragmentAddDateItem"
+        android:name="com.emikhalets.datesdb.ui.add_date_item.AddDateItemFragment"
         android:label="AddDateDialog"
-        tools:layout="@layout/dialog_add_date">
+        tools:layout="@layout/fragment_add_date_item">
         <action
             android:id="@+id/action_addDate_to_datePicker"
-            app:destination="@id/datePickerDialog" />
+            app:destination="@id/fragmentDatePicker" />
         <action
             android:id="@+id/action_addDate_to_types"
-            app:destination="@id/typesDialog" />
-    </dialog>
+            app:destination="@id/fragmentTypesList" />
+    </fragment>
 
-    <dialog
-        android:id="@+id/datePickerDialog"
-        android:name="com.emikhalets.datesdb.ui.date_picker.DatePickerDialog"
+    <fragment
+        android:id="@+id/fragmentDatePicker"
+        android:name="com.emikhalets.datesdb.ui.date_picker.DatePickerFragment"
         android:label="DatePickerDialog"
-        tools:layout="@layout/dialog_date_picker">
+        tools:layout="@layout/fragment_date_picker">
         <argument
             android:name="timestamp"
             app:argType="long" />
-    </dialog>
+    </fragment>
 </navigation>

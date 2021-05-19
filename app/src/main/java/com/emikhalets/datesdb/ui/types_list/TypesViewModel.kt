@@ -1,4 +1,4 @@
-package com.emikhalets.datesdb.ui.types
+package com.emikhalets.datesdb.ui.types_list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

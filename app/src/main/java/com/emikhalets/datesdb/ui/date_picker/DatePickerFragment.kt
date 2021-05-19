@@ -10,7 +10,7 @@ import com.emikhalets.datesdb.utils.setLocalDateTime
 import com.emikhalets.datesdb.ui.date_edit.DateEditViewModel
 import java.time.LocalDateTime
 
-class DatePickerDialog : DialogFragment() {
+class DatePickerFragment : DialogFragment() {
 
     private val viewModel: DateEditViewModel by activityViewModels()
 
