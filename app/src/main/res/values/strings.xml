@@ -43,6 +43,7 @@
 
     <!-- Date Picker Screen -->
     <string name="date_picker_text_label">Pick Date</string>
+    <string name="drawer_text_all_groups">All Groups</string>
 
     <!-- Groups List Screen -->
 </resources>

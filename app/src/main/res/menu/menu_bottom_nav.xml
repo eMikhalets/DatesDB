@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="bottom_dates_list"
+        android:enabled="true"
+        android:icon="@drawable/ic_list" />
+
+    <item
+        android:id="bottom_calendar"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar" />
+</menu>
