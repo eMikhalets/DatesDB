@@ -1,51 +1,56 @@
 package com.emikhalets.datesdb.ui
 
-import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
+import by.kirich1409.viewbindingdelegate.viewBinding
 import com.emikhalets.datesdb.R
 import com.emikhalets.datesdb.databinding.ActivityMainBinding
-import com.emikhalets.datesdb.utils.drawer.DrawerAdapter
+import com.emikhalets.datesdb.mvi.MviActivity
 import com.emikhalets.datesdb.utils.drawer.DrawerHelper
 import com.emikhalets.datesdb.utils.drawer.DrawerItem
 
-class MainActivity : AppCompatActivity() {
+class MainActivity :
+    MviActivity<ActivityIntent, ActivityAction, ActivityState, ActivityViewModel>(
+        R.layout.activity_main,
+        ActivityViewModel::class.java
+    ) {
 
-    private lateinit var binding: ActivityMainBinding
-    private val viewModel: ActivityViewModel by viewModels()
+    override val viewModel: ActivityViewModel by viewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        setUpToolBar()
+    private val binding by viewBinding(ActivityMainBinding::bind)
 
-        savedInstanceState ?: createDefaultTypesIfNeed()
-        viewModel.defTypesCreating.observe(this) { defTypesObserve(it) }
-        viewModel.notice.observe(this) { noticeObserve(it) }
-    }
-
-    private fun createDefaultTypesIfNeed() {
+    override fun initData() {
         val sp = getSharedPreferences(SP_NAME, 0)
         val isTypesDbExist = sp.getBoolean(SP_KEY_TYPES_DB_EXS, false)
-        if (!isTypesDbExist) viewModel.createDefaultTypesTable(
-            listOf(
-//                getString(R.string.app_def_group),
-//                getString(R.string.app)
+        if (!isTypesDbExist) {
+            val groupNames = listOf(
+                getString(R.string.group_birthdays),
+                getString(R.string.group_holidays),
+                getString(R.string.group_anniversaries)
             )
-        )
+            viewModel.dispatchIntent(ActivityIntent.InitGroupsDB(groupNames))
+        }
+        viewModel.dispatchIntent(ActivityIntent.LoadGroupsList)
     }
 
-    private fun defTypesObserve(isSuccess: Boolean) {
-        getSharedPreferences(SP_NAME, 0).edit()
-            .putBoolean(SP_KEY_TYPES_DB_EXS, isSuccess).apply()
+    override fun initView() {
+        setUpToolBar()
+        setUpDrawer()
     }
 
-    private fun noticeObserve(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    override fun fetchState(state: ActivityState) {
+        when (state) {
+            is ActivityState.Error -> {
+            }
+            ActivityState.GroupsCreated -> {
+                getSharedPreferences(SP_NAME, 0).edit()
+                    .putBoolean(SP_KEY_TYPES_DB_EXS, true).apply()
+            }
+            is ActivityState.ResultGroupsList -> {
+            }
+        }
     }
 
     private fun setUpToolBar() {

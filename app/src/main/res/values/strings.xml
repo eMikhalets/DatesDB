@@ -1,5 +1,9 @@
 <resources>
 
+    <string name="group_birthdays">Birthdays</string>
+    <string name="group_holidays">Holidays</string>
+    <string name="group_anniversaries">Anniversaries</string>
+
     <!-- Common -->
     <string name="app_name">DatesDB</string>
     <string name="app_btn_ok">OK</string>
